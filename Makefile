@@ -1,3 +1,3 @@
 run:
-	php bin/console server:run
+	php bin/console server:start
 	yarn run encore dev --watch
