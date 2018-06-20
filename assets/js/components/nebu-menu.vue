@@ -4,7 +4,6 @@
             <div class="line-1"></div>
             <div class="line-2"></div>
         </div>
-        <div class="Menu" :isOpen="isOpen" :class="{'isOpen': isOpen}"></div>
     </div>
 </template>
 
@@ -56,17 +55,6 @@ export default {
 .line-2
     top: 70px
     left: 35px
-
-.Menu
-    transition: all .2s ease
-    background-color: #1C440C
-    width: 100%
-    height: 100vh
-    z-index: 999
-    position: fixed
-    top: 0
-    left: 0
-    opacity: 0
 
 .active
     .line-1, .line-2
