@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}" />
+        <link rel="stylesheet" href="{{ asset('build/js/app.css') }}" />
+        {% endblock %}
     </head>
     <body>
     <div id="app">
@@ -11,6 +15,8 @@
     </div>
         {% block javascripts %}
             <script src="{{ asset('build/js/app.js') }}"></script>
+            <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+            <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
         {% endblock %}
     </body>
 </html>
