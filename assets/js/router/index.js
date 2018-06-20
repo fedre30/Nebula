@@ -6,6 +6,7 @@ import Film_card from '../pages/Film_card.vue'
 Vue.use(Router);
 Vue.use(Film_card);
 
+
 export default new Router({
     routes: [
         {
