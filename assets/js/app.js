@@ -1,6 +1,8 @@
 // assets/js/app.js
 import Vue from 'vue';
-import Homepage from './pages/Homepage.vue'
+import Homepage from './pages/Homepage.vue';
+import Film_card from './pages/Film_card.vue'
+import router from './router';
 
 
 /**
@@ -8,6 +10,7 @@ import Homepage from './pages/Homepage.vue'
  */
 new Vue({
     el: '#app',
+    router,
     components: {Homepage},
 });
 

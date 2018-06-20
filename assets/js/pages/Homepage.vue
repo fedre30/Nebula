@@ -5,13 +5,12 @@
         <nebu-question></nebu-question>
         <nebu-timeline></nebu-timeline>
 
-
     </div>
 </template>
 
 <script>
     import nebuIntroduction from '../components/nebu-introduction'
-    import nebuHamburger from "../components/nebu-hamburger.vue";
+    import nebuHamburger from "../components/nebu-menu.vue";
     import nebuQuestion from "../components/nebu-question.vue";
     import nebuTimeline from "../components/nebu-timeline.vue";
     export default {
@@ -28,6 +27,9 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="sass">
+<style lang="sass">
+@font-face
+    font-family: Airship
+    src: url(./assets/fonts/airship.ttf)
 
 </style>

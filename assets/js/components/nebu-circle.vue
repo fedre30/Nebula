@@ -1,11 +1,13 @@
 <template>
     <div class="Circle">
         <p class="Circle-year">{{year}}</p>
-        <div class="Circle-outer">
-            <div class="Circle-inner">
-                <div class="Circle-center"></div>
+        <router-link :to="{name: 'film'}">
+            <div class="Circle-outer">
+                <div class="Circle-inner">
+                    <div class="Circle-center"></div>
+                </div>
             </div>
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -37,7 +39,8 @@
     margin: 4rem auto
     text-align: center
     z-index: 10000000
-
+    &-year
+        font-size: 3rem
 
     &-center
         width: 300px

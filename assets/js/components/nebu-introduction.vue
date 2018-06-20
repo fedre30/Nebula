@@ -35,11 +35,14 @@ export default {
     &-title
         font-size: 12rem
         margin-bottom: 5rem
+        font-family: Airship, sans-serif
     &-subtitle
         font-size: 4rem
         margin-bottom: 1rem
+        font-family: Roboto, sans-serif
     &-text
         font-size: 3rem
+        font-family: Roboto, sans-serif
 
     &-wave
         width: 100vw

@@ -9,38 +9,20 @@
 </template>
 
 <script>
-    export default {
-        name: 'nebu-hamburger',
-        data() {
-            return {
-                active: false,
-                isOpen: false
-            }
-        },
-        methods: {
-            toggleActive() {
-                this.active = !this.active;
-                this.isOpen = !this.isOpen;
-            },
-
-            /*
-
-            handleScroll(){
-            const question = this.$children.nebuQuestion;
-            const questionSection = question.$el.querySelector('.Question');
-            const burger = this.$el.querySelector('.burger');
-            if(questionSection.getBoundingClientRect().top < burger.offsetHeight){
-                this.scrolled = !this.scrolled;
-            }
-            }
-            */
-        },
-        created() {
-            window.addEventListener('scroll', this.handleScroll);
-        },
-        destroyed() {
-            window.removeEventListener('scroll', this.handleScroll);
-        },
+export default {
+    name: 'nebu-hamburger',
+    data() {
+        return {
+            active: false,
+            isOpen: false
+        }
+    },
+    methods: {
+        toggleActive() {
+            this.active = !this.active;
+            this.isOpen = !this.isOpen;
+        }
+    }
     }
 </script>
 
@@ -49,6 +31,7 @@
 
 .burger-menu
     position: relative
+
 .burger
     width: 130px
     height: 130px
@@ -85,7 +68,6 @@
     left: 0
     opacity: 0
 
-
 .active
     .line-1, .line-2
         transform-origin: 30% 40%
@@ -98,7 +80,6 @@
 .isOpen
     opacity: 1
     display: block
-
 
 .scroll
     .burger

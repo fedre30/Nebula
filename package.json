@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "reset-css": "^4.0.1",
+        "vue-router": "^3.0.1",
         "vue-scroll-class": "^1.2.3"
     }
 }
