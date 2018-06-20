@@ -11,3 +11,5 @@ new Vue({
     el: '#app',
     components: {Homepage}
 });
+
+

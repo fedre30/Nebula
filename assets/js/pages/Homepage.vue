@@ -1,14 +1,23 @@
 <template>
     <div>
         <nebu-introduction></nebu-introduction>
+        <nebu-hamburger></nebu-hamburger>
+        <nebu-question></nebu-question>
+
+
     </div>
 </template>
 
 <script>
     import nebuIntroduction from '../components/nebu-introduction'
+    import nebuHamburger from "../components/nebu-hamburger.vue";
+    import nebuQuestion from "../components/nebu-question.vue";
     export default {
         name: 'homepage',
-        components: {nebuIntroduction },
+        components: {
+            nebuQuestion,
+            nebuHamburger,
+            nebuIntroduction},
         data() {
             return {}
         }
