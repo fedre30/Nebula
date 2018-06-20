@@ -5452,6 +5452,10 @@ vue-loader@14.2.2:
     vue-style-loader "^4.0.1"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-scroll-class@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/vue-scroll-class/-/vue-scroll-class-1.2.3.tgz#cbacca002555ae6debf672e148d53cca00786cc6"
+
 vue-style-loader@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.0.tgz#7588bd778e2c9f8d87bfc3c5a4a039638da7a863"

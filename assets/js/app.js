@@ -1,6 +1,5 @@
 // assets/js/app.js
 import Vue from 'vue';
-
 import Homepage from './pages/Homepage.vue'
 
 
@@ -9,7 +8,10 @@ import Homepage from './pages/Homepage.vue'
  */
 new Vue({
     el: '#app',
-    components: {Homepage}
+    components: {Homepage},
 });
+
+
+
 
 

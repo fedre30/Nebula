@@ -3,6 +3,7 @@
         <nebu-introduction></nebu-introduction>
         <nebu-hamburger></nebu-hamburger>
         <nebu-question></nebu-question>
+        <nebu-timeline></nebu-timeline>
 
 
     </div>
@@ -12,9 +13,11 @@
     import nebuIntroduction from '../components/nebu-introduction'
     import nebuHamburger from "../components/nebu-hamburger.vue";
     import nebuQuestion from "../components/nebu-question.vue";
+    import nebuTimeline from "../components/nebu-timeline.vue";
     export default {
         name: 'homepage',
         components: {
+            nebuTimeline,
             nebuQuestion,
             nebuHamburger,
             nebuIntroduction},

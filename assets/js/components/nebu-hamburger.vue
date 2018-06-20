@@ -1,7 +1,10 @@
 <template>
-    <div class="burger"  v-on:click="toggleActive" :active="active" :class="{'active': active, 'scroll': scrolled}">
-        <div class="line-1"></div>
-        <div class="line-2"></div>
+    <div class="burger-menu">
+        <div class="burger" ref="burger" v-on:click="toggleActive" :active="active" :class="{'active': active}">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+        <div class="Menu" :isOpen="isOpen" :class="{'isOpen': isOpen}"></div>
     </div>
 </template>
 
@@ -10,26 +13,32 @@
         name: 'nebu-hamburger',
         data() {
             return {
-                active : false,
-                scrolled : false
+                active: false,
+                isOpen: false
             }
         },
         methods: {
-            toggleActive(){
-                this.active = !this.active
+            toggleActive() {
+                this.active = !this.active;
+                this.isOpen = !this.isOpen;
             },
 
+            /*
+
             handleScroll(){
-            const questionSection = this.$refs.question;
+            const question = this.$children.nebuQuestion;
+            const questionSection = question.$el.querySelector('.Question');
+            const burger = this.$el.querySelector('.burger');
             if(questionSection.getBoundingClientRect().top < burger.offsetHeight){
                 this.scrolled = !this.scrolled;
             }
             }
+            */
         },
-        created () {
+        created() {
             window.addEventListener('scroll', this.handleScroll);
         },
-        destroyed () {
+        destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
         },
     }
@@ -37,6 +46,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
+
+.burger-menu
+    position: relative
 .burger
     width: 130px
     height: 130px
@@ -62,6 +74,18 @@
     top: 70px
     left: 35px
 
+.Menu
+    transition: all .2s ease
+    background-color: #1C440C
+    width: 100%
+    height: 100vh
+    z-index: 999
+    position: fixed
+    top: 0
+    left: 0
+    opacity: 0
+
+
 .active
     .line-1, .line-2
         transform-origin: 30% 40%
@@ -71,13 +95,14 @@
     .line-2
         transform: rotate(-45deg)
 
-.before-enter
-    opacity: 0;
+.isOpen
+    opacity: 1
+    display: block
 
 
-.enter
-    transition: opacity 2s ease;
-
+.scroll
+    .burger
+        background-color: red
 
 
 </style>

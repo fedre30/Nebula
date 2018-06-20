@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 export default {
     components: {},
     name: "nebu-introduction",
