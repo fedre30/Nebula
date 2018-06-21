@@ -37,29 +37,30 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
-    .Film
-        font-family: Roboto, sans-serif
-        overflow: hidden
-        &-container
-            width: 90%
-            margin: 0 auto
-            text-align: center
-            padding-top: 6rem
-        &-title
-            font-size: 6rem
-            font-family: Airship, sans-serif
-            margin: 6rem 0
-        &-subtitle
-            font-size: 4rem
-            margin: 3rem 0
-        &-text
-            line-height: 3rem
-            text-align: left
-            margin: 3rem 0
-        &-video
-            width: 100%
-            height: 30vh
-            background: url("../assets/img/space.jpg") no-repeat
+.Film
+    font-family: Roboto, sans-serif
+    overflow: hidden
+
+    &-container
+        width: 90%
+        margin: 0 auto
+        text-align: center
+        padding-top: 6rem
+    &-title
+        font-size: 6rem
+        font-family: Airship, sans-serif
+        margin: 6rem 0
+    &-subtitle
+        font-size: 4rem
+        margin: 3rem 0
+    &-text
+        line-height: 3rem
+        text-align: left
+        margin: 3rem 0
+    &-video
+        width: 100%
+        height: 30vh
+        background: url("../assets/img/space.jpg") no-repeat
 
 
 

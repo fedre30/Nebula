@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <nebu-introduction></nebu-introduction>
-        <nebu-hamburger></nebu-hamburger>
-        <nebu-question></nebu-question>
-        <nebu-timeline></nebu-timeline>
-        <nebu-footer></nebu-footer>
+    <div class="Homepage">
+        <div class="Homepage-background">
+            <nebu-introduction></nebu-introduction>
+            <nebu-question></nebu-question>
+            <nebu-timeline></nebu-timeline>
+            <nebu-footer></nebu-footer>
+        </div>
     </div>
 </template>
 
@@ -30,5 +31,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
+.Homepage
+    width: 100%
+    height: 450vh
+    overflow: hidden
+    &-background
+        width: 100%
+        height: 450vh
+        background: url("../assets/img/full_background.svg") no-repeat
+        background-size: cover
 
 </style>

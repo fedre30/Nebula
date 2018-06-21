@@ -42,7 +42,6 @@
 .Timeline
     width: 100%
     height: 100vh
-    background-color: #00D3B7
     &-container
         width: 90%
         margin: 0 auto

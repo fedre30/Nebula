@@ -56,22 +56,5 @@ export default {
     top: 70px
     left: 35px
 
-.active
-    .line-1, .line-2
-        transform-origin: 30% 40%
-        transition: all .2s ease
-    .line-1
-        transform: rotate(45deg)
-    .line-2
-        transform: rotate(-45deg)
-
-.isOpen
-    opacity: 1
-    display: block
-
-.scroll
-    .burger
-        background-color: red
-
 
 </style>
