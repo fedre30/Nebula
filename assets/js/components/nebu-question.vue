@@ -28,7 +28,7 @@
 <style scoped lang="sass">
 .Question
     width: 100%
-    height: 150vh
+    height: 100vh
     padding-top: 6rem
     position: relative
     z-index: 0
@@ -78,6 +78,7 @@
         color: white
         text-align: left
         line-height: 5rem
+        font-style: italic
     &-button
         font-size: 3rem
         width: 300px
@@ -90,12 +91,13 @@
         display: block
         background: transparent
         color: white
+        font-weight: 800
 
 
     &-button:before, &-button:after
-        width: 300px
+        width: 290px
         left: 0
-        height: 50px
+        height: 65px
         border: 7px solid white
 
     &-button:before
@@ -105,11 +107,11 @@
         -webkit-transform: perspective(15px) rotateX(5deg)
         -moz-transform: perspective(15px) rotateX(5deg)
         transform: perspective(15px) rotateX(5deg)
-        top: -35px
+        top: -50px
 
     &-button:after
         position: absolute
-        top: 30px
+        top: 40px
         content: ''
         border-top: none
         -webkit-transform: perspective(15px) rotateX(-5deg)
@@ -120,7 +122,9 @@
 
 a
     text-decoration: none
-    
+
+a:hover
+    color: #F13455
 
 
 

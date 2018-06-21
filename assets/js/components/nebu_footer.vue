@@ -22,28 +22,29 @@
 <style scoped lang="sass">
 .Footer
     width: 100%
-    height: 10vh
-    background: darkgrey
+    height: 30vh
     padding: 6rem
-    position: relative
+    position: absolute
+    bottom: 2vh
 
     &-copyright
         color: white
-        font-size: 2rem
+        font-size: 2.5rem
         font-family: Roboto, sans-serif
         font-weight: 100
-        width: 45vw
+        width: 100%
         line-height: 3rem
+        position: absolute
+        bottom: 2vh
     &-logo-container
-        width: 30vw
+        width: 35vw
         height: 12vh
         display: flex
-        flex-direction: column
         z-index: 200000
         justify-content: space-around
         position: absolute
-        right: 10vw
-        top: 2vh
+        left: 55vw
+        bottom: 3vh
 
     &-logo-facebook
         width: 100px

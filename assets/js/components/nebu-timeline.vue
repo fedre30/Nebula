@@ -1,9 +1,10 @@
 <template>
     <div class="Timeline">
         <div class="Timeline-container">
-            <h3 class="Timeline-title">Title</h3>
+            <h3 class="Timeline-title">IDEES RECUES LES PLUS TENACES</h3>
         </div>
-        <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image"></nebu-circle>
+        <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
+        <div class="Timeline-button">Voir plus</div>
     </div>
 </template>
 
@@ -18,18 +19,21 @@
                 circles : [
                     {
                         year: 1972,
-                        title: 'Space',
-                        image: './assets/img/space.jpg'
+                        title: 'Les gardiens de la Galaxie',
+                        image: './assets/img/space.jpg',
+                        mistake: 'Le corps gèle dans l’espace'
                     },
                     {
                         year: 1992,
-                        title: 'Space 2',
-                        image: './assets/img/space.jpg'
+                        title: 'Les gardiens de la Galaxie 2',
+                        image: './assets/img/space.jpg',
+                        mistake: 'Le corps gèle dans l’espace'
                     },
                     {
                         year: 2000,
-                        title: 'Space 3',
-                        image: './assets/img/space.jpg'
+                        title: 'Les gardiens de la Galaxie le retour',
+                        image: './assets/img/space.jpg',
+                        mistake: 'Le corps gèle dans l’espace'
                     },
                 ]
             }
@@ -41,14 +45,61 @@
 <style scoped lang="sass">
 .Timeline
     width: 100%
-    height: 150vh
+    height: 100vh
+    font-family: Roboto, sans-serif
+    margin-top: 5vh
     &-container
-        width: 90%
+        width: 80%
         margin: 0 auto
         text-align: center
         padding-top: 3rem
     &-title
-        font-size: 6rem
+        font-size: 6.5rem
+        font-family: Airship, sans-serif
+        text-transform: uppercase
+        margin-bottom: 10rem
+        line-height: 9rem
+        text-align: left
+        color: #1F0D87
+        width: 100%
+    &-button
+        font-size: 3rem
+        width: 300px
+        height: 200px
+        line-height: 3rem
+        text-align: center
+        margin: 0 auto
+        position: relative
+        text-transform: uppercase
+        display: block
+        background: transparent
+        color: white
+        font-weight: 800
+
+
+    &-button:before, &-button:after
+        width: 290px
+        left: 0
+        height: 65px
+        border: 7px solid white
+
+    &-button:before
+        position: absolute
+        content: ''
+        border-bottom: none
+        -webkit-transform: perspective(15px) rotateX(5deg)
+        -moz-transform: perspective(15px) rotateX(5deg)
+        transform: perspective(15px) rotateX(5deg)
+        top: -50px
+
+    &-button:after
+        position: absolute
+        top: 40px
+        content: ''
+        border-top: none
+        -webkit-transform: perspective(15px) rotateX(-5deg)
+        -moz-transform: perspective(15px) rotateX(-5deg)
+        transform: perspective(15px) rotateX(-5deg)
 
 
 </style>

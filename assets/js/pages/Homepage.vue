@@ -35,6 +35,7 @@
     width: 100%
     height: 450vh
     overflow: hidden
+    position: relative
     &-background
         width: 100%
         height: 450vh

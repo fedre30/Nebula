@@ -34,9 +34,9 @@ export default {
         padding-top: 10rem
     &-title
         font-size: 18rem
-        margin-bottom: 10rem
+        margin-bottom: 5rem
         font-family: Airship, sans-serif
-        color:  #F13455
+        color: rgb(255, 8, 73)
     &-subtitle
         font-size: 3.5rem
         margin-bottom: 4rem
@@ -44,7 +44,7 @@ export default {
         font-weight: bold
         color: white
         text-align: left
-        width: 85%
+        width: 100%
         line-height: 6rem
     &-text
         font-size: 3rem
@@ -54,7 +54,7 @@ export default {
         line-height: 4rem
         font-weight: 300
         font-style: italic
-        margin-bottom: 7rem
+        margin-bottom: 8rem
     &-astroman
         width: 75vw
         height: 70vh
