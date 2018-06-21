@@ -4,7 +4,6 @@
             <h1 class="Intro-title">Nebula</h1>
             <h3 class="Intro-subtitle">Lorem ipsum</h3>
             <h4 class="Intro-text">Lorem ipsum</h4>
-            <div class="Intro-wave"></div>
         </div>
     </div>
 </template>
@@ -25,7 +24,6 @@ export default {
     position: relative
     width: 100%
     height: 100vh
-    background-color: rgba(184, 184, 184, 1)
     z-index: 3
     &-container
         width: 90%
@@ -43,15 +41,6 @@ export default {
     &-text
         font-size: 3rem
         font-family: Roboto, sans-serif
-
-    &-wave
-        width: 100vw
-        height: 40vh
-        position: absolute
-        bottom: 0
-        left: 0
-        background: url("./assets/img/firstWave.svg") no-repeat
-        background-size: cover
 
 
 </style>

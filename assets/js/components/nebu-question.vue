@@ -12,7 +12,6 @@
                 <div class="Question-button">Quiz</div>
             </a>
         </div>
-        <div class="Question-wave"></div>
     </div>
 </template>
 
@@ -30,7 +29,6 @@
 .Question
     width: 100%
     height: 100vh
-    background-color: rgba(72,72,72,1)
     padding-top: 6rem
     position: relative
     z-index: 0
@@ -68,14 +66,6 @@
         background-color: #1cb1f2
         line-height: 150px
         margin: 0 auto
-    &-wave
-        width: 100vw
-        height: 80vh
-        position: absolute
-        bottom: 0
-        left: -10vw
-        background: url("./assets/img/secondWave.svg") no-repeat
-        background-size: cover
 
 
 

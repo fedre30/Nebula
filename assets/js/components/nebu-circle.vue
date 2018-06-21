@@ -1,15 +1,15 @@
 <template>
-    <router-link :to="{name: 'film'}">
     <div class="Circle">
-        <p class="Circle-year">{{year}}</p>
+        <router-link :to="{name: 'film'}">
+            <p class="Circle-year">{{year}}</p>
 
             <div class="Circle-outer">
                 <div class="Circle-inner">
                     <div class="Circle-center"></div>
                 </div>
             </div>
+        </router-link>
     </div>
-    </router-link>
 </template>
 
 <script>
