@@ -41,7 +41,7 @@
 <style scoped lang="sass">
 .Timeline
     width: 100%
-    height: 100vh
+    height: 150vh
     &-container
         width: 90%
         margin: 0 auto

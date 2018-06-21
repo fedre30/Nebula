@@ -28,7 +28,7 @@
 <style scoped lang="sass">
 .Question
     width: 100%
-    height: 100vh
+    height: 150vh
     padding-top: 6rem
     position: relative
     z-index: 0
