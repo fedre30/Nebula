@@ -35,10 +35,11 @@
     width: 100%
     height: 450vh
     overflow: hidden
+    position: relative
     &-background
         width: 100%
         height: 450vh
-        background: url("../assets/img/full_background.svg") no-repeat
+        background: url("../assets/img/full_background.jpg") no-repeat
         background-size: cover
 
 </style>
