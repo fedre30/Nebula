@@ -8,7 +8,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20180622095418 extends AbstractMigration
+final class Version20180622102808 extends AbstractMigration
 {
     public function up(Schema $schema) : void
     {
@@ -16,6 +16,7 @@ final class Version20180622095418 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE movies (id INT AUTO_INCREMENT NOT NULL, title VARCHAR(100) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE fact_sheets (id INT AUTO_INCREMENT NOT NULL, tab_title VARCHAR(110) NOT NULL, category VARCHAR(60) NOT NULL, main_title VARCHAR(60) NOT NULL, video_description_title VARCHAR(60) NOT NULL, video_description_text VARCHAR(3000) NOT NULL, video_src VARCHAR(2048) NOT NULL, video_alt VARCHAR(100) NOT NULL, explanation_title VARCHAR(60) NOT NULL, explanation_text VARCHAR(3000) NOT NULL, scientific_fact_title VARCHAR(60) NOT NULL, scientific_fact_text VARCHAR(3000) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
     }
 
     public function down(Schema $schema) : void
@@ -24,5 +25,6 @@ final class Version20180622095418 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('DROP TABLE movies');
+        $this->addSql('DROP TABLE fact_sheets');
     }
 }
