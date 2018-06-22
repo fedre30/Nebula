@@ -1,19 +1,20 @@
 <template>
-    <div class="burger-menu">
-        <div class="burger" ref="burger" v-on:click="toggleActive" :active="active" :class="{'active': active}">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
+    <div class="Menu">
+        <div class="Menu-container">
+            <router-link :to="{name: 'homepage'}"><div class="Menu-item-home"></div></router-link>
+            <router-link :to="{name: 'homepage'}"><div class="Menu-item-quiz"></div></router-link>
+            <router-link :to="{name: 'film'}"><div class="Menu-item-film"></div></router-link>
+            <router-link :to="{name: 'homepage'}"><div class="Menu-item-search"></div></router-link>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'nebu-hamburger',
+    name: 'nebu-menu',
     data() {
         return {
             active: false,
-            isOpen: false
         }
     },
     methods: {
@@ -27,34 +28,45 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
-
-.burger-menu
-    position: relative
-
-.burger
-    width: 130px
-    height: 130px
-    background-color: #0A246A
-    border-radius: 200px
+.Menu
+    width: 100%
+    height: 150px
+    background-color: white
     position: fixed
-    bottom: 25vh
-    left: 45vw
-    z-index: 100000
+    bottom: 0
+    z-index: 9999999
 
-.line-1, .line-2
-    width: 60px
-    height: 10px
-    background-color: #1cb1f2
-    position: absolute
-    transition: all .2s ease
+    &-container
+        padding: 2rem
+        width: 80%
+        height: 150px
+        margin: 0 auto
+        text-align: center
+        display: flex
+        justify-content: space-between
 
-.line-1
-    top: 50px
-    left: 35px
+    &-item-home
+        width: 85px
+        height: 50%
+        background: url("./assets/img/home.svg") no-repeat
+        background-size: cover
+    &-item-quiz
+        width: 55px
+        height: 50%
+        background: url("./assets/img/question_mark.svg") no-repeat
+        background-size: cover
+    &-item-film
+        width: 72px
+        height: 50%
+        background: url("./assets/img/camera.svg") no-repeat
+        background-size: cover
+    &-item-search
+        width: 70px
+        height: 50%
+        background: url("./assets/img/loupe.svg") no-repeat
+        background-size: cover
 
-.line-2
-    top: 70px
-    left: 35px
+
 
 
 </style>
