@@ -2,11 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: enzo
- * Date: 19/06/2018
- * Time: 21:38
+ * Date: 21/06/2018
+ * Time: 14:42
  */
 
-// src/Admin/CategoryAdmin.php
+// src/Admin/MoviesAdmin.php
 namespace App\Admin;
 
 use Sonata\AdminBundle\Admin\AbstractAdmin;
@@ -15,21 +15,20 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-
-class CategoryAdmin extends AbstractAdmin
+class MoviesAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('name', TextType::class);
+        $formMapper->add('title', TextType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('name');
+        $datagridMapper->add('title');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('name');
+        $listMapper->addIdentifier('title');
     }
 }
