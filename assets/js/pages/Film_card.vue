@@ -10,6 +10,7 @@
                     https://app.rivaliq.com/companies</p>
             </section>
         </div>
+        <nebu-menu></nebu-menu>
             <div class="Film-video"></div>
         <div class="Film-container">
             <section class="Film-mistake">
@@ -33,9 +34,12 @@
 
 <script>
     import nebuFooter from "../components/nebu_footer.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
 
     export default {
-        components: {nebuFooter},
+        components: {
+            nebuMenu,
+            nebuFooter},
         name: 'Film_card',
         data() {
             return {}
@@ -49,7 +53,7 @@
     font-family: Roboto, sans-serif
     overflow: hidden
     position: relative
-    width: 100%
+    width: 100vw
     height: 250vh
     background: url("../assets/img/background_film.jpg") no-repeat
     background-size: cover

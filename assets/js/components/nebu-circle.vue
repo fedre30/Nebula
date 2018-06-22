@@ -4,12 +4,11 @@
             <h3 class="Circle-mistake">{{mistake}}</h3>
             <h4 class="Circle-title">{{title}}</h4>
             <div class="Circle-container">
-            <div class="Circle-year">{{year}}</div>
-            <div class="Circle-outer"></div>
+                <div class="Circle-year">{{year}}</div>
+                <div class="Circle-outer"></div>
                 <div class="Circle-inner"></div>
                 <div class="Circle-center"></div>
             </div>
-
         </router-link>
     </div>
 </template>
@@ -17,6 +16,11 @@
 <script>
     export default {
         name: 'nebu-circle',
+        data(){
+            return {
+                rotated: true
+            }
+        },
         props: {
             year: {
                 type: Number,
@@ -52,6 +56,7 @@
         height: 600px
         position: relative
         margin-top: 10vh
+        z-index: 999999
 
     &-mistake
         font-size: 3.5rem
@@ -85,7 +90,6 @@
         left: 150px
         top: -50px
 
-
     &-outer
         width: 600px
         height: 600px
@@ -102,8 +106,9 @@
         margin: 0 auto
         background: url('./assets/img/space.jpg')
 
-
-
 a
     text-decoration: none
+
+
+
 </style>

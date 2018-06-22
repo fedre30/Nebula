@@ -1,28 +1,45 @@
 <template>
-    <div class="Menu">
+    <div class="Menu" :class="{'scrolled': scrolled}">
         <div class="Menu-container">
-            <router-link :to="{name: 'homepage'}"><div class="Menu-item-home"></div></router-link>
-            <router-link :to="{name: 'homepage'}"><div class="Menu-item-quiz"></div></router-link>
-            <router-link :to="{name: 'film'}"><div class="Menu-item-film"></div></router-link>
-            <router-link :to="{name: 'homepage'}"><div class="Menu-item-search"></div></router-link>
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-home"></div>
+            </router-link>
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-quiz"></div>
+            </router-link>
+            <router-link :to="{name: 'film'}">
+                <div class="Menu-item-film"></div>
+            </router-link>
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-search"></div>
+            </router-link>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'nebu-menu',
-    data() {
-        return {
-            active: false,
+    let lastScrollTop;
+    export default {
+        name: 'nebu-menu',
+        data() {
+            return {
+                active: false,
+                scrolled: false
+            }
+        },
+        methods: {
+            handleScroll() {
+                const scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
+                scrollDirection < lastScrollTop ? this.scrolled = !this.scrolled : lastScrollTop;
+                lastScrollTop = scrollDirection <= 0 ? 0 : scrollDirection;
+            }
+        },
+        created() {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed() {
+            window.removeEventListener('scroll', this.handleScroll);
         }
-    },
-    methods: {
-        toggleActive() {
-            this.active = !this.active;
-            this.isOpen = !this.isOpen;
-        }
-    }
     }
 </script>
 
@@ -35,6 +52,8 @@ export default {
     position: fixed
     bottom: 0
     z-index: 9999999
+    opacity: 0
+    transition: all .2s ease
 
     &-container
         padding: 2rem
@@ -66,7 +85,9 @@ export default {
         background: url("./assets/img/loupe.svg") no-repeat
         background-size: cover
 
-
+.scrolled
+    opacity: 1
+    transition: all .2s ease
 
 
 </style>
