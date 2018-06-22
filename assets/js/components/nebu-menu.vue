@@ -1,60 +1,93 @@
 <template>
-    <div class="burger-menu">
-        <div class="burger" ref="burger" v-on:click="toggleActive" :active="active" :class="{'active': active}">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
+    <div class="Menu" :class="{'scrolled': scrolled}">
+        <div class="Menu-container">
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-home"></div>
+            </router-link>
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-quiz"></div>
+            </router-link>
+            <router-link :to="{name: 'list'}">
+                <div class="Menu-item-film"></div>
+            </router-link>
+            <router-link :to="{name: 'home'}">
+                <div class="Menu-item-search"></div>
+            </router-link>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'nebu-hamburger',
-    data() {
-        return {
-            active: false,
-            isOpen: false
+    let lastScrollTop;
+    export default {
+        name: 'nebu-menu',
+        data() {
+            return {
+                active: false,
+                scrolled: false
+            }
+        },
+        methods: {
+            handleScroll() {
+                const scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
+                scrollDirection < lastScrollTop ? this.scrolled = !this.scrolled : lastScrollTop;
+                lastScrollTop = scrollDirection <= 0 ? 0 : scrollDirection;
+            }
+        },
+        created() {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed() {
+            window.removeEventListener('scroll', this.handleScroll);
         }
-    },
-    methods: {
-        toggleActive() {
-            this.active = !this.active;
-            this.isOpen = !this.isOpen;
-        }
-    }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
-
-.burger-menu
-    position: relative
-
-.burger
-    width: 130px
-    height: 130px
-    background-color: #0A246A
-    border-radius: 200px
+.Menu
+    width: 100%
+    height: 150px
+    background-color: white
     position: fixed
-    bottom: 25vh
-    left: 45vw
-    z-index: 100000
-
-.line-1, .line-2
-    width: 60px
-    height: 10px
-    background-color: #1cb1f2
-    position: absolute
+    bottom: 0
+    z-index: 9999999
+    opacity: 0
     transition: all .2s ease
 
-.line-1
-    top: 50px
-    left: 35px
+    &-container
+        padding: 2rem
+        width: 80%
+        height: 150px
+        margin: 0 auto
+        text-align: center
+        display: flex
+        justify-content: space-between
 
-.line-2
-    top: 70px
-    left: 35px
+    &-item-home
+        width: 85px
+        height: 50%
+        background: url("./assets/img/home.svg") no-repeat
+        background-size: cover
+    &-item-quiz
+        width: 55px
+        height: 50%
+        background: url("./assets/img/question_mark.svg") no-repeat
+        background-size: cover
+    &-item-film
+        width: 72px
+        height: 50%
+        background: url("./assets/img/camera.svg") no-repeat
+        background-size: cover
+    &-item-search
+        width: 70px
+        height: 50%
+        background: url("./assets/img/loupe.svg") no-repeat
+        background-size: cover
+
+.scrolled
+    opacity: 1
+    transition: all .2s ease
 
 
 </style>

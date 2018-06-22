@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>loupe</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nav" transform="translate(-318.000000, -14.000000)" stroke="#CDC1E1">
+            <g id="loupe">
+                <g transform="translate(320.000000, 16.000000)">
+                    <g>
+                        <ellipse id="Oval-7" stroke-width="3" cx="7.4375" cy="7.26923077" rx="7.4375" ry="7.26923077"></ellipse>
+                        <path d="M12.0416667,13.1538462 L17,18" id="Line" stroke-width="3" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
