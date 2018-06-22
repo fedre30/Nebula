@@ -2,6 +2,7 @@
     <div class="Homepage">
         <div class="Homepage-background">
             <nebu-introduction></nebu-introduction>
+            <nebu-menu></nebu-menu>
             <nebu-question></nebu-question>
             <nebu-timeline></nebu-timeline>
             <nebu-footer></nebu-footer>
@@ -11,17 +12,17 @@
 
 <script>
     import nebuIntroduction from '../components/nebu-introduction'
-    import nebuHamburger from "../components/nebu-menu.vue";
     import nebuQuestion from "../components/nebu-question.vue";
     import nebuTimeline from "../components/nebu-timeline.vue";
     import nebuFooter from "../components/nebu_footer.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
     export default {
         name: 'homepage',
         components: {
+            nebuMenu,
             nebuFooter,
             nebuTimeline,
             nebuQuestion,
-            nebuHamburger,
             nebuIntroduction},
         data() {
             return {}

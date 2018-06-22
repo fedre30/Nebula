@@ -3,20 +3,29 @@
         <div class="Film-container">
             <h2 class="Film-title">Les trous noirs</h2>
             <section class="Film-intro">
-                <h4 class="Film-subtitle">Lorem ipsum</h4>
+                <h4 class="Film-subtitle">dans star trek</h4>
                 <p class="Film-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolor dolore doloribus eius esse, eum fuga minus, molestiae molestias mollitia nam quasi, reiciendis rem. Consequuntur eius est ipsum maiores mollitia.</p>
+                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
+                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
+                    https://app.rivaliq.com/companies</p>
             </section>
+        </div>
+        <nebu-menu></nebu-menu>
             <div class="Film-video"></div>
+        <div class="Film-container">
             <section class="Film-mistake">
-                <h4 class="Film-subtitle">Lorem ipsum</h4>
+                <h4 class="Film-subtitle">les trous noir du cinéma</h4>
                 <p class="Film-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam cumque cupiditate eligendi esse ex hic quis voluptatibus? Doloremque ea earum expedita illum labore nostrum quaerat ratione tempora voluptate voluptatem.</p>
+                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
+                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
+                    https://app.rivaliq.com/companies</p>
             </section>
             <section class="Film-fact">
-                <h4 class="Film-subtitle">Lorem ipsum</h4>
+                <h4 class="Film-subtitle">en réalité</h4>
                 <p class="Film-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at exercitationem ipsum magnam nemo non, officia porro provident quaerat temporibus! Accusamus aperiam corporis delectus doloremque hic omnis reiciendis, tenetur voluptatem!</p>
+                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
+                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
+                    https://app.rivaliq.com/companies</p>
             </section>
         </div>
         <nebu-footer></nebu-footer>
@@ -25,9 +34,12 @@
 
 <script>
     import nebuFooter from "../components/nebu_footer.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
 
     export default {
-        components: {nebuFooter},
+        components: {
+            nebuMenu,
+            nebuFooter},
         name: 'Film_card',
         data() {
             return {}
@@ -40,25 +52,40 @@
 .Film
     font-family: Roboto, sans-serif
     overflow: hidden
+    position: relative
+    width: 100vw
+    height: 250vh
+    background: url("../assets/img/background_film.jpg") no-repeat
+    background-size: cover
 
     &-container
-        width: 90%
+        width: 80%
         margin: 0 auto
         text-align: center
         padding-top: 6rem
     &-title
         font-size: 6rem
         font-family: Airship, sans-serif
-        margin: 6rem 0
+        margin: 8rem 0
+        color: white
     &-subtitle
-        font-size: 4rem
-        margin: 3rem 0
+        font-size: 3rem
+        margin: 15vh 0 3rem 0
+        text-transform: uppercase
+        color: #1F0D87
+        font-style: italic
+        text-align: left
+        font-weight: 700
     &-text
-        line-height: 3rem
+        font-size: 2.5rem
+        color: white
+        line-height: 4rem
         text-align: left
         margin: 3rem 0
     &-video
-        width: 100%
+        width: 100vw
+        margin: 10vh auto
+        text-align: center
         height: 30vh
         background: url("../assets/img/space.jpg") no-repeat
 
