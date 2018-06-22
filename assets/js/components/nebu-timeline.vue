@@ -4,7 +4,7 @@
             <h3 class="Timeline-title">IDEES RECUES LES PLUS TENACES</h3>
         </div>
         <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
-        <div class="Timeline-button">Voir plus</div>
+        <router-link :to="{name: 'list'}"><div class="Timeline-button">Voir plus</div></router-link>
     </div>
 </template>
 
@@ -100,6 +100,10 @@
         -webkit-transform: perspective(15px) rotateX(-5deg)
         -moz-transform: perspective(15px) rotateX(-5deg)
         transform: perspective(15px) rotateX(-5deg)
+
+a
+    text-decoration: none
+
 
 
 </style>
