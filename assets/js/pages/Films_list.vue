@@ -43,6 +43,7 @@
     width: 100%
     height: 270vh
     background: url("../assets/img/background_list.jpg") no-repeat
+    overflow: hidden
     &-container
         width: 80%
         margin: 0 auto
