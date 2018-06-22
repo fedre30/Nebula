@@ -8,6 +8,7 @@ Vue.use(Router);
 Vue.use(Film_card);
 
 
+
 export default new Router({
     routes: [
         {
@@ -25,6 +26,9 @@ export default new Router({
             name: 'list',
             component: Films_list
         }
-    ]
+    ],
+    scrollBehavior (to, from) {
+        return { x: 0, y: 0 }
+    }
 })
 
