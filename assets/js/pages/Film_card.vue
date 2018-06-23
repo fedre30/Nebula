@@ -11,7 +11,9 @@
             </section>
         </div>
         <nebu-menu></nebu-menu>
-            <div class="Film-video"></div>
+            <div class="Film-video">
+                <youtube :video-id="videoId" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
+            </div>
         <div class="Film-container">
             <section class="Film-mistake">
                 <h4 class="Film-subtitle">les trous noir du cinéma</h4>
@@ -36,13 +38,31 @@
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
 
+
     export default {
         components: {
             nebuMenu,
             nebuFooter},
         name: 'Film_card',
         data() {
-            return {}
+            return {
+                videoId: 'm4JAgWk1PcM',
+                width: 1000,
+                height: 700
+            }
+        },
+        methods: {
+            playVideo() {
+                this.player.playVideo()
+            },
+            playing() {
+                console.log('\o/ we are watching!!!')
+            }
+        },
+        computed: {
+            player () {
+                return this.$refs.youtube.player
+            }
         }
     }
 </script>
@@ -87,7 +107,6 @@
         margin: 10vh auto
         text-align: center
         height: 30vh
-        background: url("../assets/img/space.jpg") no-repeat
 
 
 
