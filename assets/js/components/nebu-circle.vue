@@ -50,7 +50,7 @@
     text-align: center
     z-index: 10000000
     font-family: Roboto, sans-serif
-    margin-bottom: 2vh
+    margin-bottom: 2rem
     &-container
         width: 100%
         height: 600px

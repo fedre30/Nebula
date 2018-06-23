@@ -62,6 +62,7 @@ export default {
         background: url("./assets/img/cosmonaute.png") no-repeat
         background-size: cover
         right: 0
+        bottom: -400px
 
 
 

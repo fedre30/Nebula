@@ -33,7 +33,7 @@
 </template>
 
 <script>
-    import nebuFooter from "../components/nebu_footer.vue";
+    import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
 
     export default {
