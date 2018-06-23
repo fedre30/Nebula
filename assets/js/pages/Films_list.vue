@@ -1,5 +1,7 @@
 <template>
     <div class="List">
+        <nebu-filters></nebu-filters>
+        <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
             <nebu-film v-for="(film, index) in films" :key="film.title" :mistake="film.mistake" :title="film.title" :year="film.year" v-if="index < 7"></nebu-film>
@@ -17,9 +19,13 @@
 <script>
     import nebuFilm from "../components/nebu-film.vue";
     import nebuFooter from "../components/nebu-footer.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
+    import nebuFilters from "../components/nebu-filters.vue";
 
     export default {
         components: {
+            nebuFilters,
+            nebuMenu,
             nebuFooter,
             nebuFilm},
         name: 'nebu-films-list',

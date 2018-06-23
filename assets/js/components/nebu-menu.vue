@@ -27,7 +27,7 @@
                 scrolled: false
             }
         },
-        methods: {
+        /*methods: {
             handleScroll() {
                 const scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
                 scrollDirection < lastScrollTop ? this.scrolled = !this.scrolled : lastScrollTop;
@@ -39,7 +39,7 @@
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
-        }
+        }*/
     }
 </script>
 
@@ -52,7 +52,7 @@
     position: fixed
     bottom: 0
     z-index: 9999999
-    opacity: 0
+    opacity: 1
     transition: all .2s ease
 
     &-container
@@ -71,11 +71,11 @@
         background-size: cover
     &-item-quiz
         width: 55px
-        height: 50%
+        height: 45%
         background: url("./assets/img/question_mark.svg") no-repeat
         background-size: cover
     &-item-film
-        width: 72px
+        width: 70px
         height: 50%
         background: url("./assets/img/camera.svg") no-repeat
         background-size: cover
