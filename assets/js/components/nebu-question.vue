@@ -28,12 +28,12 @@
 <style scoped lang="sass">
 .Question
     width: 100%
-    height: 100vh
-    padding-top: 6rem
+    height: 90vh
+    padding-top: 3rem
     position: relative
     z-index: 0
     font-family: Roboto, sans-serif
-    margin-top: 15vh
+    margin-top: 7.5vh
     &-container
         width: 80%
         margin: 0 auto
@@ -58,7 +58,7 @@
     &-answers-container
         display: flex
         justify-content: space-between
-        margin: 8rem auto
+        margin: 4rem auto
         width: 100%
     &-answer
         width: 300px

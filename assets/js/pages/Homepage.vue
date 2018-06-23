@@ -5,6 +5,7 @@
             <nebu-menu></nebu-menu>
             <nebu-question></nebu-question>
             <nebu-timeline></nebu-timeline>
+            <nebu-about></nebu-about>
             <nebu-footer></nebu-footer>
         </div>
     </div>
@@ -14,8 +15,9 @@
     import nebuIntroduction from '../components/nebu-introduction'
     import nebuQuestion from "../components/nebu-question.vue";
     import nebuTimeline from "../components/nebu-timeline.vue";
-    import nebuFooter from "../components/nebu_footer.vue";
+    import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
+    import nebuAbout from "../components/nebu-about-section.vue";
     export default {
         name: 'homepage',
         components: {
@@ -23,7 +25,8 @@
             nebuFooter,
             nebuTimeline,
             nebuQuestion,
-            nebuIntroduction},
+            nebuIntroduction,
+        nebuAbout},
         data() {
             return {}
         }
@@ -34,12 +37,12 @@
 <style lang="sass">
 .Homepage
     width: 100%
-    height: 450vh
+    height: 500vh
     overflow: hidden
     position: relative
     &-background
         width: 100%
-        height: 450vh
+        height: 500vh
         background: url("../assets/img/full_background.jpg") no-repeat
         background-size: cover
 

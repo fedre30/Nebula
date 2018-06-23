@@ -45,9 +45,8 @@
 <style scoped lang="sass">
 .Timeline
     width: 100%
-    height: 100vh
+    height: 190vh
     font-family: Roboto, sans-serif
-    margin-top: 5vh
     &-container
         width: 80%
         margin: 0 auto
@@ -57,7 +56,7 @@
         font-size: 6.5rem
         font-family: Airship, sans-serif
         text-transform: uppercase
-        margin-bottom: 10rem
+        margin-bottom: 5rem
         line-height: 9rem
         text-align: left
         color: #1F0D87

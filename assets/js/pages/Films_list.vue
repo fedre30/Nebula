@@ -1,7 +1,7 @@
 <template>
     <div class="List">
         <div class="List-container">
-            <h3 class="List-title">science &amp; cinema</h3>
+            <h3 class="List-title">science <span class="and">&</span> cinema</h3>
             <nebu-film v-for="(film, index) in films" :key="film.title" :mistake="film.mistake" :title="film.title" :year="film.year"></nebu-film>
         </div>
         <nebu-footer></nebu-footer>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-    import nebuFilm from "../components/nebu_film.vue";
-    import nebuFooter from "../components/nebu_footer.vue";
+    import nebuFilm from "../components/nebu-film.vue";
+    import nebuFooter from "../components/nebu-footer.vue";
 
     export default {
         components: {
@@ -53,7 +53,11 @@
         font-size: 6rem
         font-family: Airship, sans-serif
         color: white
+        text-align: left
         margin: 8rem 0 14rem 0
         text-transform: uppercase
+
+.and
+    font-family: Futura, sans-serif
 
 </style>
