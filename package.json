@@ -17,8 +17,10 @@
         "build": "encore production"
     },
     "dependencies": {
+        "axios": "^0.18.0",
         "reset-css": "^4.0.1",
         "vue-router": "^3.0.1",
-        "vue-scroll-class": "^1.2.3"
+        "vue-scroll-class": "^1.2.3",
+        "vue-youtube": "^1.2.5"
     }
 }

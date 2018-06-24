@@ -1,8 +1,10 @@
 <template>
     <div class="List">
+        <nebu-filters></nebu-filters>
+        <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
-            <nebu-film v-for="(film, index) in films" :key="film.title" :mistake="film.mistake" :title="film.title" :year="film.year" v-if="index < 7"></nebu-film>
+            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :mistake="movie.mistake" :title="movie.title" :year="movie.year" v-if="index < 7"></nebu-film>
         </div>
         <div class="List-tips">
             <div class="List-alien"></div>
@@ -17,42 +19,28 @@
 <script>
     import nebuFilm from "../components/nebu-film.vue";
     import nebuFooter from "../components/nebu-footer.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
+    import nebuFilters from "../components/nebu-filters.vue";
+
+    import axios from 'axios';
 
     export default {
         components: {
+            nebuFilters,
+            nebuMenu,
             nebuFooter,
             nebuFilm},
         name: 'nebu-films-list',
         data() {
             return {
-                films: [
-                    {
-                        mistake: 'Le corps gèle dans l’espace',
-                        title: 'Les Gardiens de la Galaxie',
-                        year: '2014'
-                    },
-                    {
-                        mistake: 'Le corps gèle dans l’espace',
-                        title: 'Les Gardiens de la Galaxie 2',
-                        year: '2014'
-                    },
-                    {
-                        mistake: 'Le corps gèle dans l’espace',
-                        title: 'Les Gardiens de la Galaxie 3',
-                        year: '2014'
-                    },
-                    {
-                        mistake: 'Le corps gèle dans l’espace',
-                        title: 'Les Gardiens de la Galaxie 4',
-                        year: '2014'
-                    },
-                    {
-                        mistake: 'Le corps gèle dans l’espace',
-                        title: 'Les Gardiens de la Galaxie 5',
-                        year: '2014'
-                    },
-                ]
+                movies: null
             }
+        },
+
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/movies')
+                .then(response => (this.movies = response))
         }
     }
 </script>
