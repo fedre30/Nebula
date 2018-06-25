@@ -27,7 +27,7 @@
                 scrolled: false
             }
         },
-        /*methods: {
+        methods: {
             handleScroll() {
                 const scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
                 scrollDirection < lastScrollTop ? this.scrolled = !this.scrolled : lastScrollTop;
@@ -39,7 +39,7 @@
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
-        }*/
+        }
     }
 </script>
 
@@ -71,7 +71,7 @@
         background-size: cover
     &-item-quiz
         width: 55px
-        height: 45%
+        height: 55%
         background: url("./assets/img/question_mark.svg") no-repeat
         background-size: cover
     &-item-film

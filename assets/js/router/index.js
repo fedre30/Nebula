@@ -37,7 +37,8 @@ export default new Router({
         {
             path: '/question',
             name: 'question',
-            component: Quiz_question
+            component: Quiz_question,
+            props: true
         },
         {
             path: '/answer',
