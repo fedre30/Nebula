@@ -6,22 +6,22 @@ use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use FOS\RestBundle\View\View;
 use FOS\RestBundle\Controller\Annotations as FOSRest;
-use App\Entity\Movies;
+use App\Entity\FactSheets;
 
 /**
  * Brand controller.
  *
  * @Route("/api")
  */
-class MoviesController extends FOSRestController
+class FactSheetsController extends FOSRestController
 {
     /**
      * Lists all Articles.
-     * @FOSRest\Get("/movies")
+     * @FOSRest\Get("/fact")
      */
     public function getMovies()
     {
-        $repository = $this->getDoctrine()->getRepository(Movies::class);
+        $repository = $this->getDoctrine()->getRepository(FactSheets::class);
 
         // query for a single Product by its primary key (usually "id")
         $movies = $repository->findAll();
@@ -35,11 +35,11 @@ class MoviesController extends FOSRestController
 
     /**
      * Lists one Article.
-     * @Route("/movies/{id}", name="movie_id", methods={"GET"}, requirements={"id"="\d+"})
+     * @Route("/fact/{id}", name="fact_id", methods={"GET"}, requirements={"id"="\d+"})
      */
     public function getOneMovie($id)
     {
-        $repository = $this->getDoctrine()->getRepository(Movies::class);
+        $repository = $this->getDoctrine()->getRepository(FactSheets::class);
         // query for a single Product by its primary key (usually "id")
         $movies = $repository->find($id);
         $view = View::create($movies);
