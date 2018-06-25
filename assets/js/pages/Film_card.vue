@@ -1,13 +1,12 @@
 <template>
     <div class="Film">
         <div class="Film-container">
-            <h2 class="Film-title">Les trous noirs</h2>
+            <h2 class="Film-title">{{fact.mainTitle}}</h2>
             <section class="Film-intro">
-                <h4 class="Film-subtitle">dans star trek</h4>
+                <h4 class="Film-subtitle">{{fact.videoDescriptionTitle}}</h4>
                 <p class="Film-text">
-                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
-                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
-                    https://app.rivaliq.com/companies</p>
+                    {{fact.videoDescriptionText}}
+                </p>
             </section>
         </div>
         <nebu-menu></nebu-menu>
@@ -16,18 +15,14 @@
             </div>
         <div class="Film-container">
             <section class="Film-mistake">
-                <h4 class="Film-subtitle">les trous noir du cinéma</h4>
+                <h4 class="Film-subtitle">{{fact.explanationTitle}}</h4>
                 <p class="Film-text">
-                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
-                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
-                    https://app.rivaliq.com/companies</p>
+                    {{fact.explanationText}}</p>
             </section>
             <section class="Film-fact">
-                <h4 class="Film-subtitle">en réalité</h4>
+                <h4 class="Film-subtitle">{{fact.scientificFactTitle}}</h4>
                 <p class="Film-text">
-                    Analyse concurrentielle des sites dont le coeur de cible est le voyage d’affaire (plus particulièrement leur stratégie sur les réseaux sociaux):
-                    https://www.similarweb.com/fr/website/voyages-d-affaires.com#similarSites
-                    https://app.rivaliq.com/companies</p>
+                    {{fact.scientificFactText}}</p>
             </section>
         </div>
         <nebu-footer></nebu-footer>
@@ -37,6 +32,8 @@
 <script>
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
+
+    import axios from 'axios';
 
 
     export default {
@@ -48,7 +45,8 @@
             return {
                 videoId: 'm4JAgWk1PcM',
                 width: 1000,
-                height: 700
+                height: 700,
+                fact: {}
             }
         },
         methods: {
@@ -63,6 +61,11 @@
             player () {
                 return this.$refs.youtube.player
             }
+        },
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/facts/1')
+                .then(response => (this.fact = response.data))
         }
     }
 </script>
