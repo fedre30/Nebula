@@ -7,6 +7,7 @@ import Form from '../pages/Form.vue';
 import Quiz_question from '../pages/Quiz_question.vue';
 import Quiz_answer from '../pages/Quiz_answer.vue';
 import Quiz_results from '../pages/Quiz_results.vue';
+import Search from '../pages/Search.vue';
 Vue.use(Router);
 Vue.use(Film_card);
 
@@ -28,6 +29,11 @@ export default new Router({
             path:'/list',
             name: 'list',
             component: Films_list
+        },
+        {
+            path:'/search',
+            name: 'search',
+            component: Search
         },
         {
             path: '/form',
