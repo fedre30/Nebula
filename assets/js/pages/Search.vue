@@ -5,33 +5,36 @@
                v-model="search">
         <div class="Search-results">
             <ul>
-                <li v-for="test in getResults" :key="test.name">{{test.name}}</li>
+                <li v-for="movies in getResults" :key="movies.title">{{movies.title}}</li>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
-
+    
     import nebuMenu from "../components/nebu-menu.vue";
+    import axios from 'axios';
 
     export default {
         components: {nebuMenu},
         name: 'search',
         data() {
             return {
-                tests: [
-                    {name: 'coucou'},
-                    {name: 'salut'},
-                    {name: 'test'}
-                ],
-                search: ""
+                search: "",
+                results: [],
+                movies: {}
             }
         },
        computed : {
             getResults(){
-                return this.tests.filter((test) => test.name.match(this.search))
+                return this.results.filter((movie) => movie.data.title.match(this.search))
             }
+        },
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/movies')
+                .then(response => (this.movies = response.data))
         }
     }
 </script>
