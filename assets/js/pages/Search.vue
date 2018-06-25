@@ -1,5 +1,6 @@
 <template>
     <div class="Search">
+        <nebu-menu></nebu-menu>
         <input type="search" class="Search-input" placeholder="Rechercher un film, un fait scientifique …"
                v-model="search">
         <div class="Search-results">
@@ -12,8 +13,10 @@
 
 <script>
 
+    import nebuMenu from "../components/nebu-menu.vue";
+
     export default {
-        components: {},
+        components: {nebuMenu},
         name: 'search',
         data() {
             return {
