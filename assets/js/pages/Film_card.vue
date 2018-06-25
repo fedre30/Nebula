@@ -87,21 +87,22 @@
         font-size: 6rem
         font-family: Airship, sans-serif
         margin: 8rem 0
-        color: white
+        color: #CDC1E1
     &-subtitle
         font-size: 3rem
         margin: 15vh 0 3rem 0
         text-transform: uppercase
-        color: #1F0D87
+        color: #F13455
         font-style: italic
         text-align: left
         font-weight: 700
     &-text
         font-size: 2.5rem
-        color: white
+        color: #18165C
         line-height: 4rem
         text-align: left
         margin: 3rem 0
+        font-weight: 500
     &-video
         width: 100vw
         margin: 10vh auto

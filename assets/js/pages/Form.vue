@@ -1,5 +1,6 @@
 <template>
     <div class="Form">
+        <nebu-menu></nebu-menu>
         <div class="Form-container">
             <h2 class="Form-title">suggestions</h2>
             <form @submit="checkForm" action="#" method="post">
@@ -9,10 +10,10 @@
                         <h3 class="Form-subtitle">1.	GENERAL</h3>
                         <p class="Form-text">
                             Vous proposez un extrait de film cohérent ou incohérent avec ce qu’on sait de l’espace aujourd’hui ?</p>
-                        <el-radio-group>
-                            <el-radio class="el-radio" label="Cohérence"></el-radio>
-                            <el-radio class="el-radio" label="Incohérence"></el-radio>
-                        </el-radio-group>
+                        <div class="Form-radio">
+                        <p-radio class="p-round p-default" name="radio" color="info-o">Incohérence</p-radio>
+                        <p-radio class="p-round p-default" name="radio" color="info-o">Cohérence</p-radio>
+                        </div>
                         <p class="Form-text">Quel est le nom de cette cohérence / incohérence ?</p>
                         <input class="Form-inputText" type="text" name="name" placeholder="Nom">
                     </section>
@@ -50,13 +51,13 @@
 
 <script>
     import nebuFooter from "../components/nebu-footer.vue";
-    import ElRadioGroup from "../../../node_modules/element-ui/packages/radio/src/radio-group.vue";
-    import ElRadio from "../../../node_modules/element-ui/packages/radio/src/radio.vue";
+    import nebuMenu from "../components/nebu-menu.vue";
+
+
 
     export default {
         components: {
-            ElRadio,
-            ElRadioGroup,
+            nebuMenu,
             nebuFooter},
         name: 'tips-form',
         data() {
@@ -83,6 +84,7 @@
     background-size: cover
     font-family: Roboto, sans-serif
     overflow: hidden
+    font-size: 2.5rem
     &-container
         width: 80%
         margin: 0 auto
@@ -110,11 +112,8 @@
         font-weight: 300
         font-style: italic
         margin-bottom: 8rem
-    &-radio
-        display: inline-block
-        margin-bottom: 5rem
-        width: 80px !important
-        height: 80px !important
+        margin-top: 3rem
+
 
     label
         font-size: 2rem

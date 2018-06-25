@@ -10,7 +10,7 @@
             <router-link :to="{name: 'list'}">
                 <div class="Menu-item-film"></div>
             </router-link>
-            <router-link :to="{name: 'home'}">
+            <router-link :to="{name: 'search'}">
                 <div class="Menu-item-search"></div>
             </router-link>
         </div>
