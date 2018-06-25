@@ -17,7 +17,7 @@ class FactSheetsController extends FOSRestController
 {
     /**
      * Lists all Articles.
-     * @FOSRest\Get("/fact")
+     * @FOSRest\Get("/facts")
      */
     public function getMovies()
     {
@@ -35,7 +35,7 @@ class FactSheetsController extends FOSRestController
 
     /**
      * Lists one Article.
-     * @Route("/fact/{id}", name="fact_id", methods={"GET"}, requirements={"id"="\d+"})
+     * @Route("/facts/{id}", name="fact_id", methods={"GET"}, requirements={"id"="\d+"})
      */
     public function getOneMovie($id)
     {
