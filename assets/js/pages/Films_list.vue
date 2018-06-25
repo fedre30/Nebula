@@ -4,8 +4,9 @@
         <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
-            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :mistake="movie.mistake" :title="movie.title" :year="movie.year" v-if="index < 7"></nebu-film>
+            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title"  v-if="index < 7"></nebu-film>
         </div>
+
         <div class="List-tips">
             <div class="List-alien"></div>
             <h3 class="List-tips-title">suggestions</h3>
@@ -33,14 +34,15 @@
         name: 'nebu-films-list',
         data() {
             return {
-                movies: null
+                movies: {}
             }
         },
 
         mounted () {
             axios
                 .get('http://localhost:8000/api/movies')
-                .then(response => (this.movies = response))
+                .then(response => (this.movies = response.data))
+
         }
     }
 </script>

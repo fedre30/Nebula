@@ -18,7 +18,7 @@
         props: {
             mistake: {
                 type: String,
-                required: true
+
             },
             title: {
                 type: String,
