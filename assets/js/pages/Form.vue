@@ -1,0 +1,160 @@
+<template>
+    <div class="Form">
+        <div class="Form-container">
+            <h2 class="Form-title">suggestions</h2>
+            <form @submit="checkForm" action="#" method="post">
+                <div class="Form-steps-container">
+                    <!-- STEP 1 -->
+                    <section class="Form-step 1">
+                        <h3 class="Form-subtitle">1.	GENERAL</h3>
+                        <p class="Form-text">
+                            Vous proposez un extrait de film cohérent ou incohérent avec ce qu’on sait de l’espace aujourd’hui ?</p>
+                        <el-radio-group>
+                            <el-radio class="el-radio" label="Cohérence"></el-radio>
+                            <el-radio class="el-radio" label="Incohérence"></el-radio>
+                        </el-radio-group>
+                        <p class="Form-text">Quel est le nom de cette cohérence / incohérence ?</p>
+                        <input class="Form-inputText" type="text" name="name" placeholder="Nom">
+                    </section>
+                    <!-- STEP 2 -->
+                    <section class="Form-step 2">
+                        <h3 class="Form-subtitle">2.	EXTRAIT</h3>
+                        <p class="Form-text">
+                            Faites une courte description de l’extrait qui illustre la cohérence choisie.</p>
+                        <textarea class="Form-textarea" placeholder="Description" name="video-description"></textarea>
+                        <p class="Form-text">Pour lancer la vidéo, on a besoin de l’url.</p>
+                        <input class="Form-inputText" type="text" name="name" placeholder="video-link">
+                    </section>
+
+                    <!-- STEP 3 -->
+                    <section class="Form-step 3">
+                        <h3 class="Form-subtitle">3.	AU CINÉMA</h3>
+                        <p class="Form-text">
+                            Un petit récap du pourquoi, du comment ceci est utilisé au cinéma (ex: parler du film précurseur)</p>
+                        <textarea class="Form-textarea" placeholder="Description" name="film_fact"></textarea>
+                    </section>
+                    <!-- STEP 4 -->
+                    <section class="Form-step 4">
+                        <h3 class="Form-subtitle">4.	EN RÉALITÉ</h3>
+                        <p class="Form-text">
+                            Et pour finir, lâchez-vous sur les faits scientifiques,  les équations à triple inconnu, c’est du sérieux ici.</p>
+                        <textarea class="Form-textarea" placeholder="Description" name="scientific_fact"></textarea>
+                    </section>
+                    <input class="Form-button" type="submit" value="envoyer">
+                </div>
+            </form>
+        </div>
+        <nebu-footer></nebu-footer>
+    </div>
+</template>
+
+<script>
+    import nebuFooter from "../components/nebu-footer.vue";
+    import ElRadioGroup from "../../../node_modules/element-ui/packages/radio/src/radio-group.vue";
+    import ElRadio from "../../../node_modules/element-ui/packages/radio/src/radio.vue";
+
+    export default {
+        components: {
+            ElRadio,
+            ElRadioGroup,
+            nebuFooter},
+        name: 'tips-form',
+        data() {
+            return {
+            }
+        },
+
+        methods: {
+            checkForm: function (e) {
+
+                e.preventDefault();
+            }
+        }
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="sass">
+.Form
+    width: 100%
+    height: 320vh
+    position: relative
+    background: url("../assets/img/background_suggestion.jpg") no-repeat
+    background-size: cover
+    font-family: Roboto, sans-serif
+    overflow: hidden
+    &-container
+        width: 80%
+        margin: 0 auto
+        padding-top: 10rem
+    &-title
+        font-size: 6rem
+        font-family: Airship, sans-serif
+        color: #CDC1E1
+        text-align: left
+        text-transform: uppercase
+        margin-bottom: 14rem
+    &-subtitle
+        font-size: 3rem
+        text-transform: uppercase
+        color: #1F0D87
+        font-style: italic
+        font-weight: 700
+        margin-bottom: 5rem
+    &-text
+        font-size: 2.5rem
+        font-family: Roboto, sans-serif
+        color: black
+        text-align: left
+        line-height: 4rem
+        font-weight: 300
+        font-style: italic
+        margin-bottom: 8rem
+    &-radio
+        display: inline-block
+        margin-bottom: 5rem
+        width: 80px !important
+        height: 80px !important
+
+    label
+        font-size: 2rem
+        color: black
+    &-inputText
+        background: transparent
+        border: 2px solid #CDC1E1
+        width: 70vw
+        height: 70px
+        font-size: 2rem
+        color: #CDC1E1
+        margin-bottom: 5rem
+        padding: 1rem
+    &-textarea
+        background: transparent
+        border: 2px solid #CDC1E1
+        width: 70vw
+        max-width: 70vw
+        height: 300px
+        max-height: 400px
+        font-size: 2rem
+        color: #CDC1E1
+        margin-bottom: 5rem
+        padding: 1rem
+    &-button
+        width: 300px
+        height: 130px
+        font-size: 3rem
+        line-height: 130px
+        background: linear-gradient(90deg, rgba(255,54,103,1) 0%, rgba(246,80,75,1) 100%)
+        font-weight: 700
+        border-radius: 20px
+        text-transform: uppercase
+        text-align: center
+        margin: 0 auto
+        color: white
+    &-step
+        width: 100%
+        margin-top: 15vh
+
+
+
+</style>

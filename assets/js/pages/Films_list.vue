@@ -10,7 +10,7 @@
             <div class="List-alien"></div>
             <h3 class="List-tips-title">suggestions</h3>
             <p class="List-tips-text">Un film manque à l’appel ?  Vous pouvez nous envoyer  vos suggestions lumineuses !</p>
-            <div class="List-button">contribuer</div>
+            <router-link :to="{name: 'form'}"><div class="List-button">contribuer</div></router-link>
         </div>
         <nebu-footer></nebu-footer>
     </div>
@@ -40,7 +40,7 @@
         mounted () {
             axios
                 .get('http://localhost:8000/api/movies')
-                .then(response => (this.movies = response))
+                .then(response => (this.movies = response.data))
         }
     }
 </script>
