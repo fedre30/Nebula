@@ -5,9 +5,7 @@
             <h3 class="Quiz-title">quizz</h3>
         <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
             <form method="post">
-            <el-radio-group>
-                <el-radio class="el-radio" v-for="(answer, index) in answers" :label="answer"></el-radio>
-            </el-radio-group>
+                <div class="Form-radio"><p-radio class="p-round p-default Quiz-radio" v-for="(answer, index) in answers" name="radio">{{answer}}</p-radio></div>
                 <router-link :to="{name:'answer'}"><input class="Quiz-button" type="submit" value="valider"/></router-link>
             </form>
         </div>
@@ -18,15 +16,11 @@
 <script>
     import ElementUI from 'element-ui';
     import nebuFooter from "../components/nebu-footer.vue";
-    import ElRadioGroup from "../../../node_modules/element-ui/packages/radio/src/radio-group.vue";
-    import ElRadio from "../../../node_modules/element-ui/packages/radio/src/radio-button.vue";
     import nebuMenu from "../components/nebu-menu.vue";
 
     export default {
         components: {
             nebuMenu,
-            ElRadioGroup,
-            ElRadio,
             nebuFooter},
         name: 'quiz-question',
         data: function() {
@@ -86,6 +80,12 @@
         text-align: center
         margin: 5vh auto
         color: #1F0D87
+    &-radio
+        width: 100%
+        font-size: 2.5rem
+        color: white
+        margin-bottom: 3rem
+        text-align: left
 
 
 
