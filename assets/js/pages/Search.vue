@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    
+
     import nebuMenu from "../components/nebu-menu.vue";
     import axios from 'axios';
 

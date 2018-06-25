@@ -62,10 +62,16 @@
                 return this.$refs.youtube.player
             }
         },
+        created() {
+            this.fetchData()
+        },
         mounted () {
             axios
-                .get('http://localhost:8000/api/facts/1')
+                .get('http://localhost:8000/api/facts/' + this.$route.params.id + '/')
                 .then(response => (this.fact = response.data))
+        },
+        watch: {
+            '$route': 'fetchData'
         }
     }
 </script>
