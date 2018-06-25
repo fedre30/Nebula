@@ -22,7 +22,7 @@
 <style scoped lang="sass">
 .Footer
     width: 100%
-    height: 30vh
+    height: 20vh
     padding: 6rem
     position: absolute
     bottom: 2vh
@@ -35,7 +35,7 @@
         width: 100%
         line-height: 3rem
         position: absolute
-        bottom: 2vh
+        bottom: 6vh
     &-logo-container
         width: 35vw
         height: 12vh
@@ -44,7 +44,7 @@
         justify-content: space-around
         position: absolute
         left: 55vw
-        bottom: 3vh
+        bottom: 5vh
 
     &-logo-facebook
         width: 100px
