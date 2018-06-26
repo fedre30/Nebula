@@ -3,9 +3,9 @@
         <nebu-menu></nebu-menu>
         <div class="Form-container">
             <h2 class="Form-title">suggestions</h2>
-            <form @submit="checkForm" action="#" method="post">
+           <form @submit="postPost" action="#" method="post">
                 <div class="Form-steps-container">
-                    <!-- STEP 1 -->
+                    <!--&lt;!&ndash; STEP 1 &ndash;&gt;-->
                     <section class="Form-step 1">
                         <h3 class="Form-subtitle">1.	GENERAL</h3>
                         <p class="Form-text">
@@ -15,35 +15,36 @@
                         <p-radio class="p-round p-default" name="radio" color="info-o">Cohérence</p-radio>
                         </div>
                         <p class="Form-text">Quel est le nom de cette cohérence / incohérence ?</p>
-                        <input class="Form-inputText" type="text" name="name" placeholder="Nom">
+                        <input class="Form-inputText" type="text" name="name" placeholder="Nom" v-model="tab_title">
                     </section>
-                    <!-- STEP 2 -->
+                    <!--&lt;!&ndash; STEP 2 &ndash;&gt;-->
                     <section class="Form-step 2">
                         <h3 class="Form-subtitle">2.	EXTRAIT</h3>
                         <p class="Form-text">
                             Faites une courte description de l’extrait qui illustre la cohérence choisie.</p>
-                        <textarea class="Form-textarea" placeholder="Description" name="video-description"></textarea>
+                        <textarea class="Form-textarea" placeholder="Description" name="video-description" v-model="video_description_text"></textarea>
                         <p class="Form-text">Pour lancer la vidéo, on a besoin de l’url.</p>
                         <input class="Form-inputText" type="text" name="name" placeholder="video-link">
                     </section>
 
-                    <!-- STEP 3 -->
+                    <!--&lt;!&ndash; STEP 3 &ndash;&gt;-->
                     <section class="Form-step 3">
                         <h3 class="Form-subtitle">3.	AU CINÉMA</h3>
                         <p class="Form-text">
                             Un petit récap du pourquoi, du comment ceci est utilisé au cinéma (ex: parler du film précurseur)</p>
-                        <textarea class="Form-textarea" placeholder="Description" name="film_fact"></textarea>
+                        <textarea class="Form-textarea" placeholder="Description" name="film_fact" v-model="explanation_text"></textarea>
                     </section>
-                    <!-- STEP 4 -->
+                    <!--&lt;!&ndash; STEP 4 &ndash;&gt;-->
                     <section class="Form-step 4">
                         <h3 class="Form-subtitle">4.	EN RÉALITÉ</h3>
                         <p class="Form-text">
                             Et pour finir, lâchez-vous sur les faits scientifiques,  les équations à triple inconnu, c’est du sérieux ici.</p>
-                        <textarea class="Form-textarea" placeholder="Description" name="scientific_fact"></textarea>
+                        <textarea class="Form-textarea" placeholder="Description" name="scientific_fact" v-model="scientific_fact_text"></textarea>
                     </section>
                     <input class="Form-button" type="submit" value="envoyer">
                 </div>
             </form>
+
         </div>
         <nebu-footer></nebu-footer>
     </div>
@@ -52,7 +53,7 @@
 <script>
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
-
+    import axios from 'axios';
 
 
     export default {
@@ -62,13 +63,36 @@
         name: 'tips-form',
         data() {
             return {
+                posts: []
             }
         },
 
+
+
         methods: {
             checkForm: function (e) {
-
                 e.preventDefault();
+            },
+
+            postPost() {
+                axios.post(`http://localhost:8000/api/facts`, {
+                    "tab_title": this.tab_title,
+                    "category": 'oijn',
+                    "main_title": this.tab_title,
+                    "video_description_title": 'dfonk',
+                    "video_description_text": this.video_description_text,
+                    "video_src": 'kjnjon',
+                    "video_alt": 'lkfndlk',
+                    "explanation_title": 'klnko',
+                    "explanation_text": this.explanation_text,
+                    "scientific_fact_title": 'ofdno',
+                    "scientific_fact_text": this.scientific_fact_text
+                }, {
+                    headers: {
+                        'Content-type': 'application/json',
+                    }
+                }).then(response => {})
+
             }
         }
     }

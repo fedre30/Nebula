@@ -124,7 +124,7 @@
         font-weight: 500
     &-video
         width: 100vw
-        margin: 10vh auto
+        margin: 5vh auto
         text-align: center
         height: 30vh
 @media(min-width: 600px)
@@ -182,13 +182,4 @@
             margin: 40vh 30vw
         &-fact
             width: 45%
-
-
-
-
-
-
-
-
-
 </style>

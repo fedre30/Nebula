@@ -42,13 +42,6 @@ services:
             - method: setCircularReferenceHandler
               arguments: ["@circular_reference_handler"]
 
-    admin.movies:
-        class: App\Admin\MoviesAdmin
-        arguments: [~, App\Entity\Movies, ~]
-        tags:
-            - { name: sonata.admin, manager_type: orm, label: Movies }
-        public: true
-
     admin.factSheets:
         class: App\Admin\FactSheetsAdmin
         arguments: [~, App\Entity\FactSheets, ~]
@@ -61,4 +54,11 @@ services:
         arguments: [~, App\Entity\HomeQuestions, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Questions }
+        public: true
+
+    admin.quizz:
+        class: App\Admin\QuizzAdmin
+        arguments: [~, App\Entity\Quizz, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Quizz }
         public: true
