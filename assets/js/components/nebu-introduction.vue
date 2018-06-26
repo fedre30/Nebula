@@ -2,8 +2,8 @@
     <div class="Intro">
         <div class="Intro-container">
             <h1 class="Intro-title">Nebula</h1>
-            <h3 class="Intro-subtitle">L’espace vu en grand,<br>
-                Ou plutôt sur grand écran.</h3>
+            <h3 class="Intro-subtitle">L’espace vu en <span class="big">grand</span><span class="none">,</span> <br>
+                <span class="none">Ou plutôt</span><span class="violet">sur Grand écran<span class="none">.</span></span></h3>
             <h4 class="Intro-text">Tout ce que vous pensiez savoir sur l’Univers grâce (ou à cause) du Cinéma</h4>
         </div>
         <div class="Intro-astroman"></div>
@@ -63,6 +63,59 @@ export default {
         background-size: cover
         right: 0
         bottom: -400px
+
+@media(min-width: 600px)
+    .Intro
+        position: relative
+        width: 100%
+        height: 100vh
+        z-index: 3
+        &-container
+            width: 60%
+            margin: 0 auto
+            text-align: center
+        &-title
+            font-size: 3rem
+            position: absolute
+            left: 3rem
+            top: -3rem
+            font-family: Airship, sans-serif
+            color: rgb(255, 8, 73)
+        &-subtitle
+            font-size: 3.5rem
+            margin-bottom: 4rem
+            font-family: Airship, sans-serif
+            font-weight: 300
+            color: black
+            text-align: left
+            width: 100%
+            line-height: 6rem
+        &-text
+            font-size: 1.3rem
+            font-family: Roboto, sans-serif
+            color: #1F0D87
+            text-align: left
+            line-height: 3rem
+            font-weight: 300
+            font-style: italic
+            margin-bottom: 8rem
+        &-astroman
+            display: none
+        .big
+            font-size: 7rem
+            position: absolute
+            top: 11rem
+            font-weight: 300
+        .violet
+            color: #CDC1E1
+            font-family: Roboto, sans-serif
+            font-weight: 500
+            font-size: 2.5rem
+            position: absolute
+            top: 14rem
+            left: 23rem
+        .none
+            display: none
 
 
 

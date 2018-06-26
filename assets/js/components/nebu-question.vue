@@ -126,6 +126,100 @@ a
 a:hover
     color: #F13455
 
+@media(min-width: 600px)
+    .Question
+        width: 25vw
+        height: 20vw
+        border-radius: 1000px
+        padding-top: 3rem
+        z-index: 0
+        font-family: Roboto, sans-serif
+        position: absolute
+        top: 70vh
+        left: 40vw
+        background: white
+        &-container
+            width: 80%
+            margin: 5vh auto
+            z-index: 2
+            text-align: center
+
+
+        &-title
+            width: 100%
+            font-size: 2rem
+            margin: 2vh auto
+            text-align: center
+
+        &-text
+            font-size: 1.2rem
+            color: black
+            text-align: center
+            line-height: 2rem
+
+        &-answers-container
+            width: 100%
+            margin: 2rem auto
+            justify-content: center
+        &-answer
+            width: 100px
+            height: 50px
+            background: linear-gradient(90deg, rgba(205,193,225,1) 0%, rgba(156,130,198,1) 100%)
+            font-size: 1rem
+            line-height: 50px
+            color: white
+            font-weight: 700
+            border-radius: 10px
+            text-align: center
+            margin: 0 auto
+
+        &-invitation
+            font-size: 3rem
+            margin: 20vh 0 10vh 0
+            color: white
+            text-align: left
+            line-height: 5rem
+            font-style: italic
+        &-button
+            font-size: 3rem
+            width: 300px
+            height: 200px
+            line-height: 3rem
+            text-align: center
+            margin: 0 auto
+            position: relative
+            text-transform: uppercase
+            display: block
+            background: transparent
+            color: white
+            font-weight: 800
+
+
+        &-button:before, &-button:after
+            width: 290px
+            left: 0
+            height: 65px
+            border: 7px solid white
+
+        &-button:before
+            position: absolute
+            content: ''
+            border-bottom: none
+            -webkit-transform: perspective(15px) rotateX(5deg)
+            -moz-transform: perspective(15px) rotateX(5deg)
+            transform: perspective(15px) rotateX(5deg)
+            top: -50px
+
+        &-button:after
+            position: absolute
+            top: 40px
+            content: ''
+            border-top: none
+            -webkit-transform: perspective(15px) rotateX(-5deg)
+            -moz-transform: perspective(15px) rotateX(-5deg)
+            transform: perspective(15px) rotateX(-5deg)
+
+
 
 
 

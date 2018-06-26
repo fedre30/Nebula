@@ -11,7 +11,7 @@
         </div>
         <nebu-menu></nebu-menu>
             <div class="Film-video">
-                <youtube :video-id="videoId" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
+                <youtube :video-id="fact.videoSrc" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
             </div>
         <div class="Film-container">
             <section class="Film-mistake">
@@ -43,7 +43,6 @@
         name: 'Film_card',
         data() {
             return {
-                videoId: 'm4JAgWk1PcM',
                 width: 1000,
                 height: 700,
                 fact: {}
@@ -83,7 +82,7 @@
     overflow: hidden
     position: relative
     width: 100vw
-    height: 250vh
+    height: 300vh
     background: url("../assets/img/background_film.jpg") no-repeat
     background-size: cover
 
