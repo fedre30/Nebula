@@ -1,7 +1,7 @@
 <template>
     <div class="Timeline">
         <div class="Timeline-container">
-            <h3 class="Timeline-title">IDEES RECUES LES PLUS TENACES</h3>
+            <h3 class="Timeline-title">idees recues les plus tenaces</h3>
         </div>
         <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
         <router-link :to="{name: 'list'}"><div class="Timeline-button">Voir plus</div></router-link>

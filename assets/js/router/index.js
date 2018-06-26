@@ -21,9 +21,10 @@ export default new Router({
             component: Homepage
         },
         {
-            path: '/film',
+            path: '/film/:id',
             name: 'film',
             component: Film_card,
+            params: true
         },
         {
             path:'/list',
