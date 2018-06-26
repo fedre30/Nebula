@@ -48,7 +48,7 @@
 <style scoped lang="sass">
 .Menu
     width: 100%
-    height: 150px
+    height: 70px
     background-color: white
     position: fixed
     bottom: 0
@@ -59,7 +59,7 @@
         display: none
 
     &-container
-        padding: 2rem
+        padding-top: 0.7rem
         width: 80%
         height: 150px
         margin: 0 auto
@@ -68,23 +68,23 @@
         justify-content: space-between
 
     &-item-home
-        width: 85px
-        height: 50%
+        width: 43px
+        height: 25%
         background: url("./assets/img/home.svg") no-repeat
         background-size: cover
     &-item-quiz
-        width: 55px
-        height: 55%
+        width: 30px
+        height: 30%
         background: url("./assets/img/question_mark.svg") no-repeat
         background-size: cover
     &-item-film
-        width: 70px
-        height: 50%
+        width: 37px
+        height: 25%
         background: url("./assets/img/camera.svg") no-repeat
         background-size: cover
     &-item-search
-        width: 70px
-        height: 50%
+        width: 35px
+        height: 25%
         background: url("./assets/img/loupe.svg") no-repeat
         background-size: cover
 
@@ -107,13 +107,13 @@
             width: 50px
             height: 50px
             border: 2px solid transparent
-            border-image: linear-gradient(90deg, rgba(31,13,135,1) 0%, rgba(255,90,61,1) 100%)
-            -webkit-border-image: linear-gradient(90deg, rgba(31,13,135,1) 0%, rgba(255,90,61,1) 100%)
-            border-image-slice: 1
             border-radius: 1000px
             position: absolute
-            top: 3rem
-            right: 2rem
+            top: 4rem
+            right: 4rem
+            background: url("./assets/img/burger.svg") no-repeat
+            background-size: cover
+
 
         &-container
             padding: 2rem

@@ -23,13 +23,13 @@
 .Footer
     width: 100%
     height: 20vh
-    padding: 6rem
+    padding: 1rem
     position: absolute
     bottom: 2vh
 
     &-copyright
         color: white
-        font-size: 2.5rem
+        font-size: 1rem
         font-family: Roboto, sans-serif
         font-weight: 100
         width: 100%
@@ -44,16 +44,16 @@
         justify-content: space-around
         position: absolute
         left: 55vw
-        bottom: 5vh
+        bottom: 7vh
 
     &-logo-facebook
-        width: 100px
-        height: 100px
+        width: 40px
+        height: 40px
         background: url("./assets/img/facebook-logo-button.png") no-repeat
         background-size: cover
     &-logo-twitter
-        width: 100px
-        height: 100px
+        width: 40px
+        height: 40px
         background: url("./assets/img/twitter-logo-button.png") no-repeat
         background-size: cover
 

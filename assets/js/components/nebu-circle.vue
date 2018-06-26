@@ -50,7 +50,6 @@
     text-align: center
     z-index: 10000000
     font-family: Roboto, sans-serif
-    margin-bottom: 2rem
     &-container
         width: 100%
         height: 600px
@@ -59,55 +58,127 @@
         z-index: 999999
 
     &-mistake
-        font-size: 3.5rem
+        font-size: 1.2rem
         font-weight: 700
         color: white
         text-align: left
-        line-height: 5rem
-        margin-bottom: 2rem
+        line-height: 3rem
+        margin-bottom: 0.5rem
     &-title
-        font-size: 3rem
+        font-size: 1rem
         font-weight: 300
         color: white
         text-align: left
-        line-height: 4rem
+        line-height: 3rem
         font-style: italic
     &-year
-        font-size: 4.5rem
+        font-size: 1.4rem
         margin-bottom: 15vh
         position: absolute
         color: white
         font-family: Airship, sans-serif
         left: 0
-        top: 100px
+        top: 50px
 
     &-inner
-        width: 450px
-        height: 500px
+        width: 150px
+        height: 200px
         background: url("./assets/img/inner_circle.png") no-repeat
         background-size: cover
         position: absolute
-        left: 150px
-        top: -50px
+        left: 60px
+        top: -25px
 
     &-outer
-        width: 600px
-        height: 600px
+        width: 250px
+        height: 250px
         background: url("./assets/img/outer_circle.png") no-repeat
         background-size: cover
         position: absolute
-        left: 100px
-        bottom: 100px
+        left: 30px
+        top: -50px
 
     &-center
-        width: 400px
-        height: 400px
+        width: 150px
+        height: 150px
         border-radius: 300px
         margin: 0 auto
         background: url('./assets/img/space.jpg')
 
+@media(min-width: 600px)
+    .Circle
+        width: 80%
+        height: 50vh
+        margin: 0 auto
+        text-align: center
+        z-index: 10000000
+        font-family: Roboto, sans-serif
+        position: relative
+        &-container
+            width: 100%
+            height: 700px
+            position: relative
+            margin-top: 400px
+            z-index: 999999
+
+        &-mistake
+            font-size: 1.2rem
+            font-weight: 700
+            color: #440BA2
+            text-align: left
+            line-height: 3rem
+            margin-bottom: 0.5rem
+            position: absolute
+            bottom: 20vh
+            left: 5vw
+        &-title
+            font-size: 1rem
+            font-weight: 300
+            color: #F33957
+            text-align: left
+            line-height: 3rem
+            font-style: italic
+            position: absolute
+            bottom: 15vh
+            left: 5vw
+        &-year
+            font-size: 2rem
+            margin-bottom: 15vh
+            position: absolute
+            color: #F33957
+            font-family: Airship, sans-serif
+            left: 25px
+            top: 30px
+            z-index: 99999
+
+        &-inner
+            width: 150px
+            height: 200px
+            background: url("./assets/img/inner_desktop.png") no-repeat
+            background-size: cover
+            position: absolute
+            left: 90px
+            top: -25px
+
+        &-outer
+            width: 250px
+            height: 250px
+            background: url("./assets/img/outer_desktop.png") no-repeat
+            background-size: cover
+            position: absolute
+            left: 70px
+            top: -55px
+
+        &-center
+            width: 150px
+            height: 150px
+            border-radius: 300px
+            margin: 0 auto
+            background: url('./assets/img/space.jpg')
 a
     text-decoration: none
+
+
 
 
 

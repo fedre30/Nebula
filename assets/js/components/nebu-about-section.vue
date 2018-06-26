@@ -30,37 +30,37 @@
         height: 100vh
         margin: 0 auto
         position: relative
-        padding-top: 30vh
+        padding-top: 40vh
     &-alien
         position: absolute
-        width: 370px
-        height: 400px
+        width: 150px
+        height: 170px
         background: url("./assets/img/alien.png") no-repeat
         background-size: cover
-        top: 90px
-        left: 250px
+        top: 200px
+        left: 100px
     &-title
-        font-size: 6rem
+        font-size: 2.5rem
         font-family: Airship, sans-serif
         text-transform: uppercase
-        margin: 0 0 5rem 0
+        margin: 5rem 0 1rem 0
         line-height: 9rem
         text-align: left
         color: #1F0D87
     &-text
-        font-size: 2.5rem
+        font-size: 1rem
         font-weight: 500
         color: white
         text-align: left
-        line-height: 5rem
-        margin-bottom: 2rem
+        line-height: 2rem
+        margin-bottom: 3rem
     &-button
-        font-size: 3rem
-        width: 300px
-        height: 200px
+        font-size: 1rem
+        width: 100px
+        height: 50px
         line-height: 3rem
         text-align: center
-        margin: 10vh auto
+        margin: 0 auto
         position: relative
         text-transform: uppercase
         display: block
@@ -70,28 +70,28 @@
 
 
     &-button:before, &-button:after
-        width: 290px
+        width: 100px
         left: 0
-        height: 65px
-        border: 7px solid white
+        height: 20px
+        border: 2px solid white
 
     &-button:before
         position: absolute
         content: ''
         border-bottom: none
-        -webkit-transform: perspective(15px) rotateX(5deg)
-        -moz-transform: perspective(15px) rotateX(5deg)
-        transform: perspective(15px) rotateX(5deg)
-        top: -50px
+        -webkit-transform: perspective(15px) rotateX(7deg)
+        -moz-transform: perspective(15px) rotateX(7deg)
+        transform: perspective(15px) rotateX(10deg)
+        top: 0
 
     &-button:after
         position: absolute
-        top: 40px
+        top: 25px
         content: ''
         border-top: none
-        -webkit-transform: perspective(15px) rotateX(-5deg)
-        -moz-transform: perspective(15px) rotateX(-5deg)
-        transform: perspective(15px) rotateX(-5deg)
+        -webkit-transform: perspective(15px) rotateX(-7deg)
+        -moz-transform: perspective(15px) rotateX(-7deg)
+        transform: perspective(15px) rotateX(-10deg)
 
 a
     text-decoration: none

@@ -42,18 +42,18 @@
     position: relative
     &-background
         width: 100%
-        height: 300vh
+        height: 500vh
         background: url("../assets/img/full_background.jpg") no-repeat
         background-size: cover
 @media(min-width: 600px)
     .Homepage
         width: 100%
-        height: 300vh
+        height: 500vh
         &-background
             width: 100%
-            height: 300vh
+            height: 500vh
             background: url("../assets/img/background_home_desktop.png") no-repeat
             background-size: 100%
-            margin-top: 10vh
+            margin-top: 5vh
 
 </style>
