@@ -2,12 +2,12 @@
 namespace App\Controller;
 
 
-use App\Form\FactSheetsType;
+use App\Form\HomeQuestionsType;
 use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use FOS\RestBundle\View\View;
 use FOS\RestBundle\Controller\Annotations as FOSRest;
-use App\Entity\FactSheets;
+use App\Entity\HomeQuestions;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -16,20 +16,20 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @Route("/api")
  */
-class FactSheetsController extends FOSRestController
+class HomeQuestionsController extends FOSRestController
 {
     /**
-     * Lists all Articles.
-     * @FOSRest\Get("/facts")
+     * Lists all homeQuestion.
+     * @FOSRest\Get("/homeQuestions")
      */
     public function getMovies()
     {
-        $repository = $this->getDoctrine()->getRepository(FactSheets::class);
+        $repository = $this->getDoctrine()->getRepository(HomeQuestions::class);
 
         // query for a single Product by its primary key (usually "id")
-        $FactSheets = $repository->findAll();
+        $movies = $repository->findAll();
 
-        $view = View::create($FactSheets);
+        $view = View::create($movies);
         $view->setFormat('json');
 
         // Gestion de la réponse
@@ -37,19 +37,18 @@ class FactSheetsController extends FOSRestController
     }
 
     /**
-     * Lists one Article.
-     * @Route("/facts/{id}", name="facts_id", methods={"GET"}, requirements={"id"="\d+"})
-     *
+     * one Article.
+     * @Route("/homeQuestions/{id}", name="homeQuestions_id", methods={"GET"}, requirements={"id"="\d+"})
      */
     public function getOneMovie($id)
     {
-        $repository = $this->getDoctrine()->getRepository(FactSheets::class);
-        $FactSheets = $repository->find($id);
+        $repository = $this->getDoctrine()->getRepository(HomeQuestions::class);
+        $HomeQuestions = $repository->find($id);
 
-        if ($FactSheets === null) {
-            $view = View::create($FactSheets, Response::HTTP_NOT_FOUND , []);
+        if ($HomeQuestions === null) {
+            $view = View::create($HomeQuestions, Response::HTTP_NOT_FOUND , []);
         } else {
-            $view = View::create($FactSheets, Response::HTTP_OK , []);
+            $view = View::create($HomeQuestions, Response::HTTP_OK , []);
         }
         $view->setFormat('json');
         return $this->handleView($view);
@@ -57,20 +56,20 @@ class FactSheetsController extends FOSRestController
 
     /**
      * Create Article.
-     * @FOSRest\Post("/facts")
+     * @FOSRest\Post("/homeQuestions")
      *
      */
     public function PostMoviesAction(Request $request)
     {
-        $FactSheets = new FactSheets();
-        $form = $this->createForm(FactSheetsType::class, $FactSheets);
+        $HomeQuestions = new HomeQuestions();
+        $form = $this->createForm(HomeQuestionsType::class, $HomeQuestions);
         $form->submit($request->request->all());
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($FactSheets);
+            $em->persist($HomeQuestions);
             $em->flush();
-            $view = View::create($FactSheets, Response::HTTP_CREATED , []);
+            $view = View::create($HomeQuestions, Response::HTTP_CREATED , []);
         } else {
             $view = View::create($form, Response::HTTP_BAD_REQUEST , []);
         }
