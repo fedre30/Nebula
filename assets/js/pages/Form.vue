@@ -3,9 +3,9 @@
         <nebu-menu></nebu-menu>
         <div class="Form-container">
             <h2 class="Form-title">suggestions</h2>
-            <form @submit="checkForm" action="#" method="post">
+           <!-- <form @submit="checkForm" action="#" method="post">
                 <div class="Form-steps-container">
-                    <!-- STEP 1 -->
+                    &lt;!&ndash; STEP 1 &ndash;&gt;
                     <section class="Form-step 1">
                         <h3 class="Form-subtitle">1.	GENERAL</h3>
                         <p class="Form-text">
@@ -17,7 +17,7 @@
                         <p class="Form-text">Quel est le nom de cette cohérence / incohérence ?</p>
                         <input class="Form-inputText" type="text" name="name" placeholder="Nom">
                     </section>
-                    <!-- STEP 2 -->
+                    &lt;!&ndash; STEP 2 &ndash;&gt;
                     <section class="Form-step 2">
                         <h3 class="Form-subtitle">2.	EXTRAIT</h3>
                         <p class="Form-text">
@@ -27,14 +27,14 @@
                         <input class="Form-inputText" type="text" name="name" placeholder="video-link">
                     </section>
 
-                    <!-- STEP 3 -->
+                    &lt;!&ndash; STEP 3 &ndash;&gt;
                     <section class="Form-step 3">
                         <h3 class="Form-subtitle">3.	AU CINÉMA</h3>
                         <p class="Form-text">
                             Un petit récap du pourquoi, du comment ceci est utilisé au cinéma (ex: parler du film précurseur)</p>
                         <textarea class="Form-textarea" placeholder="Description" name="film_fact"></textarea>
                     </section>
-                    <!-- STEP 4 -->
+                    &lt;!&ndash; STEP 4 &ndash;&gt;
                     <section class="Form-step 4">
                         <h3 class="Form-subtitle">4.	EN RÉALITÉ</h3>
                         <p class="Form-text">
@@ -43,7 +43,8 @@
                     </section>
                     <input class="Form-button" type="submit" value="envoyer">
                 </div>
-            </form>
+            </form>-->
+            <input class="Form-inputText" type="text" v-model="posts" @change="postPost()"/>
         </div>
         <nebu-footer></nebu-footer>
     </div>
@@ -52,7 +53,7 @@
 <script>
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
-
+    import axios from 'axios';
 
 
     export default {
@@ -62,13 +63,36 @@
         name: 'tips-form',
         data() {
             return {
+                posts: []
             }
         },
 
+
+
         methods: {
             checkForm: function (e) {
-
                 e.preventDefault();
+            },
+
+            postPost() {
+                axios.post(`http://localhost:8000/api/facts`, {
+                    "tab_title": 'd',
+                    "category": 'oijn',
+                    "main_title": 'kjnk',
+                    "video_description_title": 'dfonk',
+                    "video_description_text": 'ijnjn',
+                    "video_src": 'kjnjon',
+                    "video_alt": 'lkfndlk',
+                    "explanation_title": 'klnko',
+                    "explanation_text": 'knfkodn',
+                    "scientific_fact_title": 'ofdno',
+                    "scientific_fact_text": 'dfksp'
+                }, {
+                    headers: {
+                        'Content-type': 'application/json',
+                    }
+                }).then(response => {})
+
             }
         }
     }
