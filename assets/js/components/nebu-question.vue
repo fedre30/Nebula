@@ -28,12 +28,10 @@
 <style scoped lang="sass">
 .Question
     width: 100%
-    height: 90vh
-    padding-top: 3rem
+    height: 100vh
     position: relative
     z-index: 0
     font-family: Roboto, sans-serif
-    margin-top: 7.5vh
     &-container
         width: 80%
         margin: 0 auto
@@ -42,47 +40,47 @@
 
     &-title
         width: 100%
-        font-size: 6rem
-        margin-bottom: 7rem
+        font-size: 2.3rem
+        margin-bottom: 3.5rem
         text-transform: uppercase
         font-family: Airship, sans-serif
         color: #1F0D87
         text-align: left
 
     &-text
-        font-size: 3rem
+        font-size: 1.2rem
         color: white
         text-align: left
-        line-height: 5rem
+        line-height: 2rem
 
     &-answers-container
         display: flex
         justify-content: space-between
-        margin: 4rem auto
+        margin: 2rem auto
         width: 100%
     &-answer
         width: 300px
-        height: 130px
+        height: 50px
         background-color: white
-        font-size: 3rem
+        font-size: 1rem
         margin-right: 3rem
-        line-height: 130px
+        line-height: 50px
         color: #1F0D87
         font-weight: 700
-        border-radius: 20px
+        border-radius: 10px
         text-transform: uppercase
 
     &-invitation
-        font-size: 3rem
-        margin: 20vh 0 10vh 0
+        font-size: 1.2rem
+        margin: 20vh 0 3rem 0
         color: white
         text-align: left
-        line-height: 5rem
+        line-height: 2rem
         font-style: italic
     &-button
-        font-size: 3rem
-        width: 300px
-        height: 200px
+        font-size: 1rem
+        width: 100px
+        height: 50px
         line-height: 3rem
         text-align: center
         margin: 0 auto
@@ -95,28 +93,28 @@
 
 
     &-button:before, &-button:after
-        width: 290px
+        width: 100px
         left: 0
-        height: 65px
-        border: 7px solid white
+        height: 20px
+        border: 2px solid white
 
     &-button:before
         position: absolute
         content: ''
         border-bottom: none
-        -webkit-transform: perspective(15px) rotateX(5deg)
-        -moz-transform: perspective(15px) rotateX(5deg)
-        transform: perspective(15px) rotateX(5deg)
-        top: -50px
+        -webkit-transform: perspective(15px) rotateX(7deg)
+        -moz-transform: perspective(15px) rotateX(7deg)
+        transform: perspective(15px) rotateX(10deg)
+        top: 0
 
     &-button:after
         position: absolute
-        top: 40px
+        top: 25px
         content: ''
         border-top: none
-        -webkit-transform: perspective(15px) rotateX(-5deg)
-        -moz-transform: perspective(15px) rotateX(-5deg)
-        transform: perspective(15px) rotateX(-5deg)
+        -webkit-transform: perspective(15px) rotateX(-7deg)
+        -moz-transform: perspective(15px) rotateX(-7deg)
+        transform: perspective(15px) rotateX(-10deg)
 
 
 
@@ -125,6 +123,102 @@ a
 
 a:hover
     color: #F13455
+
+@media(min-width: 600px)
+    .Question
+        width: 30vw
+        height: 25vw
+        border-radius: 1000px
+        padding-top: 3rem
+        z-index: 0
+        font-family: Roboto, sans-serif
+        position: absolute
+        top: 70vh
+        left: 40vw
+        background: white
+        &-container
+            width: 80%
+            margin: 5vh auto
+            z-index: 2
+            text-align: center
+
+
+        &-title
+            width: 100%
+            font-size: 2rem
+            margin: 2vh auto
+            text-align: center
+
+        &-text
+            font-size: 1.2rem
+            color: black
+            text-align: center
+            line-height: 2rem
+
+        &-answers-container
+            width: 100%
+            margin: 0.5rem auto
+            justify-content: center
+        &-answer
+            width: 120px
+            height: 50px
+            background: linear-gradient(90deg, rgba(205,193,225,1) 0%, rgba(156,130,198,1) 100%)
+            font-size: 1rem
+            line-height: 50px
+            color: white
+            font-weight: 700
+            border-radius: 10px
+            text-align: center
+            margin: 0 auto
+
+        &-invitation
+            font-size: 1.2rem
+            margin: 30vh 0 10vh 0
+            color: white
+            text-align: left
+            line-height: 2rem
+            font-style: italic
+        &-button
+            font-size: 1.2rem
+            padding-left: 1rem
+            padding-top: 0.3rem
+            width: 100px
+            height: 50px
+            line-height: 1.2
+            text-align: center
+            margin: 0 auto
+            position: relative
+            text-transform: uppercase
+            display: block
+            background: transparent
+            color: white
+            font-weight: 800
+
+
+        &-button:before, &-button:after
+            width: 130px
+            left: 0
+            height: 30px
+            border: 2px solid white
+
+        &-button:before
+            position: absolute
+            content: ''
+            border-bottom: none
+            -webkit-transform: perspective(15px) rotateX(7deg)
+            -moz-transform: perspective(15px) rotateX(7deg)
+            transform: perspective(15px) rotateX(7deg)
+            top: -20px
+
+        &-button:after
+            position: absolute
+            top: 15px
+            content: ''
+            border-top: none
+            -webkit-transform: perspective(15px) rotateX(-7deg)
+            -moz-transform: perspective(15px) rotateX(-7deg)
+            transform: perspective(15px) rotateX(-7deg)
+
 
 
 

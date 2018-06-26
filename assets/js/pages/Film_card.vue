@@ -11,7 +11,7 @@
         </div>
         <nebu-menu></nebu-menu>
             <div class="Film-video">
-                <youtube :video-id="videoId" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
+                <youtube :video-id="fact.videoSrc" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
             </div>
         <div class="Film-container">
             <section class="Film-mistake">
@@ -43,9 +43,8 @@
         name: 'Film_card',
         data() {
             return {
-                videoId: 'm4JAgWk1PcM',
-                width: 1000,
-                height: 700,
+                width: 450,
+                height: 300,
                 fact: {}
             }
         },
@@ -93,12 +92,12 @@
         text-align: center
         padding-top: 6rem
     &-title
-        font-size: 6rem
+        font-size: 2rem
         font-family: Airship, sans-serif
-        margin: 8rem 0
+        margin: 4rem 0
         color: #CDC1E1
     &-subtitle
-        font-size: 3rem
+        font-size: 1.5rem
         margin: 15vh 0 3rem 0
         text-transform: uppercase
         color: #F13455
@@ -106,9 +105,9 @@
         text-align: left
         font-weight: 700
     &-text
-        font-size: 2.5rem
+        font-size: 1rem
         color: #18165C
-        line-height: 4rem
+        line-height: 2rem
         text-align: left
         margin: 3rem 0
         font-weight: 500

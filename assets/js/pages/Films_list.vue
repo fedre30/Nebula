@@ -54,19 +54,20 @@
     width: 100%
     height: 270vh
     background: url("../assets/img/background_list.jpg") no-repeat
+    background-size: cover
     overflow: hidden
     font-family: Roboto, sans-serif
     &-container
         width: 80%
         margin: 0 auto
         text-align: center
-        padding-top: 6rem
+        padding-top: 2rem
     &-title
-        font-size: 6rem
+        font-size: 2rem
         font-family: Airship, sans-serif
         color: white
         text-align: left
-        margin: 8rem 0 14rem 0
+        margin: 2rem 0 14rem 0
         text-transform: uppercase
     &-tips
         width: 80%
@@ -76,35 +77,36 @@
         bottom: 40vh
     &-alien
         position: absolute
-        width: 200px
-        height: 500px
+        width: 100px
+        height: 250px
         background: url("./assets/img/alien2.png") no-repeat
         background-size: cover
         right: -10vw
         top: -15vh
 
     &-tips-title
-        font-size: 3rem
+        font-size: 1.5rem
         text-transform: uppercase
         color: #1F0D87
         font-style: italic
         text-align: left
         font-weight: 700
     &-tips-text
-        font-size: 2.7rem
+        font-size: 1rem
         color: white
-        line-height: 4.3rem
+        line-height: 2rem
         text-align: left
         margin: 3rem 0
         width: 80%
+        font-style: italic
 
     &-button
-        font-size: 2.5rem
-        width: 300px
-        height: 200px
+        font-size: 0.8rem
+        width: 100px
+        height: 50px
         line-height: 3rem
         text-align: center
-        margin: 10vh auto
+        margin: 0 auto
         position: relative
         text-transform: uppercase
         display: block
@@ -114,28 +116,28 @@
 
 
     &-button:before, &-button:after
-        width: 290px
+        width: 100px
         left: 0
-        height: 65px
-        border: 7px solid white
+        height: 20px
+        border: 2px solid white
 
     &-button:before
         position: absolute
         content: ''
         border-bottom: none
-        -webkit-transform: perspective(15px) rotateX(5deg)
-        -moz-transform: perspective(15px) rotateX(5deg)
-        transform: perspective(15px) rotateX(5deg)
-        top: -50px
+        -webkit-transform: perspective(15px) rotateX(7deg)
+        -moz-transform: perspective(15px) rotateX(7deg)
+        transform: perspective(15px) rotateX(10deg)
+        top: 0
 
     &-button:after
         position: absolute
-        top: 40px
+        top: 25px
         content: ''
         border-top: none
-        -webkit-transform: perspective(15px) rotateX(-5deg)
-        -moz-transform: perspective(15px) rotateX(-5deg)
-        transform: perspective(15px) rotateX(-5deg)
+        -webkit-transform: perspective(15px) rotateX(-7deg)
+        -moz-transform: perspective(15px) rotateX(-7deg)
+        transform: perspective(15px) rotateX(-10deg)
 
 a
     text-decoration: none

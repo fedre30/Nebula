@@ -4,7 +4,8 @@
             <nebu-introduction></nebu-introduction>
             <nebu-menu></nebu-menu>
             <nebu-question></nebu-question>
-            <nebu-timeline></nebu-timeline>
+            <nebu-timeline title="idees recues les plus tenaces"></nebu-timeline>
+            <div class="desktop timeline" title="les meilleurs eleves"><nebu-timeline></nebu-timeline></div>
             <nebu-about></nebu-about>
             <nebu-footer></nebu-footer>
         </div>
@@ -45,5 +46,25 @@
         height: 500vh
         background: url("../assets/img/full_background.jpg") no-repeat
         background-size: cover
+
+    .desktop
+        display: none
+@media(min-width: 600px)
+    .Homepage
+        width: 100%
+        height: 450vh
+        &-background
+            width: 100%
+            height: 450vh
+            background: url("../assets/img/background_home_desktop.png") no-repeat
+            background-size: 100%
+            margin-top: 5vh
+        .desktop
+            display: block
+        .timeline
+            width: 100%
+            position: absolute
+            top: 180vh
+            left: 20vw
 
 </style>
