@@ -22,13 +22,12 @@
         data() {
             return {
                 search: "",
-                results: [],
-                movies: {}
+                movies: []
             }
         },
        computed : {
             getResults(){
-                return this.results.filter((movie) => movie.data.title.match(this.search))
+                return this.movies.filter((movie) => movie.title.match(this.search))
             }
         },
         mounted () {
