@@ -83,7 +83,7 @@
     overflow: hidden
     position: relative
     width: 100vw
-    height: 250vh
+    height: 300vh
     background: url("../assets/img/background_film.jpg") no-repeat
     background-size: cover
 
@@ -114,9 +114,9 @@
         font-weight: 500
     &-video
         width: 100vw
-        margin: 10vh auto
+        margin: 5vh auto
         text-align: center
-        height: 30vh
+        height: 20vh
 
 
 
