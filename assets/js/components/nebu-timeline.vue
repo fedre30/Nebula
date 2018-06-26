@@ -1,12 +1,12 @@
 <template>
     <div class="Timeline">
         <div class="Timeline-container">
-            <h3 class="Timeline-title">idees recues les plus tenaces</h3>
+            <h3 class="Timeline-title">{{title}}</h3>
         </div>
         <div class="Circles-container">
         <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
         </div>
-        <router-link :to="{name: 'list'}"><div class="Timeline-button">Voir plus</div></router-link>
+        <router-link :to="{name: 'list'}"><div class="Timeline-button desktop">Voir plus</div></router-link>
     </div>
 </template>
 
@@ -38,6 +38,11 @@
                         mistake: 'Le corps gèle dans l’espace'
                     },
                 ]
+            }
+        },
+        props: {
+            title: {
+                type: String
             }
         }
     }
@@ -102,6 +107,9 @@
         -moz-transform: perspective(15px) rotateX(-7deg)
         transform: perspective(15px) rotateX(-10deg)
 
+    .desktop
+        display: none
+
 
 
 a
@@ -140,15 +148,18 @@ a
             text-transform: uppercase
             display: block
             background: transparent
-            color: white
+            color: #440BA2
             font-weight: 800
+            position: absolute
+            bottom: 20vh
+            left: 25vw
 
 
         &-button:before, &-button:after
             width: 100px
             left: 0
             height: 20px
-            border: 2px solid white
+            border: 2px solid #440BA2
 
         &-button:before
             position: absolute
