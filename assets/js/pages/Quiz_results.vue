@@ -4,7 +4,7 @@
         <div class="Results-container">
             <h3 class="Results-title">quizz</h3>
             <h4 class="Results-subtitle">résultats</h4>
-            <p class="Results-text">Waou trop balèze ! Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 20.</span></p>
+            <p class="Results-text">Waou trop balèze !  Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 20.</span></p>
             <p class="Results-text">Seulement  <span class="bold">{{rate}}%</span> des utilisateurs ont réussi un tel exploit. </p>
             <router-link :to="{name: 'question'}"><div class="Results-button">réssayer</div></router-link>
         </div>
@@ -20,7 +20,7 @@
         components: {
             nebuFooter,
             nebuMenu},
-        name: 'quiz-results', //TODO
+        name: 'quiz-results',
         data() {
             return {
                 goodAnswers: 18,
