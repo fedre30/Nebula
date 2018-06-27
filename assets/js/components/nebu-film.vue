@@ -67,6 +67,7 @@
         height: 20vh
         margin: 5vh 2vw
         font-family: Roboto, sans-serif
+        z-index: 999999
         &-text
             background-color: white
             height: 20vh

@@ -13,7 +13,7 @@
 
         <div class="List-tips">
             <div class="List-alien mobile"></div>
-            <h3 class="List-tips-title">suggestions</h3>
+            <h3 class="List-tips-title mobile">suggestions</h3>
             <p class="List-tips-text">Un film manque à l’appel ?  Vous pouvez nous envoyer  vos suggestions lumineuses !</p>
             <router-link :to="{name: 'form'}"><div class="List-button">contribuer</div></router-link>
         </div>
@@ -39,32 +39,16 @@
         name: 'nebu-films-list',
         data() {
             return {
-                movies: [
-                    {
-                        title: 'Gardiens de la galaxie',
-                        mistake: 'Lorem ipsum',
-                        year: 2014
-                    },
-                    {
-                        title: 'Gardiens de la galaxie 2',
-                        mistake: 'Lorem ipsum',
-                        year: 2014
-                    },
-                    {
-                        title: 'Gardiens de la galaxie 3',
-                        mistake: 'Lorem ipsum',
-                        year: 2014
-                    },
-                ]
+                movies: {}
 
             }
         },
 
         mounted () {
-            /*axios
+            axios
                 .get('http://localhost:8000/api/movies')
                 .then(response => (this.movies = response.data))
-                */
+
         },
 
     }
@@ -203,33 +187,19 @@ a
             text-transform: uppercase
             text-align: left
         &-tips
-            width: 80%
-            height: 30vh
+            width: 34vw
+            height: 42vh
             position: absolute
-            left: 10%
-            bottom: 40vh
-        &-alien
-            position: absolute
-            width: 100px
-            height: 250px
-            background: url("./assets/img/alien2.png") no-repeat
+            left: 60vw
+            bottom: 50vh
+            background: url("../assets/img/list_shape.png") no-repeat
             background-size: cover
-            right: -10vw
-            top: -15vh
-
-        &-tips-title
-            font-size: 1.5rem
-            text-transform: uppercase
-            color: #1F0D87
-            font-style: italic
-            text-align: left
-            font-weight: 700
         &-tips-text
             font-size: 1rem
             color: white
             line-height: 2rem
-            text-align: left
-            margin: 3rem 0
+            text-align: center
+            margin: 6rem 0 2rem 3rem
             width: 80%
             font-style: italic
 
@@ -239,10 +209,8 @@ a
             height: 50px
             line-height: 3rem
             text-align: center
-            margin: 0 auto
             position: relative
             text-transform: uppercase
-            display: block
             background: transparent
             color: white
             font-weight: 800
