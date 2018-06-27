@@ -6,7 +6,7 @@
         <div class="Circles-container">
         <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
         </div>
-        <router-link :to="{name: 'list'}"><div class="Timeline-button desktop">Voir plus</div></router-link>
+        <div class="Timeline-button desktop"><router-link :to="{name: 'list'}">Voir plus</router-link></div>
     </div>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
     <div class="Homepage">
         <div class="Homepage-background">
-            <nebu-introduction></nebu-introduction>
+            <nebu-introduction id="intro"></nebu-introduction>
             <nebu-menu></nebu-menu>
             <nebu-question></nebu-question>
             <nebu-timeline title="idees recues les plus tenaces"></nebu-timeline>
-            <div class="desktop timeline" title="les meilleurs eleves"><nebu-timeline></nebu-timeline></div>
+            <div class="desktop timeline"><nebu-timeline title="les meilleurs eleves"></nebu-timeline></div>
             <nebu-about></nebu-about>
             <nebu-footer></nebu-footer>
         </div>
@@ -19,6 +19,7 @@
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
     import nebuAbout from "../components/nebu-about-section.vue";
+
     export default {
         name: 'homepage',
         components: {
