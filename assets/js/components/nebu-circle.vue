@@ -183,10 +183,12 @@ a
     text-decoration: none
 
 .turnright-enter-active, .turnright-leave-active
-    animation: turnRight 8s ease infinite
+    animation: turnRight 20s ease infinite
+    opacity: 1
 
 .turnright-enter, .turnright-leave-to
-    animation: turnRight 8s ease infinite
+    animation: turnRight 20s ease infinite
+    opacity: 1
 
 @-webkit-keyframes turnRight
     from
@@ -200,7 +202,7 @@ a
         transform: rotate(360deg)
 
 @keyframes turnRight
-    0
+    0%
         -ms-transform: rotate(0deg)
         -moz-transform: rotate(0deg)
         -webkit-transform: rotate(0deg)
@@ -226,12 +228,20 @@ a
         -webkit-transform: rotate(0deg)
         -o-transform: rotate(0deg)
         transform: rotate(0deg)
+    100%
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
 
 .turnleft-enter-active, .turnleft-leave-active
-    animation: turnRight 8s
+    animation: turnRight 20s ease infinite
+    opacity: 1
 
 .turnleft-enter, .turnleft-leave-to
-    animation: turnRight 8s reverse
+    animation: turnRight 20s ease infinite
+    opacity: 1
 
 @-webkit-keyframes turnleft
     from
@@ -245,7 +255,7 @@ a
         transform: rotate(-360deg)
 
 @keyframes turnleft
-    0
+    0%
         -ms-transform: rotate(0deg)
         -moz-transform: rotate(0deg)
         -webkit-transform: rotate(0deg)
@@ -271,6 +281,13 @@ a
         -webkit-transform: rotate(0deg)
         -o-transform: rotate(0deg)
         transform: rotate(0deg)
+    100%
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
 
 
 </style>
