@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="Quiz">
         <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Quiz-background"></div>
