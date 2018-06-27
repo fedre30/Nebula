@@ -54,7 +54,7 @@
         name: 'Film_card',
         data() {
             return {
-                width: 1000,
+                width: 900,
                 height: 700,
                 fact: {}
             }
@@ -132,7 +132,7 @@
         font-family: Roboto, sans-serif
         position: relative
         width: 95vw
-        height: 390vh
+        height: 355vh
         background: none
         padding: 3rem
         margin: 0 auto
@@ -140,7 +140,7 @@
 
         &-background
             width: 100%
-            height: 500vh
+            height: 355vh
             background: url("../assets/img/film_background_desktop.png") no-repeat
             background-size: 100%
             box-sizing: border-box

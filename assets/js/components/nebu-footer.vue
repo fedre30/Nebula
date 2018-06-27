@@ -60,9 +60,10 @@
 @media(min-width: 600px)
     .Footer
         width: 100%
-        height: 5vh
-        bottom: 2vh
+        height: 3vh
         padding: 3rem
+        position: absolute
+        bottom: 0
 
         &-copyright
             color: #CDC1E1

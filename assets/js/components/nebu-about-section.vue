@@ -7,7 +7,7 @@
             <div class="AboutSection-shape desktop"></div>
             <div class="AboutSection-button">à propos</div>
         </div>
-        <div class="desktop shuttle"></div>
+        <a href="#" ><div class="desktop shuttle" v-scroll-to="'#intro'"></div></a>
     </div>
 </template>
 
@@ -187,6 +187,7 @@ a
             height: 25vh
             background: url("./assets/img/footer_shape.png") no-repeat
             background-size: cover
+
         .shuttle
             width: 50px
             height: 70px
