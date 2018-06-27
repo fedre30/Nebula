@@ -42,15 +42,16 @@ export default new Router({
             component: Form
         },
         {
-            path: '/question',
+            path: '/question/:count',
             name: 'question',
             component: Quiz_question,
             props: true
         },
         {
-            path: '/answer',
+            path: '/answer/:count',
             name: 'answer',
-            component: Quiz_answer
+            component: Quiz_answer,
+            props: true
         },
         {
             path: '/results',
