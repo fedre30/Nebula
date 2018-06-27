@@ -1,12 +1,16 @@
 <template>
-    <div class="Circle">
+    <div class="Circle" v-on:mouseenter="show = !show">
         <router-link :to="{name: 'film'}">
             <h3 class="Circle-mistake">{{mistake}}</h3>
             <h4 class="Circle-title">{{title}}</h4>
             <div class="Circle-container">
                 <div class="Circle-year">{{year}}</div>
-                <div class="Circle-outer"></div>
-                <div class="Circle-inner"></div>
+                <transition name="turnright">
+                    <div class="Circle-outer" v-if="show"></div>
+                </transition>
+                <transition name="turnleft">
+               <div class="Circle-inner"  v-if="show"></div>
+                </transition>
                 <div class="Circle-center"></div>
             </div>
         </router-link>
@@ -18,7 +22,7 @@
         name: 'nebu-circle',
         data(){
             return {
-                rotated: true
+                show: true
             }
         },
         props: {
@@ -81,7 +85,7 @@
         top: 50px
 
     &-inner
-        width: 150px
+        width: 180px
         height: 200px
         background: url("./assets/img/inner_circle.png") no-repeat
         background-size: cover
@@ -152,13 +156,13 @@
             z-index: 99999
 
         &-inner
-            width: 150px
-            height: 200px
+            width: 200px
+            height: 220px
             background: url("./assets/img/inner_desktop.png") no-repeat
             background-size: cover
             position: absolute
             left: 90px
-            top: -25px
+            top: -35px
 
         &-outer
             width: 250px
@@ -178,8 +182,95 @@
 a
     text-decoration: none
 
+.turnright-enter-active, .turnright-leave-active
+    animation: turnRight 8s ease infinite
 
+.turnright-enter, .turnright-leave-to
+    animation: turnRight 8s ease infinite
 
+@-webkit-keyframes turnRight
+    from
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    to
+        -webkit-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        transform: rotate(360deg)
+
+@keyframes turnRight
+    0
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    30%
+        -ms-transform: rotate(360deg)
+        -moz-transform: rotate(360deg)
+        -webkit-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        transform: rotate(360deg)
+    60%
+        -ms-transform: rotate(360deg)
+        -moz-transform: rotate(360deg)
+        -webkit-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        transform: rotate(360deg)
+
+    90%
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+.turnleft-enter-active, .turnleft-leave-active
+    animation: turnRight 8s
+
+.turnleft-enter, .turnleft-leave-to
+    animation: turnRight 8s reverse
+
+@-webkit-keyframes turnleft
+    from
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    to
+        -webkit-transform: rotate(-360deg)
+        -o-transform: rotate(-360deg)
+        transform: rotate(-360deg)
+
+@keyframes turnleft
+    0
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    30%
+        -ms-transform: rotate(-360deg)
+        -moz-transform: rotate(-360deg)
+        -webkit-transform: rotate(-360deg)
+        -o-transform: rotate(-360deg)
+        transform: rotate(-360deg)
+    60%
+        -ms-transform: rotate(-360deg)
+        -moz-transform: rotate(-360deg)
+        -webkit-transform: rotate(-360deg)
+        -o-transform: rotate(-360deg)
+        transform: rotate(-360deg)
+
+    90%
+        -ms-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
 
 
 </style>
