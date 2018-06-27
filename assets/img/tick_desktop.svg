@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="27px" viewBox="0 0 26 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="quizz-réponse" transform="translate(-239.000000, -474.000000)" fill-rule="nonzero" stroke="#FFFFFF">
+            <g id="question" transform="translate(140.000000, 180.000000)">
+                <g id="responses" transform="translate(80.000000, 166.000000)">
+                    <g id="true" transform="translate(0.000000, 116.000000)">
+                        <g id="tick" transform="translate(20.000000, 13.000000)">
+                            <g id="Group">
+                                <path d="M12,0.430867081 C5.37967428,0.430867081 -2.196e-05,5.77717267 0,12.3563329 C-2.196e-05,18.9356124 5.37967428,24.2817988 12,24.2817988 C18.6203256,24.2817988 24.0000216,18.9356124 24,12.3563329 C24.0000216,5.77717267 18.6203256,0.430867081 12,0.430867081 Z" id="Shape" stroke-width="2" fill="#F13455"></path>
+                                <polygon id="Shape" fill="#FFFFFF" points="16.9828128 8.29189565 10.8492192 14.7367752 7.72734372 11.8020373 6.90234372 12.6684224 10.8960936 16.4231553 17.8546872 9.11177143 16.9828128 8.29189565"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,7 @@
 <template>
     <div class="Form">
         <div class="Form-background">
+            <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
             <nebu-menu></nebu-menu>
             <div class="Form-container" id="top">
                 <h2 class="Form-title">suggestions</h2>
@@ -359,6 +360,13 @@
                 position: absolute
                 right: 100px
                 bottom: 250px
+            .Nebula-title
+                font-size: 3rem
+                position: absolute
+                left: 6rem
+                top: 6rem
+                font-family: Airship, sans-serif
+                color: white
 
 
 
