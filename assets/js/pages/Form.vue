@@ -108,48 +108,48 @@
     background-size: cover
     font-family: Roboto, sans-serif
     overflow: hidden
-    font-size: 2.5rem
+    font-size: 1rem
     &-container
         width: 80%
         margin: 0 auto
-        padding-top: 10rem
+        padding-top: 4rem
     &-title
-        font-size: 6rem
+        font-size: 3rem
         font-family: Airship, sans-serif
         color: #CDC1E1
         text-align: left
+        margin: 2rem 0 6rem 1rem
         text-transform: uppercase
-        margin-bottom: 14rem
     &-subtitle
-        font-size: 3rem
+        font-size: 2rem
         text-transform: uppercase
         color: #1F0D87
         font-style: italic
         font-weight: 700
-        margin-bottom: 5rem
+        margin-bottom: 1rem
     &-text
-        font-size: 2.5rem
+        font-size: 1rem
         font-family: Roboto, sans-serif
         color: black
         text-align: left
-        line-height: 4rem
+        line-height: 2rem
         font-weight: 300
         font-style: italic
-        margin-bottom: 8rem
-        margin-top: 3rem
+        margin-bottom: 1rem
+        margin-top: 2rem
 
 
     label
-        font-size: 2rem
+        font-size: 1rem
         color: black
     &-inputText
         background: transparent
         border: 2px solid #CDC1E1
         width: 70vw
-        height: 70px
-        font-size: 2rem
+        height: 20px
+        font-size: 1rem
         color: #CDC1E1
-        margin-bottom: 5rem
+        margin-bottom: 1rem
         padding: 1rem
     &-textarea
         background: transparent
@@ -158,25 +158,25 @@
         max-width: 70vw
         height: 300px
         max-height: 400px
-        font-size: 2rem
+        font-size: 1rem
         color: #CDC1E1
-        margin-bottom: 5rem
+        margin-bottom: 1rem
         padding: 1rem
     &-button
-        width: 300px
-        height: 130px
-        font-size: 3rem
-        line-height: 130px
+        width: 120px
+        height: 70px
+        font-size: 1rem
+        line-height: 50px
         background: linear-gradient(90deg, rgba(255,54,103,1) 0%, rgba(246,80,75,1) 100%)
         font-weight: 700
-        border-radius: 20px
+        border-radius: 10px
         text-transform: uppercase
         text-align: center
         margin: 0 auto
         color: white
     &-step
         width: 100%
-        margin-top: 15vh
+        margin-top: 10vh
 
 
 
