@@ -20,18 +20,21 @@ class HomeQuestionAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('Question', TextType::class);
+        $formMapper->add('Answer');
         $formMapper->add('Page');
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper->add('Question');
+        $datagridMapper->add('Answer');
         $datagridMapper->add('Page');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper->add('Question');
+        $listMapper->add('Answer');
         $listMapper->add('Page');
     }
 }
