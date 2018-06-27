@@ -1,6 +1,6 @@
 <template>
     <div class="Answer">
-        <h1 class="Nebula-title desktop">Nebula</h1>
+        <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Answer-background"></div>
         <nebu-menu></nebu-menu>
         <div class="Answer-container">
