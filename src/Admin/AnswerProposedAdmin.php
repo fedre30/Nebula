@@ -1,12 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: enzo
- * Date: 21/06/2018
- * Time: 14:42
- */
 
-// src/Admin/MoviesAdmin.php
 namespace App\Admin;
 
 use Sonata\AdminBundle\Admin\AbstractAdmin;
@@ -15,26 +8,21 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-class HomeQuestionAdmin extends AbstractAdmin
+class AnswerProposedAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('Question', TextType::class);
-        $formMapper->add('Answer');
-        $formMapper->add('Page');
+
+        $formMapper->add('firstAnswer', TextType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('Question');
-        $datagridMapper->add('Answer');
-        $datagridMapper->add('Page');
+        $datagridMapper->add('firstAnswer');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->add('Question');
-        $listMapper->add('Answer');
-        $listMapper->add('Page');
+        $listMapper->add('firstAnswer');
     }
 }

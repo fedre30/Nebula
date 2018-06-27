@@ -4,7 +4,9 @@
         <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
-            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title"  v-if="index < 7"><router-link :to="{name: 'film', params: movie.id}"></router-link></nebu-film>
+            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title"  v-if="index < 7">
+                <router-link :to="{name: 'film', params: movie.id}"></router-link>
+            </nebu-film>
         </div>
 
         <div class="List-tips">

@@ -27,6 +27,11 @@ class HomeQuestions
      */
     private $Page;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $Answer;
+
     public function getId()
     {
         return $this->id;
@@ -59,4 +64,17 @@ class HomeQuestions
     {
         return (string) $this->getQuestion();
     }
+
+    public function getAnswer(): ?bool
+    {
+        return $this->Answer;
+    }
+
+    public function setAnswer(?bool $Answer): self
+    {
+        $this->Answer = $Answer;
+
+        return $this;
+    }
+
 }

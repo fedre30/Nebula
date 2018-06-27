@@ -62,3 +62,4 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Quizz }
         public: true
+

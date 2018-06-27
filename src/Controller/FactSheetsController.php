@@ -22,14 +22,14 @@ class FactSheetsController extends FOSRestController
      * Lists all Articles.
      * @FOSRest\Get("/facts")
      */
-    public function getMovies()
+    public function getFacts()
     {
         $repository = $this->getDoctrine()->getRepository(FactSheets::class);
 
         // query for a single Product by its primary key (usually "id")
-        $FactSheets = $repository->findAll();
+        $data = $repository->findAll();
 
-        $view = View::create($FactSheets);
+        $view = View::create($data);
         $view->setFormat('json');
 
         // Gestion de la réponse
@@ -41,15 +41,15 @@ class FactSheetsController extends FOSRestController
      * @Route("/facts/{id}", name="facts_id", methods={"GET"}, requirements={"id"="\d+"})
      *
      */
-    public function getOneMovie($id)
+    public function getOneFact($id)
     {
         $repository = $this->getDoctrine()->getRepository(FactSheets::class);
-        $FactSheets = $repository->find($id);
+        $data = $repository->find($id);
 
-        if ($FactSheets === null) {
-            $view = View::create($FactSheets, Response::HTTP_NOT_FOUND , []);
+        if ($data === null) {
+            $view = View::create($data, Response::HTTP_NOT_FOUND , []);
         } else {
-            $view = View::create($FactSheets, Response::HTTP_OK , []);
+            $view = View::create($data, Response::HTTP_OK , []);
         }
         $view->setFormat('json');
         return $this->handleView($view);
@@ -60,17 +60,17 @@ class FactSheetsController extends FOSRestController
      * @FOSRest\Post("/facts")
      *
      */
-    public function PostMoviesAction(Request $request)
+    public function PostFactsAction(Request $request)
     {
-        $FactSheets = new FactSheets();
-        $form = $this->createForm(FactSheetsType::class, $FactSheets);
+        $data = new FactSheets();
+        $form = $this->createForm(FactSheetsType::class, $data);
         $form->submit($request->request->all());
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($FactSheets);
+            $em->persist($data);
             $em->flush();
-            $view = View::create($FactSheets, Response::HTTP_CREATED , []);
+            $view = View::create($data, Response::HTTP_CREATED , []);
         } else {
             $view = View::create($form, Response::HTTP_BAD_REQUEST , []);
         }

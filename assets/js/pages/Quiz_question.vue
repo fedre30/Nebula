@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="Quiz">
         <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Quiz-background"></div>
@@ -17,31 +18,81 @@
                         <router-link :to="{name:'answer'}"><input class="Quiz-button" type="submit" value="valider"/>
                         </router-link>
                     </form>
+    <div class="Quiz" >
+        <nebu-menu></nebu-menu>
+        <div class="Quiz-container">
+            <h3 class="Quiz-title">quigzz</h3>
+        <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
+            <form method="post" >
+                <div class="Form-radio" v-if="answers[0]" >
+                    <p-radio class="p-round p-default Quiz-radio" value="0" name="radio" v-model="chibre">{{answers[$route.params.count].firstAnswer}}</p-radio>
+                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="1" v-model="chibre">{{answers[$route.params.count].secondAnswer}}</p-radio>
+                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="2" v-model="chibre">{{answers[$route.params.count].thirdAnswer}}</p-radio>
                 </div>
-            </div>
-            <nebu-footer></nebu-footer>
+                <router-link :to="{path: `/answer/${parseInt($route.params.count)}`}">
+                    <input class="Quiz-button" type="submit" value="valider"/>
+                </router-link>
+            </form>
         </div>
+        <nebu-footer />
+    </div>
 </template>
 
 <script>
     import ElementUI from 'element-ui';
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
+    import DataStore from "../store.js"
 
+    import axios from 'axios';
     export default {
         components: {
             nebuMenu,
             nebuFooter
         },
         name: 'quiz-question',
-        data: function () {
+        data () {
             return {
-                answers: [
-                    'L’explosion d’un astéroïde',
-                    'L’explosion d’une étoile',
-                    'Une faille dans l’espace'
-                ]
+                chibre: [],
+                answers: {}
             };
+        },
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/quizz')
+                .then(response => (this.answers = response.data))
+        },
+        methods : {
+            /*test (){
+                console.log('m',this.isRightAnswer);
+                this.isRightAnswer = true;
+
+               /*let test = this.checked;
+
+                if(test.value === 1){
+                    this.isRightAnswer = true;
+                }else if(test.value === 2){
+                    this.isRightAnswer = true;
+                }else if(test.value === 3){
+                    this.isRightAnswer = true;
+                }
+
+                console.log(this.isRightAnswer);
+            }*/
+        },
+        watch: {
+            chibre: function() {
+                console.log(this.answers[$route.params.count].firstAnswerCorrection);
+                if (this.chibre === 0  && this.answers[$route.params.count].firstAnswerCorrection ) {
+                    DataStore.isRightAnswer = true;
+                    console.log(this.chibre);
+                }else if (this.chibre === 1  && this.answers[$route.params.count].secondAnswerCorrection ){
+                    DataStore.isRightAnswer = true;
+
+                }else if (this.chibre === 2  && this.answers[$route.params.count].thirdAnswerCorrection){
+                    DataStore.isRightAnswer = true;
+                }
+            }
         }
     }
 </script>
