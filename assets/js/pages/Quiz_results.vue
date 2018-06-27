@@ -4,7 +4,7 @@
         <div class="Results-container">
             <h3 class="Results-title">quizz</h3>
             <h4 class="Results-subtitle">résultats</h4>
-            <p class="Results-text">Waou trop balèze !  Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 20.</span></p>
+            <p class="Results-text">Waou trop balèze !  Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 10.</span></p>
             <p class="Results-text">Seulement  <span class="bold">{{rate}}%</span> des utilisateurs ont réussi un tel exploit. </p>
             <router-link :to="{name: 'question'}"><div class="Results-button">réssayer</div></router-link>
         </div>
@@ -23,7 +23,7 @@
         name: 'quiz-results',
         data() {
             return {
-                goodAnswers: 18,
+                goodAnswers: 8,
                 rate: 4
             }
         }
@@ -44,41 +44,40 @@
         width: 80%
         margin: 0 auto
         text-align: center
-        padding-top: 6rem
+        padding-top: 4rem
     &-title
-        font-size: 6rem
+        font-size: 2rem
         font-family: Airship, sans-serif
         color: white
         text-align: left
-        padding-top: 4rem
-        margin-bottom: 14rem
+        margin: 2rem 0 3rem 0
         text-transform: uppercase
     &-subtitle
-        font-size: 3rem
+        width: 100%
+        font-size: 1.5rem
         text-transform: uppercase
         color: #1F0D87
         font-style: italic
         font-weight: 700
         margin-bottom: 5rem
         text-align: left
-        width: 80%
-        line-height: 5rem
+        line-height: 3rem
     &-text
-        font-size: 2.5rem
+        font-size: 1rem
         font-family: Roboto, sans-serif
         color: white
         text-align: left
-        line-height: 4rem
+        line-height: 2rem
         font-weight: 500
-        margin-top: 6rem
+        margin-top: 2rem
     &-button
-        width: 300px
-        height: 130px
-        font-size: 3rem
-        line-height: 130px
+        width: 150px
+        height: 50px
+        font-size: 1rem
+        line-height: 50px
         background: white
         font-weight: 700
-        border-radius: 20px
+        border-radius: 10px
         text-transform: uppercase
         text-align: center
         margin: 5vh auto

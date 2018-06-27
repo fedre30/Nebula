@@ -29,7 +29,8 @@
     export default {
         components: {
             nebuMenu,
-            nebuFooter},
+            nebuFooter
+        },
         name: 'quiz-question',
         data () {
             return {
@@ -91,48 +92,140 @@
         width: 80%
         margin: 0 auto
         text-align: center
-        padding-top: 6rem
+        padding-top: 2rem
     &-title
-        font-size: 6rem
+        font-size: 2rem
         font-family: Airship, sans-serif
         color: white
         text-align: left
-        padding-top: 4rem
-        margin-bottom: 14rem
+        margin: 2rem 0 6rem 0
         text-transform: uppercase
     &-question
-        font-size: 3rem
+        width: 100%
+        font-size: 1.5rem
         text-transform: uppercase
         color: #1F0D87
         font-style: italic
         font-weight: 700
         margin-bottom: 5rem
         text-align: left
-        width: 80%
-        line-height: 5rem
+        line-height: 3rem
     &-button
-        width: 300px
-        height: 130px
-        font-size: 3rem
-        line-height: 130px
+        width: 150px
+        height: 50px
+        font-size: 1rem
+        line-height: 50px
         background: white
         font-weight: 700
-        border-radius: 20px
+        border-radius: 10px
         text-transform: uppercase
         text-align: center
         margin: 5vh auto
         color: #1F0D87
     &-radio
         width: 100%
-        font-size: 2.5rem
+        font-size: 1rem
         color: white
         margin-bottom: 3rem
         text-align: left
+    .desktop
+        display: none
 
+@media(min-width: 600px)
+    .Quiz
+        font-family: Roboto, sans-serif
+        position: relative
+        width: 95vw
+        height: 100vh
+        background: none
+        padding: 3rem
+        margin: 0 auto
+        overflow: hidden
 
+        &-background
+            width: 100%
+            height: 50vh
+            position: absolute
+            bottom: 15vh
+            right: 5vw
+            background: url("../assets/img/quiz_background_desktop.png") no-repeat
+            background-size: 100%
+            box-sizing: border-box
 
+        &-container
+            width: 100vw
+            height: 30vh
+            margin: 0 auto
+            text-align: center
+            padding: 6rem
+        &-title
+            font-size: 2.5rem
+            font-family: Airship, sans-serif
+            color: #231189
+            text-align: left
+            margin: 2rem 0 6rem 0
+            text-transform: uppercase
+            position: absolute
+            transform: rotate(90deg)
+            right: 90px
+            top: 230px
+        &-question
+            font-size: 1.5rem
+            color: #FE5B3F
+            font-style: italic
+            font-weight: 900
+            margin-bottom: 1rem
+            text-transform: none
+        &-button
+            width: 150px
+            height: 50px
+            font-size: 1rem
+            line-height: 50px
+            background: white
+            font-weight: 700
+            border-radius: 10px
+            border: transparent
+            text-transform: uppercase
+            text-align: center
+            margin: 5vh 1vw
+            color: #1F0D87
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1)
+            left: 3rem
+            position: absolute
 
-
+        &-radio
+            width: 100%
+            font-size: 1rem
+            color: black
+            margin: 1.5rem 0
+            text-align: left
+        .desktop
+            display: block
+        .Nebula-title
+            font-size: 3rem
+            position: absolute
+            left: 6rem
+            top: 3rem
+            font-family: Airship, sans-serif
+            color: #F33A56
+        &-questionContainer
+            width: 70vw
+            height: 35vh
+            border-width: 15px
+            border-style: solid
+            border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)
+            border-image-slice: 1
+            padding: 4rem
+            position: relative
+            margin-top: 10vh
+        .kurk
+            width: 350px
+            height: 300px
+            position: absolute
+            bottom: 0
+            right: 50px
+            background: url("../assets/img/kurk.png") no-repeat
+            background-size: cover
 
 
 </style>

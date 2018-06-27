@@ -14,6 +14,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class FactSheetsAdmin extends AbstractAdmin
 {
@@ -23,13 +24,13 @@ class FactSheetsAdmin extends AbstractAdmin
         $formMapper->add('category', TextType::class);
         $formMapper->add('main_title', TextType::class);
         $formMapper->add('video_description_title', TextType::class);
-        $formMapper->add('video_description_text', TextType::class);
+        $formMapper->add('video_description_text', TextareaType::class);
         $formMapper->add('video_src', TextType::class);
         $formMapper->add('video_alt', TextType::class);
         $formMapper->add('explanation_title', TextType::class);
-        $formMapper->add('explanation_text', TextType::class);
+        $formMapper->add('explanation_text', TextareaType::class);
         $formMapper->add('scientific_fact_title', TextType::class);
-        $formMapper->add('scientific_fact_text', TextType::class);
+        $formMapper->add('scientific_fact_text', TextareaType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

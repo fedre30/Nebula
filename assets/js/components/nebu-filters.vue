@@ -52,7 +52,7 @@
 .Filters
     width: 100%
     position: fixed
-    bottom: 150px
+    bottom: 70px
     background-color: white
     z-index: 99999999
     overflow: hidden
@@ -60,13 +60,13 @@
     &-link
         color: #7169AD
         font-weight: 800
-        font-size: 3rem
-        line-height: 120px
+        font-size: 1rem
+        line-height: 50px
         width: 100%
-        height: 120px
+        height: 50px
         z-index: 999999999
         background-color: white
-        padding-left: 6rem
+        padding-left: 2rem
         box-shadow: 0 1px 3px 0 rgba(0,0,0,6)
 
     &-container
@@ -79,17 +79,17 @@
 
     &-item
         width: 100%
-        height: calc(50px + 3rem)
+        height: calc(50px + 1rem)
         margin: 0
-        font-size: 3rem
+        font-size: 1rem
         color: #F13455
-        line-height: calc(50px + 3rem)
+        line-height: calc(50px + 1rem)
         z-index: 0
         box-shadow: 0 1px 3px 0 rgba(0,0,0,6)
-        padding: 1rem 6rem
+        padding: 0.5rem 2rem
         font-weight: 500
     &-item:first-child
-        padding-top: 5.8rem
+        padding-top: 1.6rem
 
     .opened
         height: auto

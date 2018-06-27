@@ -13,6 +13,7 @@ class HomeQuestionsType extends AbstractType
     {
         $builder
             ->add('Question')
+            ->add('Answer')
             ->add('Page')
         ;
     }

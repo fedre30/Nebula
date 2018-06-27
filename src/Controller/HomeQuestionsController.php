@@ -22,14 +22,14 @@ class HomeQuestionsController extends FOSRestController
      * Lists all homeQuestion.
      * @FOSRest\Get("/homeQuestions")
      */
-    public function getMovies()
+    public function getQuestions()
     {
         $repository = $this->getDoctrine()->getRepository(HomeQuestions::class);
 
         // query for a single Product by its primary key (usually "id")
-        $movies = $repository->findAll();
+        $data = $repository->findAll();
 
-        $view = View::create($movies);
+        $view = View::create($data);
         $view->setFormat('json');
 
         // Gestion de la réponse
@@ -40,15 +40,15 @@ class HomeQuestionsController extends FOSRestController
      * one Article.
      * @Route("/homeQuestions/{id}", name="homeQuestions_id", methods={"GET"}, requirements={"id"="\d+"})
      */
-    public function getOneMovie($id)
+    public function getOneQuestion($id)
     {
         $repository = $this->getDoctrine()->getRepository(HomeQuestions::class);
-        $HomeQuestions = $repository->find($id);
+        $data = $repository->find($id);
 
-        if ($HomeQuestions === null) {
-            $view = View::create($HomeQuestions, Response::HTTP_NOT_FOUND , []);
+        if ($data === null) {
+            $view = View::create($data, Response::HTTP_NOT_FOUND , []);
         } else {
-            $view = View::create($HomeQuestions, Response::HTTP_OK , []);
+            $view = View::create($data, Response::HTTP_OK , []);
         }
         $view->setFormat('json');
         return $this->handleView($view);
@@ -59,17 +59,17 @@ class HomeQuestionsController extends FOSRestController
      * @FOSRest\Post("/homeQuestions")
      *
      */
-    public function PostMoviesAction(Request $request)
+    public function PostQuestionsAction(Request $request)
     {
-        $HomeQuestions = new HomeQuestions();
-        $form = $this->createForm(HomeQuestionsType::class, $HomeQuestions);
+        $data = new HomeQuestions();
+        $form = $this->createForm(HomeQuestionsType::class, $data);
         $form->submit($request->request->all());
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($HomeQuestions);
+            $em->persist($data);
             $em->flush();
-            $view = View::create($HomeQuestions, Response::HTTP_CREATED , []);
+            $view = View::create($data, Response::HTTP_CREATED , []);
         } else {
             $view = View::create($form, Response::HTTP_BAD_REQUEST , []);
         }

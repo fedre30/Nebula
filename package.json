@@ -23,6 +23,8 @@
         "reset-css": "^4.0.1",
         "vue-router": "^3.0.1",
         "vue-scroll-class": "^1.2.3",
-        "vue-youtube": "^1.2.5"
+        "vue-scrollto": "^2.11.0",
+        "vue-youtube": "^1.2.5",
+        "vue2-animate": "^2.0.0"
     }
 }
