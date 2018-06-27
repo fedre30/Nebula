@@ -13,7 +13,7 @@ class QuizzAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('Question', TextType::class);
-        $formMapper->add('firstAnswer', TextType::class);
+        $formMapper->add('firstAnswer');
         $formMapper->add('firstAnswerCorrection');
         $formMapper->add('secondAnswer', TextType::class);
         $formMapper->add('secondAnswerCorrection');

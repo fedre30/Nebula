@@ -3,9 +3,11 @@
         <nebu-menu></nebu-menu>
         <div class="Answer-container">
         <h3 class="Answer-title">quizz</h3>
-            <div class="Answer-question">un trou noir se forme suite à:</div>
-            <div class="Answer-item" v-for="(answer, index) in answers" :key="answer.name" :class="answer.styleClass">{{answer.name}}</div>
-            <p class="Answer-text">Mais vous n’avez rien compris !
+            <div class="Answer-question" v-on:click="test"> un trou noir se forme suite à:</div>
+            <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }">{{answers[$route.params.count].firstAnswer}}</div>
+            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }" >{{answers[$route.params.count].secondAnswer}}</div>
+            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}" >{{answers[$route.params.count].thirdAnswer}}</div>
+            <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris !
                 Vous devriez relire la fiche qui en parle si vous voulez mon avis.</p>
             <router-link :to="{name: 'results'}"><div class="Answer-button">suivant</div></router-link>
         </div>
@@ -16,6 +18,9 @@
 <script>
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
+    import DataStore from "../store.js";
+
+    import axios from 'axios';
 
     export default {
         components: {
@@ -24,27 +29,22 @@
         name: 'quiz-answer',
         data() {
             return {
-                answers: [
-                    {   name: 'L’explosion d’un astéroïde',
-                        styleClass: 'wrong'
-                    },
-
-                    {
-                        name: 'L’explosion d’une étoile',
-                        styleClass: ''
-                    },
-                    {
-                        name: 'Une faille dans l’espace',
-                        styleClass: 'right'
-                    }
-                ]
+                answers: {},
+                isRightAnswer: DataStore.isRightAnswer
             }
+        },
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/quizz')
+                .then(response => (this.answers = response.data))
         }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
+.inactive
+    display: none
 .Answer
     width: 100%
     height: 100vh
