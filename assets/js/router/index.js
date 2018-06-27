@@ -8,6 +8,7 @@ import Quiz_question from '../pages/Quiz_question.vue';
 import Quiz_answer from '../pages/Quiz_answer.vue';
 import Quiz_results from '../pages/Quiz_results.vue';
 import Search from '../pages/Search.vue';
+import Contribution from '../pages/Contribution.vue';
 Vue.use(Router);
 Vue.use(Film_card);
 
@@ -56,6 +57,11 @@ export default new Router({
             path: '/results',
             name: 'results',
             component: Quiz_results
+        },
+        {
+            path: '/contribution',
+            name: 'contribution',
+            component: Contribution
         },
     ],
     scrollBehavior (to, from) {

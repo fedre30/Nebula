@@ -118,9 +118,10 @@ a
 @media(min-width: 600px)
     .Timeline
         width: 100%
-        height: 170vh
+        height: 100vh
         font-family: Roboto, sans-serif
         position: relative
+        margin-top: 70vh
         &-container
             width: 80%
             margin: 0 auto
@@ -144,7 +145,6 @@ a
             line-height: 3rem
             text-align: center
             margin: 0 auto
-            position: relative
             text-transform: uppercase
             display: block
             background: transparent
