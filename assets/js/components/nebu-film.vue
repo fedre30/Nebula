@@ -52,12 +52,46 @@
     &-mistake
         color: #1F0D87
         font-weight: 700
-        font-size: 2.5rem
+        font-size: 1rem
         text-align: left
-        line-height: 3.5rem
+        line-height: 2rem
     &-title, &-year
         color: white
-        font-size: 2rem
+        font-size: 0.8rem
         text-align: left
-        margin-top: 1.5rem
+        margin-top: 1rem
+        line-height: 2
+@media(min-width: 600px)
+    .Item
+        width: 100%
+        height: 20vh
+        margin: 5vh 2vw
+        font-family: Roboto, sans-serif
+        &-text
+            background-color: white
+            height: 20vh
+            width: 100%
+            padding: 1rem 3rem
+        &-container
+            display: flex
+            width: 100%
+            margin: 0 auto
+        &-image
+            width: 200px
+            height: 23vh
+            background: url("./assets/img/space.jpg") no-repeat
+            background-size: cover
+            margin-right: 5vw
+        &-mistake
+            color: #440BA2
+            font-weight: 700
+            font-size: 2rem
+            text-align: left
+            line-height: 3.5rem
+        &-title, &-year
+            color: #FF5A3D
+            font-style: italic
+            font-size: 1rem
+            text-align: left
+            margin-top: 1.5rem
 </style>
