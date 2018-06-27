@@ -1,16 +1,13 @@
 <template>
-    <div class="Circle" v-on:mouseenter="show = !show">
+    <div class="Circle">
         <router-link :to="{name: 'film'}">
             <h3 class="Circle-mistake">{{mistake}}</h3>
             <h4 class="Circle-title">{{title}}</h4>
             <div class="Circle-container">
                 <div class="Circle-year">{{year}}</div>
-                <transition name="turnright">
-                    <div class="Circle-outer" v-if="show"></div>
-                </transition>
-                <transition name="turnleft">
-               <div class="Circle-inner"  v-if="show"></div>
-                </transition>
+
+                    <div class="Circle-outer"></div>
+               <div class="Circle-inner"></div>
                 <div class="Circle-center"></div>
             </div>
         </router-link>
@@ -156,13 +153,13 @@
             z-index: 99999
 
         &-inner
-            width: 200px
-            height: 220px
+            width: 190px
+            height: 210px
             background: url("./assets/img/inner_desktop.png") no-repeat
             background-size: cover
             position: absolute
             left: 90px
-            top: -35px
+            top: -30px
 
         &-outer
             width: 250px
@@ -182,13 +179,6 @@
 a
     text-decoration: none
 
-.turnright-enter-active, .turnright-leave-active
-    animation: turnRight 20s ease infinite
-    opacity: 1
-
-.turnright-enter, .turnright-leave-to
-    animation: turnRight 20s ease infinite
-    opacity: 1
 
 @-webkit-keyframes turnRight
     from
@@ -235,15 +225,17 @@ a
         -o-transform: rotate(0deg)
         transform: rotate(0deg)
 
-.turnleft-enter-active, .turnleft-leave-active
-    animation: turnRight 20s ease infinite
-    opacity: 1
+.Circle:hover
+    .Circle-inner
+        animation: turnRight 3s ease infinite
+    .Circle-outer
+        animation: turnLeft 3s ease infinite
 
-.turnleft-enter, .turnleft-leave-to
-    animation: turnRight 20s ease infinite
-    opacity: 1
 
-@-webkit-keyframes turnleft
+
+
+
+@-webkit-keyframes turnLeft
     from
         -webkit-transform: rotate(0deg)
         -o-transform: rotate(0deg)
@@ -254,7 +246,7 @@ a
         -o-transform: rotate(-360deg)
         transform: rotate(-360deg)
 
-@keyframes turnleft
+@keyframes turnLeft
     0%
         -ms-transform: rotate(0deg)
         -moz-transform: rotate(0deg)

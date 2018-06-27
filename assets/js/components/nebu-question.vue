@@ -8,7 +8,7 @@
                 <div class="Question-answer">Faux</div>
             </div>
             <div class="Question-invitation">Trop facile pour vous ? <br> Un quizz complet vous attend !</div>
-            <router-link :to="{name: 'question'}"> <div class="Question-button quizz">quizz</div></router-link>
+            <router-link :to="{name: 'question'}"><div class="Question-button quizz">quizz</div></router-link>
 
         </div>
     </div>
@@ -89,6 +89,7 @@
         background: transparent
         color: white
         font-weight: 800
+        z-index: 999999999
 
 
     &-button:before, &-button:after

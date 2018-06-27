@@ -183,7 +183,7 @@ a
             position: absolute
             top: 20vh
             left: 25vw
-            width: 22vw
+            width: 22.5vw
             height: 25vh
             background: url("./assets/img/footer_shape.png") no-repeat
             background-size: cover

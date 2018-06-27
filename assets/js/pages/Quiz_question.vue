@@ -57,7 +57,7 @@
         text-align: left
         margin: 2rem 0 6rem 0
         text-transform: uppercase
-    &-question
+    &-subtitle
         width: 100%
         font-size: 1.5rem
         text-transform: uppercase
