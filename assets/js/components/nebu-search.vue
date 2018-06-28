@@ -4,7 +4,7 @@
         <input type="search" placeholder="Rechercher">
         <div class="Input-results">
             <ul>
-                <li v-for="movies in getResults" :key="movies.title">{{movies.title}}</li>
+                <li v-for="facts in getResults" :key="facts.mainTitle">{{facts.mainTitle}}</li>
             </ul>
         </div>
     </div>
@@ -17,18 +17,18 @@
         data() {
             return {
                 search: "",
-                movies: []
+                facts: []
             }
         },
         computed : {
             getResults(){
-                return this.movies.filter((movie) => movie.title.match(this.search))
+                return this.facts.filter((fact) => fact.mainTitle.match(this.search))
             }
         },
         mounted () {
              axios
-                .get('http://localhost:8000/api/movies')
-                .then(response => (this.movies = response.data))
+                .get('http://localhost:8000/api/facts')
+                .then(response => (this.facts = response.data))
         }
     }
 </script>
@@ -42,7 +42,7 @@
     top: 5vh
     left: 15%
     z-index: 3
-    font-family: Robote, sans-serif
+    font-family: Roboto, sans-serif
     .loupe
         background: url("./assets/img/loupe_desktop.svg") no-repeat
         background-size: cover
