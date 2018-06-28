@@ -112,7 +112,7 @@
         height: 50vh
         margin: 0 auto
         text-align: center
-        z-index: 10000000
+        z-index: 1
         font-family: Roboto, sans-serif
         position: relative
         &-container
