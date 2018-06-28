@@ -133,6 +133,7 @@
             opacity: 1
             transition: all .2s
             background: transparent
+            z-index: 1
             &-burger
                 display: block
                 width: 50px
@@ -166,7 +167,7 @@
                 height: 60vh
                 position: absolute
                 left: 60vw
-                top: 20vh
+                top: 15vh
                 display: flex
                 flex-direction: column
             &-item
@@ -181,13 +182,13 @@
             &-item-home, &-item-search, &-item-film, &-item-quiz
                 background: none
             &-circle
-                width: 700px
-                height: 700px
+                width: 600px
+                height: 600px
                 background: linear-gradient(348deg, rgba(177,147,223,1) 0%, rgba(251,32,70,1) 100%)
                 position: absolute
                 top: 15vh
-                left: 10vw
-                border-radius: 700px
+                left: 5vw
+                border-radius: 600px
 
             .mobile
                 display: none

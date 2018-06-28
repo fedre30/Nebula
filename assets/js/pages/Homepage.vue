@@ -56,10 +56,10 @@
 @media(min-width: 600px)
     .Homepage
         width: 100%
-        height: 450vh
+        height: 500vh
         &-background
             width: 100%
-            height: 450vh
+            height: 480vh
             background: url("../assets/img/background_home_desktop.png") no-repeat
             background-size: 100%
             margin-top: 5vh
@@ -68,7 +68,7 @@
         .timeline
             width: 100%
             position: absolute
-            top: 180vh
+            top: 190vh
             left: 20vw
 
 </style>

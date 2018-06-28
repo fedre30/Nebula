@@ -1,10 +1,12 @@
 <template>
     <div class="Answer">
+        <h1 class="Nebula-title desktop">Nebula</h1>
+       <div class="Answer-background"></div>
         <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Answer-background"></div>
         <nebu-menu></nebu-menu>
-        <div class="Answer-container">
         <h3 class="Answer-title">quizz</h3>
+        <div class="Answer-answerContainer">
             <div class="Answer-question"> un trou noir se forme suite à:</div>
             <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }" v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}</div>
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"  v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}</div>
@@ -17,7 +19,6 @@
             <router-link :to="{name: 'results' }">
                 <div class="Answer-button">suivant</div>
             </router-link>
-
         </div>
         <nebu-footer></nebu-footer>
     </div>
@@ -228,7 +229,7 @@ a
             position: absolute
         &-answerContainer
             width: 70vw
-            height: 35vh
+            height: 45vh
             border-width: 15px
             border-style: solid
             border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)

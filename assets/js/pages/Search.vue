@@ -3,9 +3,9 @@
         <nebu-menu></nebu-menu>
         <input type="search" class="Search-input" placeholder="Rechercher un film, un fait scientifique …"
                v-model="search">
-        <div class="Search-results">
+        <div class="Input-results" v-if="show">
             <ul>
-                <li v-for="facts in getResults" :key="facts.mainTitle">{{facts.mainTitle}}</li>
+                <li v-for="facts in getResults" :key="facts.videoDescriptionTitle" ><router-link :to="{path: `/film/${parseInt(facts.id)}`}">{{facts.videoDescriptionTitle}}</router-link></li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,7 @@
         },
         computed : {
             getResults(){
-                return this.facts.filter((fact) => fact.mainTitle.match(this.search))
+                return this.facts.filter((fact) => fact.videoDescriptionTitlee.match(this.search))
             }
         },
         mounted () {

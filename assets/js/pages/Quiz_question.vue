@@ -1,8 +1,11 @@
 <template>
     <div class="Quiz" >
+        <h1 class="Nebula-title desktop">Nebula</h1>
+       <div class="Quiz-background"></div>
         <nebu-menu />
         <div class="Quiz-container">
             <h3 class="Quiz-title">quizz</h3>
+            <div class="Quiz-questionContainer">
         <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
             <form method="post" >
                 <div class="Form-radio" v-if="answers[0]" >
@@ -14,6 +17,8 @@
                     <input class="Quiz-button" type="submit" value="valider" v-on:click="save"/>
                 </router-link>
             </form>
+                <div class="kurk"></div>
+            </div>
         </div>
         <nebu-footer />
     </div>
@@ -133,6 +138,7 @@
         padding: 3rem
         margin: 0 auto
         overflow: hidden
+        z-index: 9999
 
         &-background
             width: 100%
@@ -184,6 +190,8 @@
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1)
             left: 3rem
             position: absolute
+            cursor: pointer
+            z-index: 999
 
         &-radio
             width: 100%

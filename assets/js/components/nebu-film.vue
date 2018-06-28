@@ -86,7 +86,7 @@
         &-mistake
             color: #440BA2
             font-weight: 700
-            font-size: 2rem
+            font-size: 1.5rem
             text-align: left
             line-height: 3.5rem
         &-title, &-year
