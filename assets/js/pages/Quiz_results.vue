@@ -19,6 +19,7 @@
 <script>
     import nebuMenu from "../components/nebu-menu.vue";
     import nebuFooter from "../components/nebu-footer.vue";
+    import DataStore from "../store.js";
 
     export default {
         components: {
@@ -27,7 +28,7 @@
         name: 'quiz-results',
         data() {
             return {
-                goodAnswers: 8,
+                goodAnswers: DataStore.goodAnswers,
                 rate: 4
             }
         }
