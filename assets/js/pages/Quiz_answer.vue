@@ -59,85 +59,84 @@
         width: 80%
         margin: 0 auto
         text-align: center
-        padding-top: 6rem
+        padding-top: 2rem
     &-title
-        font-size: 6rem
+        font-size: 2rem
         font-family: Airship, sans-serif
         color: white
         text-align: left
-        padding-top: 4rem
-        margin-bottom: 12rem
+        margin: 2rem 0 5rem 0
         text-transform: uppercase
     &-question
-        font-size: 3rem
+        width: 100%
+        font-size: 1.5rem
         text-transform: uppercase
         color: #1F0D87
         font-style: italic
         font-weight: 700
-        margin-bottom: 5rem
+        margin-bottom: 2rem
         text-align: left
-        width: 80%
-        line-height: 5rem
+        line-height: 3rem
     &-item
         width: 100%
-        height: 100px
-        font-size: 3rem
+        height: 50px
+        font-size: 1rem
         font-weight: 700
         color: #CDC1E1
-        margin-top: 2rem
-        line-height: 100px
+        margin-top: 0.5rem
+        line-height: 50px
     &-text
-        font-size: 2.5rem
+        font-size: 1rem
         font-family: Roboto, sans-serif
         color: white
         text-align: left
-        line-height: 4rem
+        line-height: 2rem
         font-weight: 300
         font-style: italic
-        margin-top: 6rem
+        margin-top: 1rem
 
     &-button
-        width: 300px
-        height: 130px
-        font-size: 3rem
-        line-height: 130px
+        width: 150px
+        height: 50px
+        font-size: 1rem
+        line-height: 50px
         background: white
         font-weight: 700
-        border-radius: 20px
+        border-radius: 10px
         text-transform: uppercase
         text-align: center
-        margin: 2vh auto
+        margin: 5vh auto
         color: #1F0D87
-        z-index: 999999
-
 .wrong
     width: 100%
-    height: 100px
+    height: 50px
     background-color: #CDC1E1
     color: #18165C
+    text-align: left
     &:before
         display: inline-block
         content: ""
         background: url("../assets/img/error.svg") no-repeat
-        width: 45px
-        height: 45px
+        width: 20px
+        height: 20px
         background-size: cover
-        margin-right: 3rem
-        line-height: 100px
+        margin: 0 1rem
+        line-height: 50px
 
 
 .right
     background-color: white
     color: #F13455
+    text-align: left
     &:before
         display: inline-block
         content: ""
         background: url("../assets/img/tick.svg") no-repeat
-        width: 45px
-        height: 45px
+        width: 20px
+        height: 20px
         background-size: cover
-        margin-right: 3rem
-        line-height: 100px
+        margin: 0 1rem
+        line-height: 50px
 
 a
     text-decoration: none

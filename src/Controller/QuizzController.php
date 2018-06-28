@@ -27,9 +27,9 @@ class QuizzController extends FOSRestController
         $repository = $this->getDoctrine()->getRepository(Quizz::class);
 
         // query for a single Product by its primary key (usually "id")
-        $quizz = $repository->findAll();
+        $data = $repository->findAll();
 
-        $view = View::create($quizz);
+        $view = View::create($data);
         $view->setFormat('json');
 
         // Gestion de la réponse
@@ -43,12 +43,12 @@ class QuizzController extends FOSRestController
     public function getOneQuizz($id)
     {
         $repository = $this->getDoctrine()->getRepository(Quizz::class);
-        $HomeQuestions = $repository->find($id);
+        $data = $repository->find($id);
 
-        if ($HomeQuestions === null) {
-            $view = View::create($HomeQuestions, Response::HTTP_NOT_FOUND , []);
+        if ($data === null) {
+            $view = View::create($data, Response::HTTP_NOT_FOUND , []);
         } else {
-            $view = View::create($HomeQuestions, Response::HTTP_OK , []);
+            $view = View::create($data, Response::HTTP_OK , []);
         }
         $view->setFormat('json');
         return $this->handleView($view);
@@ -61,15 +61,15 @@ class QuizzController extends FOSRestController
      */
     public function PostQuizzAction(Request $request)
     {
-        $HomeQuestions = new Quizz();
-        $form = $this->createForm(QuizzType::class, $HomeQuestions);
+        $data = new Quizz();
+        $form = $this->createForm(QuizzType::class, $data);
         $form->submit($request->request->all());
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($HomeQuestions);
+            $em->persist($data);
             $em->flush();
-            $view = View::create($HomeQuestions, Response::HTTP_CREATED , []);
+            $view = View::create($data, Response::HTTP_CREATED , []);
         } else {
             $view = View::create($form, Response::HTTP_BAD_REQUEST , []);
         }

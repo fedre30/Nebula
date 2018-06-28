@@ -53,7 +53,7 @@
         height: 5vh
         background-color: #CDC1E1
         color: #440BA2
-        font-size: 2.5rem
+        font-size: 1rem
         padding-left: 2rem
     &-results
         color: white
