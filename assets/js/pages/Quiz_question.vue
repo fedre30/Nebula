@@ -1,24 +1,6 @@
 <template>
-    <div class="Quiz">
-        <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
-        <div class="Quiz-background"></div>
-            <nebu-menu></nebu-menu>
-            <div class="Quiz-container">
-                <h3 class="Quiz-title">quizz</h3>
-                <div class="Quiz-questionContainer">
-                    <h4 class="Quiz-question">Un trou noir se forme suite à: </h4>
-                    <form method="post">
-                        <div class="Form-radio">
-                            <p-radio class="p-round p-default Quiz-radio" v-for="(answer, index) in answers"
-                                     name="radio">{{answer}}
-                            </p-radio>
-                            <div class="kurk desktop"></div>
-                        </div>
-                        <router-link :to="{name:'answer'}"><input class="Quiz-button" type="submit" value="valider"/>
-                        </router-link>
-                    </form>
     <div class="Quiz" >
-        <nebu-menu></nebu-menu>
+        <nebu-menu />
         <div class="Quiz-container">
             <h3 class="Quiz-title">quizz</h3>
         <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
