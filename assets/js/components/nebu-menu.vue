@@ -18,17 +18,17 @@
             </div>
         </div>
         <div class="Menu desktop">
-            <div class="Menu-burger" v-on:click="show = !show" :class="{'active': show}"></div>
+            <div class="Menu-burger" v-on:click="show = !show" :class="{'active': active}"></div>
                 <div class="Menu-container" :show="show" :class="{'opened': show}">
                     <div class="Menu-circle"></div>
                     <div class="Menu-itemsContainer" >
                         <router-link :to="{name: 'home'}">
                             <div class="Menu-item">Home</div>
                         </router-link>
-                        <router-link :to="{path:`question/0`}">
+                        <router-link :to="{path:`list`}">
                             <div class="Menu-item">Espace <span class="and">&</span> cinema</div>
                         </router-link>
-                        <router-link :to="{name: 'list'}">
+                        <router-link :to="{path: 'question/0'}">
                             <div class="Menu-item">Quizz</div>
                         </router-link>
                         <router-link :to="{name: 'form'}">
@@ -145,6 +145,7 @@
                 background: url("./assets/img/burger.svg") no-repeat
                 background-size: cover
                 z-index: 2
+                cursor: pointer
 
             &-container
                 padding: 2rem
