@@ -208,6 +208,7 @@
             top: 3rem
             font-family: Airship, sans-serif
             color: #F33A56
+            z-index: 2
         &-questionContainer
             width: 70vw
             height: 45vh

@@ -42,7 +42,7 @@
     position: absolute
     top: 5vh
     left: 20vw
-    z-index: 3
+    z-index: 0
     font-family: Roboto, sans-serif
     .loupe
         background: url("./assets/img/loupe_desktop.svg") no-repeat

@@ -1,11 +1,11 @@
 <template>
     <div class="Question" ref="question">
         <div class="Question-container">
-            <h3 class="Question-title">testez vous</h3>
-            <p class="Question-text">Le corps humain gèle dans l’espace quand il est sans protection.</p>
+            <h3 class="Question-title">testez-vous</h3>
+            <p class="Question-text">{{homeQuestion[0].Question}}</p>
             <div class="Question-answers-container">
-                <div class="Question-answer">Vrai</div>
-                <div class="Question-answer">Faux</div>
+                <div class="Question-answer" v-on:click="checkAnswer" :value="true">Vrai</div>
+                <div class="Question-answer" v-on:click="checkAnswer" :value="false">Faux</div>
             </div>
             <div class="Question-invitation">Trop facile pour vous ? <br> Un quizz complet vous attend !</div>
             <router-link :to="{path: 'question/0'}"><div class="Question-button quizz">quizz</div></router-link>
@@ -15,11 +15,30 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'nebu-question',
         data() {
-            return {}
+            return {
+                homeQuestion: {}
+            }
+        },
+        mounted () {
+            axios
+                .get('http://localhost:8000/api/homeQuestions')
+                .then(response => (this.homeQuestion = response.data))
+        },
+        methods: {
+            checkAnswer(){
+                if(this.homeQuestion[0].Answer === this.value){
+                    this.$router.replace('film/4')
+                }
+                else{
+                    this.$router.replace('film/4')
+                }
+            }
         }
+
     }
 </script>
 

@@ -191,6 +191,7 @@ a
             left: 6rem
             top: 3rem
             font-family: Airship, sans-serif
+            z-index: 2
             color: #F33A56
         .bold
             font-weight: 700

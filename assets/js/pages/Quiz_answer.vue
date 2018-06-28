@@ -254,6 +254,7 @@ a
             top: 3rem
             font-family: Airship, sans-serif
             color: #F33A56
+            z-index: 2
 .wrong
     height: 50px
     background-color: #CDC1E1
