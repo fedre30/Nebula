@@ -3,13 +3,15 @@
         <nebu-menu></nebu-menu>
         <div class="Answer-container">
         <h3 class="Answer-title">quizz</h3>
-            <div class="Answer-question" v-on:click="test"> un trou noir se forme suite à:</div>
-            <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }">{{answers[$route.params.count].firstAnswer}}</div>
-            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }" >{{answers[$route.params.count].secondAnswer}}</div>
-            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}" >{{answers[$route.params.count].thirdAnswer}}</div>
+            <div class="Answer-question"> un trou noir se forme suite à:</div>
+            <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }" v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}</div>
+            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"  v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}</div>
+            <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"  v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}</div>
             <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris !
                 Vous devriez relire la fiche qui en parle si vous voulez mon avis.</p>
-            <router-link :to="{name: 'results'}"><div class="Answer-button">suivant</div></router-link>
+            <router-link :to="{name: 'results'}">
+                <div class="Answer-button">suivant</div>
+            </router-link>
         </div>
         <nebu-footer></nebu-footer>
     </div>

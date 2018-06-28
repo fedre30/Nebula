@@ -6,9 +6,9 @@
         <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
             <form method="post" >
                 <div class="Form-radio" v-if="answers[0]" >
-                    <p-radio class="p-round p-default Quiz-radio" value="0" name="radio" v-model="chibre">{{answers[$route.params.count].firstAnswer}}</p-radio>
-                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="1" v-model="chibre">{{answers[$route.params.count].secondAnswer}}</p-radio>
-                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="2" v-model="chibre">{{answers[$route.params.count].thirdAnswer}}</p-radio>
+                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="0" v-model="value">{{answers[$route.params.count].firstAnswer}}</p-radio>
+                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="1" v-model="value">{{answers[$route.params.count].secondAnswer}}</p-radio>
+                    <p-radio class="p-round p-default Quiz-radio" name="radio" value="2" v-model="value">{{answers[$route.params.count].thirdAnswer}}</p-radio>
                 </div>
                 <router-link :to="{path: `/answer/${parseInt($route.params.count)}`}">
                     <input class="Quiz-button" type="submit" value="valider"/>
@@ -33,7 +33,7 @@
         name: 'quiz-question',
         data () {
             return {
-                chibre: [],
+                value: [],
                 answers: {}
             };
         },
@@ -61,16 +61,18 @@
             }*/
         },
         watch: {
-            chibre: function() {
-                console.log(this.answers[$route.params.count].firstAnswerCorrection);
-                if (this.chibre === 0  && this.answers[$route.params.count].firstAnswerCorrection ) {
+            value: function() {
+                console.log(this.answers[0].secondAnswerCorrection,this.value,'p')
+                if (this.value === '0'  && this.answers[0].firstAnswerCorrection ) {
                     DataStore.isRightAnswer = true;
-                    console.log(this.chibre);
-                }else if (this.chibre === 1  && this.answers[$route.params.count].secondAnswerCorrection ){
+                }else if (this.value === '1'  && this.answers[0].secondAnswerCorrection === true){
                     DataStore.isRightAnswer = true;
 
-                }else if (this.chibre === 2  && this.answers[$route.params.count].thirdAnswerCorrection){
+                }else if (this.value=== '2'  && this.answers[0].thirdAnswerCorrection){
                     DataStore.isRightAnswer = true;
+                }else{
+                    DataStore.isRightAnswer = false;
+                    console.log('f')
                 }
             }
         }
