@@ -24,6 +24,8 @@ class FactSheetsType extends AbstractType
             ->add('scientific_fact_title')
             ->add('scientific_fact_text')
             ->add('homeQuestions')
+            ->add('releaseDate')
+            ->add('Img_src')
         ;
     }
 

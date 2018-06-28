@@ -5,9 +5,9 @@
         <nebu-menu />
         <div class="Quiz-container">
             <h3 class="Quiz-title">quizz</h3>
-        <h4 class="Quiz-question">{{answers[$route.params.count].question}}</h4>
-            <div class="Quiz-questionContainer">
 
+            <div class="Quiz-questionContainer">
+                <h4 class="Quiz-question">{{answers[$route.params.count].Question}}</h4>
             <form method="post" >
                 <div class="Form-radio" v-if="answers[0]" >
                     <p-radio class="p-round p-default Quiz-radio" name="radio" value="0" v-model="value">{{answers[$route.params.count].firstAnswer}}</p-radio>
@@ -56,7 +56,7 @@
         },
         watch: {
             value: function() {
-
+                console.log(this.answers[this.$route.params.count].question);
                 if (this.value === '0'  && this.answers[this.$route.params.count].firstAnswerCorrection ) {
                     DataStore.isRightAnswer = true;
                     DataStore.goodAnswers += 1;
@@ -191,7 +191,7 @@
             left: 3rem
             position: absolute
             cursor: pointer
-            z-index: 999
+            z-index: 1
 
         &-radio
             width: 100%
@@ -208,9 +208,10 @@
             top: 3rem
             font-family: Airship, sans-serif
             color: #F33A56
+            z-index: 2
         &-questionContainer
             width: 70vw
-            height: 35vh
+            height: 45vh
             border-width: 15px
             border-style: solid
             border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)
