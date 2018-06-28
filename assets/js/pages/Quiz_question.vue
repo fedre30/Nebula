@@ -3,7 +3,7 @@
         <nebu-menu />
         <div class="Quiz-container">
             <h3 class="Quiz-title">quizz</h3>
-        <h4 class="Quiz-question">un trou noir se forme suite à: </h4>
+        <h4 class="Quiz-question">{{answers[$route.params.count].question}}</h4>
             <form method="post" >
                 <div class="Form-radio" v-if="answers[0]" >
                     <p-radio class="p-round p-default Quiz-radio" name="radio" value="0" v-model="value">{{answers[$route.params.count].firstAnswer}}</p-radio>
@@ -51,20 +51,19 @@
         watch: {
             value: function() {
 
-                if (this.value === '0'  && this.answers[0].firstAnswerCorrection ) {
+                if (this.value === '0'  && this.answers[this.$route.params.count].firstAnswerCorrection ) {
                     DataStore.isRightAnswer = true;
                     DataStore.goodAnswers += 1;
-                }else if (this.value === '1'  && this.answers[0].secondAnswerCorrection){
+                }else if (this.value === '1'  && this.answers[this.$route.params.count].secondAnswerCorrection){
                     DataStore.isRightAnswer = true;
                     DataStore.goodAnswers += 1;
-                }else if (this.value === '2'  && this.answers[0].thirdAnswerCorrection){
+                }else if (this.value === '2'  && this.answers[this.$route.params.count].thirdAnswerCorrection){
                     DataStore.isRightAnswer = true;
                     DataStore.goodAnswers += 1;
                 }else{
                     DataStore.isRightAnswer = false;
                     DataStore.goodAnswers = DataStore.saveAnswer;
                 }
-                console.log(DataStore.saveAnswer, DataStore.goodAnswers);
             }
         }
     }

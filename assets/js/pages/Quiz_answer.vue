@@ -5,7 +5,7 @@
         <nebu-menu></nebu-menu>
         <div class="Answer-container">
         <h3 class="Answer-title">quizz</h3>
-            <div class="Answer-question"> un trou noir se forme suite à:</div>
+            <div class="Answer-question"> {{answers[$route.params.count].question}}</div>
             <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }" v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}</div>
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"  v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}</div>
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"  v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}</div>
@@ -14,9 +14,8 @@
                 Vous devriez relire la fiche qui en parle si vous voulez mon avis.</p>
 
             <!--<router-link :to="{path: `/question/${parseInt($route.params.count)+1}`}">-->
-            <router-link :to="{name: 'results' }">
-                <div class="Answer-button">suivant</div>
-            </router-link>
+                <div class="Answer-button" v-on:click="test">suivant</div>
+
 
         </div>
         <nebu-footer></nebu-footer>
@@ -45,6 +44,15 @@
             axios
                 .get('http://localhost:8000/api/quizz')
                 .then(response => (this.answers = response.data))
+        },
+        methods : {
+            test () {
+                this.$router.replace(`/question/${parseInt(this.$route.params.count)+1}`);
+                if (this.answers[this.$route.params.count]=== this.answers.length){
+                    this.$router.replace('/results')
+                }
+
+            }
         }
     }
 </script>
