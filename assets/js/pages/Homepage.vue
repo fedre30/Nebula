@@ -2,6 +2,7 @@
     <div class="Homepage">
         <div class="Homepage-background">
             <nebu-introduction id="intro"></nebu-introduction>
+            <nebu-search class="desktop"></nebu-search>
             <nebu-menu></nebu-menu>
             <nebu-question></nebu-question>
             <nebu-timeline title="idees recues les plus tenaces"></nebu-timeline>
@@ -19,10 +20,12 @@
     import nebuFooter from "../components/nebu-footer.vue";
     import nebuMenu from "../components/nebu-menu.vue";
     import nebuAbout from "../components/nebu-about-section.vue";
+    import nebuSearch from "../components/nebu-search.vue";
 
     export default {
         name: 'homepage',
         components: {
+            nebuSearch,
             nebuMenu,
             nebuFooter,
             nebuTimeline,

@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>Oval</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="13.0279634%" y1="-15.1097413%" x2="100%" y2="115.679923%" id="linearGradient-1">
-            <stop stop-color="#1F0D87" offset="0%"></stop>
-            <stop stop-color="#FF5A3D" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD" transform="translate(-1318.000000, -78.000000)" stroke="url(#linearGradient-1)" stroke-width="3">
-            <circle id="Oval" cx="1340" cy="100" r="20"></circle>
-        </g>
-    </g>
-</svg>
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><title>Oval</title><defs><linearGradient x1="13.028%" y1="-15.11%" y2="115.68%" id="a"><stop stop-color="#1F0D87" offset="0%"/><stop stop-color="#FF5A3D" offset="100%"/></linearGradient></defs><circle cx="1340" cy="100" r="20" transform="translate(-1318 -78)" stroke="url(#a)" stroke-width="3" fill="none"/></svg>
