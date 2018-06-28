@@ -21,7 +21,7 @@
     height: 10vh
     position: absolute
     top: 5vh
-    left: 20%
+    left: 15%
     z-index: 3
     .loupe
         background: url("./assets/img/loupe_desktop.svg") no-repeat
@@ -35,7 +35,7 @@
 
     input[type=search]
         width: 40px
-        height: 120px
+        height: 110px
         box-sizing: border-box
         border: 2px solid #CDC1E1
         border-bottom-right-radius: 50px
