@@ -145,7 +145,7 @@
                 right: 4rem
                 background: url("./assets/img/burger.svg") no-repeat
                 background-size: cover
-                z-index: 2
+                z-index: 4
                 cursor: pointer
 
             &-container

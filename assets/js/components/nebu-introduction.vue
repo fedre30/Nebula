@@ -69,6 +69,7 @@ export default {
         position: relative
         width: 100%
         height: 100vh
+        z-index: 1
         &-container
             width: 60%
             margin: 0 auto
