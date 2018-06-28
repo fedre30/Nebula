@@ -1,19 +1,22 @@
 <template>
     <div class="List">
+        <div class="List-background">
+        <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <nebu-filters></nebu-filters>
         <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
-            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title"  v-if="index < 7">
+            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title" :mistake="movie.mistake" :year="movie.year" v-if="index < 7">
                 <router-link :to="{name: 'film', params: movie.id}"></router-link>
             </nebu-film>
         </div>
 
         <div class="List-tips">
-            <div class="List-alien"></div>
-            <h3 class="List-tips-title">suggestions</h3>
+            <div class="List-alien mobile"></div>
+            <h3 class="List-tips-title mobile">suggestions</h3>
             <p class="List-tips-text">Un film manque à l’appel ?  Vous pouvez nous envoyer  vos suggestions lumineuses !</p>
             <router-link :to="{name: 'form'}"><div class="List-button">contribuer</div></router-link>
+        </div>
         </div>
         <nebu-footer></nebu-footer>
     </div>
@@ -37,6 +40,7 @@
         data() {
             return {
                 movies: {}
+
             }
         },
 
@@ -44,6 +48,7 @@
             axios
                 .get('http://localhost:8000/api/movies')
                 .then(response => (this.movies = response.data))
+
         },
 
     }
@@ -69,7 +74,7 @@
         font-family: Airship, sans-serif
         color: white
         text-align: left
-        margin: 2rem 0 14rem 0
+        margin: 2rem 0 8rem 0
         text-transform: uppercase
     &-tips
         width: 80%
@@ -145,10 +150,107 @@ a
     text-decoration: none
 
 
-
-
-
 .and
     font-family: Futura, sans-serif
+
+.desktop
+    display: none
+
+@media(min-width: 600px)
+    .List
+        font-family: Roboto, sans-serif
+        position: relative
+        width: 98%
+        height: 270vh
+        background: none
+        padding: 3rem 0
+        overflow: hidden
+
+        &-background
+            width: 100%
+            height: 270vh
+            background: url("../assets/img/list_background_desktop.png") no-repeat
+            background-size: 100%
+            box-sizing: border-box
+
+        &-container
+            width: 70%
+            height: 30vh
+            margin: 0 auto
+            text-align: center
+            padding: 6rem 0
+        &-title
+            font-size: 4rem
+            font-family: Airship, sans-serif
+            color: black
+            margin: 6rem 0 14rem 0
+            text-transform: uppercase
+            text-align: left
+        &-tips
+            width: 34vw
+            height: 42vh
+            position: absolute
+            left: 60vw
+            bottom: 50vh
+            background: url("../assets/img/list_shape.png") no-repeat
+            background-size: cover
+        &-tips-text
+            font-size: 1rem
+            color: white
+            line-height: 2rem
+            text-align: center
+            margin: 6rem 0 2rem 3rem
+            width: 80%
+            font-style: italic
+
+        &-button
+            font-size: 0.8rem
+            width: 100px
+            height: 50px
+            line-height: 3rem
+            text-align: center
+            position: relative
+            text-transform: uppercase
+            background: transparent
+            color: white
+            font-weight: 800
+
+
+        &-button:before, &-button:after
+            width: 100px
+            left: 0
+            height: 20px
+            border: 2px solid white
+
+        &-button:before
+            position: absolute
+            content: ''
+            border-bottom: none
+            -webkit-transform: perspective(15px) rotateX(7deg)
+            -moz-transform: perspective(15px) rotateX(7deg)
+            transform: perspective(15px) rotateX(10deg)
+            top: 0
+
+        &-button:after
+            position: absolute
+            top: 25px
+            content: ''
+            border-top: none
+            -webkit-transform: perspective(15px) rotateX(-7deg)
+            -moz-transform: perspective(15px) rotateX(-7deg)
+            transform: perspective(15px) rotateX(-10deg)
+
+        .mobile
+            display: none
+        .desktop
+            display: block
+        .Nebula-title
+            font-size: 3rem
+            position: absolute
+            left: 6rem
+            top: 6rem
+            font-family: Airship, sans-serif
+            color: #F33A56
+
 
 </style>

@@ -1,6 +1,7 @@
 <template>
     <div class="Film">
         <div class="Film-background">
+            <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Film-container">
             <h2 class="Film-title"><!--{{fact.mainTitle}}-->LE son dans l’espace</h2>
             <section class="Film-intro">
@@ -127,6 +128,8 @@
         margin: 5vh auto
         text-align: center
         height: 30vh
+    .desktop
+        display: none
 @media(min-width: 600px)
     .Film
         font-family: Roboto, sans-serif
@@ -182,4 +185,13 @@
             margin: 40vh 30vw
         &-fact
             width: 45%
+        .Nebula-title
+            font-size: 3rem
+            position: absolute
+            left: 6rem
+            top: 6rem
+            font-family: Airship, sans-serif
+            color: white
+        .desktop
+            display: block
 </style>
