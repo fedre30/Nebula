@@ -121,7 +121,10 @@ a
         height: 100vh
         font-family: Roboto, sans-serif
         position: relative
-        margin-top: 70vh
+        top: 300px
+        left: 70px
+        margin-top: 20vh
+
         &-container
             width: 80%
             margin: 0 auto

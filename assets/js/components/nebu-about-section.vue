@@ -181,10 +181,10 @@ a
             display: block
         &-shape
             position: absolute
-            top: 20vh
-            left: 25vw
-            width: 22.5vw
-            height: 25vh
+            top: 200px
+            left: 350px
+            width: 330px
+            height: 250px
             background: url("./assets/img/footer_shape.png") no-repeat
             background-size: cover
 

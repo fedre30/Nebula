@@ -174,7 +174,9 @@
             width: 150px
             height: 150px
             border-radius: 300px
-            margin: 0 auto
+            position: absolute
+            left: 120px
+            top: -15
             background: url('./assets/img/space.jpg')
 a
     text-decoration: none
