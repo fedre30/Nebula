@@ -6,8 +6,8 @@
         <nebu-menu></nebu-menu>
         <div class="List-container">
             <h3 class="List-title">science <span class="and">&</span> cinema</h3>
-            <nebu-film v-for="(movie, index) in movies" :key="movie.title" :title="movie.title" :mistake="movie.mistake" :year="movie.year" v-if="index < 7">
-                <router-link :to="{name: 'film', params: movie.id}"></router-link>
+            <nebu-film v-for="(fact, index) in facts" :key="fact.mainTitle" :title="fact.videoDescriptionTitle" :mistake="fact.mainTitle" :year="fact.year" v-if="index < 7">
+                <router-link :to="{name: 'film', params: fact.id}"></router-link>
             </nebu-film>
         </div>
 
@@ -39,15 +39,15 @@
         name: 'nebu-films-list',
         data() {
             return {
-                movies: {}
+                facts: {}
 
             }
         },
 
         mounted () {
             axios
-                .get('http://localhost:8000/api/movies')
-                .then(response => (this.movies = response.data))
+                .get('http://localhost:8000/api/facts')
+                .then(response => (this.facts = response.data))
 
         },
 
@@ -183,15 +183,15 @@ a
             font-size: 4rem
             font-family: Airship, sans-serif
             color: black
-            margin: 6rem 0 14rem 0
+            margin: 3rem 0 6rem 0
             text-transform: uppercase
             text-align: left
         &-tips
-            width: 34vw
-            height: 42vh
+            width: 38vw
+            height: 48vh
             position: absolute
             left: 60vw
-            bottom: 50vh
+            bottom: 30vh
             background: url("../assets/img/list_shape.png") no-repeat
             background-size: cover
         &-tips-text

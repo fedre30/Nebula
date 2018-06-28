@@ -109,7 +109,7 @@
 @media(min-width: 600px)
     .Circle
         width: 80%
-        height: 50vh
+        height: 55vh
         margin: 0 auto
         text-align: center
         z-index: 1
@@ -117,7 +117,7 @@
         position: relative
         &-container
             width: 100%
-            height: 700px
+            height: 500px
             position: relative
             margin-top: 400px
             z-index: 999999

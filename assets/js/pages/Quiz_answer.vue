@@ -1,11 +1,14 @@
 <template>
     <div class="Answer">
+        <h1 class="Nebula-title desktop">Nebula</h1>
+       <div class="Answer-background"></div>
         <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
         <div class="Answer-background"></div>
         <nebu-menu></nebu-menu>
-        <div class="Answer-container">
         <h3 class="Answer-title">quizz</h3>
             <div class="Answer-question"> {{answers[$route.params.count].question}}</div>
+
+        <div class="Answer-answerContainer">
             <div class="Answer-item wrong"   :class="{'right': answers[$route.params.count].firstAnswerCorrection }" v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}</div>
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"  v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}</div>
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"  v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}</div>
@@ -13,7 +16,7 @@
             <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris !
                 Vous devriez relire la fiche qui en parle si vous voulez mon avis.</p>
 
-            <!--<router-link :to="{path: `/question/${parseInt($route.params.count)+1}`}">-->
+
                 <div class="Answer-button" v-on:click="test">suivant</div>
 
 
@@ -236,7 +239,7 @@ a
             position: absolute
         &-answerContainer
             width: 70vw
-            height: 35vh
+            height: 45vh
             border-width: 15px
             border-style: solid
             border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)

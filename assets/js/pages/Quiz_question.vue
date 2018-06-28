@@ -1,9 +1,13 @@
 <template>
     <div class="Quiz" >
+        <h1 class="Nebula-title desktop">Nebula</h1>
+       <div class="Quiz-background"></div>
         <nebu-menu />
         <div class="Quiz-container">
             <h3 class="Quiz-title">quizz</h3>
         <h4 class="Quiz-question">{{answers[$route.params.count].question}}</h4>
+            <div class="Quiz-questionContainer">
+
             <form method="post" >
                 <div class="Form-radio" v-if="answers[0]" >
                     <p-radio class="p-round p-default Quiz-radio" name="radio" value="0" v-model="value">{{answers[$route.params.count].firstAnswer}}</p-radio>
@@ -14,6 +18,8 @@
                     <input class="Quiz-button" type="submit" value="valider" v-on:click="save"/>
                 </router-link>
             </form>
+                <div class="kurk"></div>
+            </div>
         </div>
         <nebu-footer />
     </div>
@@ -132,6 +138,7 @@
         padding: 3rem
         margin: 0 auto
         overflow: hidden
+        z-index: 9999
 
         &-background
             width: 100%
@@ -183,6 +190,8 @@
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1)
             left: 3rem
             position: absolute
+            cursor: pointer
+            z-index: 999
 
         &-radio
             width: 100%

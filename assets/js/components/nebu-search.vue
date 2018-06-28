@@ -1,10 +1,10 @@
 <template>
     <div class="Input">
         <div class="loupe"></div>
-        <input type="search" placeholder="Rechercher">
-        <div class="Input-results">
+        <input type="search" placeholder="Rechercher" @focus="show=!show" v-model="search">
+        <div class="Input-results" v-if="show">
             <ul>
-                <li v-for="facts in getResults" :key="facts.mainTitle">{{facts.mainTitle}}</li>
+                <li v-for="facts in getResults" :key="facts.videoDescriptionTitle" ><router-link :to="{path: `/film/${parseInt(facts.id)}`}">{{facts.videoDescriptionTitle}}</router-link></li>
             </ul>
         </div>
     </div>
@@ -17,12 +17,13 @@
         data() {
             return {
                 search: "",
+                show: false,
                 facts: []
             }
         },
         computed : {
             getResults(){
-                return this.facts.filter((fact) => fact.mainTitle.match(this.search))
+                return this.facts.filter((fact) => fact.videoDescriptionTitle.match(this.search))
             }
         },
         mounted () {
@@ -37,10 +38,10 @@
 <style scoped lang="sass">
 .Input
     width: 30vw
-    height: 10vh
+    height: 20vh
     position: absolute
     top: 5vh
-    left: 15%
+    left: 20vw
     z-index: 3
     font-family: Roboto, sans-serif
     .loupe
@@ -75,11 +76,19 @@
         position: absolute
         top: 40px
         left: 0
+        border: none
     &-results
         width: 30vw
         height: auto
         background-color: white
+        position: absolute
+        top: 10vh
         li
             color: #F13455
+            margin: 1rem 1rem
+            border-bottom: 1px solid lightgrey
+    a
+        text-decoration: none
+        color: #F13455
 
 </style>

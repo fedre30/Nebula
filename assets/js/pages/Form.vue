@@ -228,7 +228,7 @@
             font-family: Roboto, sans-serif
             position: relative
             width: 95vw
-            height: 300vh
+            height: 355vh
             background: none
             padding: 3rem
             margin: 0 auto
@@ -236,7 +236,7 @@
 
             &-background
                 width: 100%
-                height: 355vh
+                height: 350vh
                 background: url("../assets/img/form_desktop_background.png") no-repeat
                 background-size: 100%
                 box-sizing: border-box
@@ -319,11 +319,11 @@
                 text-align: center
                 position: absolute
                 left: 45%
-                bottom: 70vh
+                bottom: 100vh
                 color: white
             &-step
                 width: 25vw
-                height: 70vh
+                height: 80vh
                 border-width: 15px
                 border-style: solid
                 border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)
@@ -340,14 +340,14 @@
                 width: 90%
                 display: flex
             .second
-                height: 60vh
+                height: 70vh
                 margin-top: 15vh
             &-student
                 width: 300px
                 height: 300px
                 position: absolute
                 right: 200px
-                top: 216px
+                top: 195px
                 background: url("../assets/img/student.png") no-repeat
                 background-size: cover
             .desktop

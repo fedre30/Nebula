@@ -294,8 +294,8 @@
                 background: url('../assets/img/shape_contribution.png') no-repeat
                 background-size: cover
                 position: absolute
-                bottom: 550px
-                right: 350px
+                bottom: 450px
+                right: 200px
             .textShape
                 margin-top: 6rem
                 margin-bottom: 3rem
@@ -305,7 +305,7 @@
                 background: url('../assets/img/thanks.png') no-repeat
                 background-size: cover
                 position: absolute
-                top: 300px
+                top: 250px
                 right: 400px
 
 
