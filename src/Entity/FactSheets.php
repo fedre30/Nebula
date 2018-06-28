@@ -76,6 +76,16 @@ class FactSheets
      */
     private $homeQuestions;
 
+    /**
+     * @ORM\Column(type="smallint", nullable=true)
+     */
+    private $releaseDate;
+
+    /**
+     * @ORM\Column(type="string", length=2048, nullable=true)
+     */
+    private $Img_src;
+
 
     public function getId()
     {
@@ -234,6 +244,30 @@ class FactSheets
     public function __toString()
     {
         return (string) $this->getMainTitle();
+    }
+
+    public function getReleaseDate(): ?int
+    {
+        return $this->releaseDate;
+    }
+
+    public function setReleaseDate(?int $releaseDate): self
+    {
+        $this->releaseDate = $releaseDate;
+
+        return $this;
+    }
+
+    public function getImgSrc(): ?string
+    {
+        return $this->Img_src;
+    }
+
+    public function setImgSrc(?string $Img_src): self
+    {
+        $this->Img_src = $Img_src;
+
+        return $this;
     }
 
 }

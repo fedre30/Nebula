@@ -15,6 +15,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 class FactSheetsAdmin extends AbstractAdmin
 {
@@ -31,6 +32,8 @@ class FactSheetsAdmin extends AbstractAdmin
         $formMapper->add('explanation_text', TextareaType::class);
         $formMapper->add('scientific_fact_title', TextType::class);
         $formMapper->add('scientific_fact_text', TextareaType::class);
+        $formMapper->add('releaseDate', IntegerType::class);
+        $formMapper->add('Img_src');
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
@@ -46,6 +49,8 @@ class FactSheetsAdmin extends AbstractAdmin
         $datagridMapper->add('explanation_text');
         $datagridMapper->add('scientific_fact_title');
         $datagridMapper->add('scientific_fact_text');
+        $datagridMapper->add('releaseDate');
+        $datagridMapper->add('Img_src');
     }
 
     protected function configureListFields(ListMapper $listMapper)
@@ -61,5 +66,7 @@ class FactSheetsAdmin extends AbstractAdmin
         $listMapper->addIdentifier('explanation_text');
         $listMapper->addIdentifier('scientific_fact_title');
         $listMapper->addIdentifier('scientific_fact_text');
+        $listMapper->addIdentifier('releaseDate');
+        $listMapper->addIdentifier('Img_src');
     }
 }
