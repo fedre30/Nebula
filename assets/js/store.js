@@ -1,3 +1,5 @@
 export default {
-    isRightAnswer: false
+    isRightAnswer: false,
+    saveAnswer : 0,
+    goodAnswers : 0
 };

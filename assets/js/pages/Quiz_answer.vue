@@ -9,7 +9,8 @@
             <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"  v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}</div>
             <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris !
                 Vous devriez relire la fiche qui en parle si vous voulez mon avis.</p>
-            <router-link :to="{name: 'results'}">
+            <!--<router-link :to="{path: `/question/${parseInt($route.params.count)+1}`}">-->
+            <router-link :to="{name: 'results' }">
                 <div class="Answer-button">suivant</div>
             </router-link>
         </div>
