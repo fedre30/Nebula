@@ -127,6 +127,7 @@
         right: 20vw
         background-color: transparent
         font-family: Roboto, sans-serif
+        z-index: 1
         &-link
             color: white
             font-weight: 800
