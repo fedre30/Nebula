@@ -2,14 +2,33 @@
     <div class="Input">
         <div class="loupe"></div>
         <input type="search" placeholder="Rechercher">
+        <div class="Input-results">
+            <ul>
+                <li v-for="movies in getResults" :key="movies.title">{{movies.title}}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'nebu-search',
         data() {
-            return {}
+            return {
+                search: "",
+                movies: []
+            }
+        },
+        computed : {
+            getResults(){
+                return this.movies.filter((movie) => movie.title.match(this.search))
+            }
+        },
+        mounted () {
+             axios
+                .get('http://localhost:8000/api/movies')
+                .then(response => (this.movies = response.data))
         }
     }
 </script>
@@ -23,6 +42,7 @@
     top: 5vh
     left: 15%
     z-index: 3
+    font-family: Robote, sans-serif
     .loupe
         background: url("./assets/img/loupe_desktop.svg") no-repeat
         background-size: cover
@@ -55,5 +75,11 @@
         position: absolute
         top: 40px
         left: 0
+    &-results
+        width: 30vw
+        height: auto
+        background-color: white
+        li
+            color: #F13455
 
 </style>
