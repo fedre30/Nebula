@@ -13,24 +13,12 @@
                     <div class="Menu-item-film"></div>
                 </router-link>
                 <router-link :to="{name: 'search'}">
-                    <div class="Menu-item-search"></div>
+                    <div class="Menu-item-search search"></div>
                 </router-link>
             </div>
         </div>
         <div class="Menu desktop">
-            <svg class="Menu-burger" v-on:click="show = !show" :class="{'active': active}" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient x1="13.0279634%" y1="-15.1097413%" x2="100%" y2="115.679923%" id="linearGradient-1">
-                        <stop stop-color="#9C82C6" offset="0%"></stop>
-                        <stop stop-color="#F33A56" offset="100%"></stop>
-                    </linearGradient>
-                </defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Home" transform="translate(-1318.000000, -78.000000)" stroke-width="3" stroke="url(#linearGradient-1)">
-                        <circle id="Oval" cx="1340" cy="100" r="20"></circle>
-                    </g>
-                </g>
-            </svg>
+            <div class="Menu-burger" v-on:click="show = !show" :class="{'active': show}"></div>
                 <div class="Menu-container" :show="show" :class="{'opened': show}">
                     <div class="Menu-circle"></div>
                     <div class="Menu-itemsContainer" >
@@ -107,26 +95,25 @@
             justify-content: space-between
 
         &-item-home
-            width: 10px
-            height: 20px
+            width: 40px
+            height: 23%
             background: url("./assets/img/home.svg") no-repeat
             background-size: cover
         &-item-quiz
-            width: 30px
-            height: 30px
+            width: 28px
+            height: 24%
             background: url("./assets/img/question_mark.svg") no-repeat
             background-size: cover
         &-item-film
-            width: 37px
-            height: 20px
+            width: 35px
+            height: 23%
             background: url("./assets/img/camera.svg") no-repeat
             background-size: cover
         &-item-search
-            width: 35px
-            height: 20px
+            width: 33px
+            height: 23%
             background: url("./assets/img/loupe.svg") no-repeat
             background-size: cover
-
     .scrolled
         opacity: 1
         transition: all .2s ease
@@ -143,15 +130,21 @@
             top: 0
             right: 0
             opacity: 1
-            background: transparent
             transition: all .2s
+            background: transparent
             z-index: 1
             &-burger
                 display: block
-                top: 80px
-                right: 80px
-                z-index: 4
+                width: 50px
+                height: 50px
+                border: 2px solid transparent
+                border-radius: 1000px
+                top: 4rem
+                right: 4rem
+                background: url("./assets/img/burger.svg") no-repeat
+                background-size: cover
                 cursor: pointer
+                z-index: 9999999999
                 position: absolute
 
             &-container
@@ -168,6 +161,7 @@
                 z-index: 0
                 opacity: 0
                 transition: all .2s ease
+                display: none
             &-itemsContainer
                 width: 100%
                 height: 60vh
@@ -187,7 +181,7 @@
                 color: #ED3A5E
             &-item-home, &-item-search, &-item-film, &-item-quiz
                 background: none
-            //&-circle
+            &-circle
                 width: 600px
                 height: 600px
                 background: linear-gradient(348deg, rgba(177,147,223,1) 0%, rgba(251,32,70,1) 100%)
@@ -196,21 +190,25 @@
                 left: 5vw
                 border-radius: 600px
 
-        .mobile
-            display: none
-        .desktop
-            display: block
-        .opened
-            width: 100vw
-            height: 100vh
-            opacity: 1
-            transition: all .2s ease
-        .active
-            background: url('./assets/img/menu_open.svg') no-repeat
+            .mobile
+                display: none
+            .desktop
+                display: block
+            .opened
+                width: 100vw
+                height: 100vh
+                opacity: 1
+                transition: all .2s ease
+                display: block
+            .active
+                background: url('./assets/img/menu_open.svg') no-repeat
+                display: block
 
-        a
-            text-decoration: none
-        .and
-            font-family: Futura, sans-serif
+            a
+                text-decoration: none
+            .and
+                font-family: Futura, sans-serif
+
+
 
 </style>

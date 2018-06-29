@@ -22,8 +22,7 @@
 <style scoped lang="sass">
 .Footer
     width: 100%
-    height: 20vh
-    padding: 1rem
+    height: 30vh
     position: absolute
     bottom: 2vh
 

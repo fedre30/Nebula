@@ -128,11 +128,13 @@
         z-index: 1
         font-family: Roboto, sans-serif
         position: relative
+        margin-top: 0
         &-container
             width: 100%
             position: relative
-            margin-top: 350px
+            margin-top: 400px
             z-index: 999999
+
 
         &-mistake
             font-size: 2rem

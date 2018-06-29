@@ -55,6 +55,8 @@
     width: 100%
     font-family: Roboto, sans-serif
     position: relative
+    &-frame
+        display: none
     &-container
         width: 80%
         margin: 0 auto
@@ -63,6 +65,7 @@
         font-size: 3.6rem
         font-family: Airship, sans-serif
         text-transform: uppercase
+        margin-top: 400px
         margin-bottom: 5rem
         line-height: 5.2rem
         text-align: left
@@ -123,6 +126,7 @@ a
         .desktop
             display: block
         &-frame
+            display: block
             position: absolute
             z-index: -5
 

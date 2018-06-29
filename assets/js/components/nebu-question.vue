@@ -59,7 +59,7 @@
         z-index: 2
         text-align: center
     &-scrollArrow
-        margin-top: 20px
+        display: none
     &-title
         width: 100%
         font-size: 3.6rem
@@ -156,13 +156,18 @@ a:hover
         border-radius: 100%
         font-family: Roboto, sans-serif
         position: absolute
-        top: 732px
+        top: 632px
         left: 502px
         background: white
         &-container
             width: 80%
             z-index: 2
             text-align: center
+
+        &-scrollArrow
+            display: block
+            margin-top: 20px
+            margin-left: 160px
 
         &-title
             width: 100%

@@ -37,8 +37,18 @@ export default {
         margin: 0 auto
         text-align: center
         padding-top: 5rem
+    &-bigCircle
+        display: none
+    &-spaceShape
+        display: none
+
+    &-spaceship
+        display: none
+
+    &-pinkCosmo
+        display: none
     &-title
-        font-size: 8rem
+        font-size: 12rem
         margin-bottom: 2rem
         font-family: Airship, sans-serif
         color: rgb(255, 8, 73)
@@ -104,6 +114,7 @@ export default {
             margin-left: 200px
 
         &-bigCircle
+            display: block
             width: 870px
             height: 870px
             border-radius: 100%
@@ -114,18 +125,21 @@ export default {
             z-index: -9
 
         &-spaceShape
+            display: block
             position: absolute
             z-index: -7
             top: 585px
             left: 160px
 
         &-spaceship
+            display: block
             position: absolute
             z-index: -6
             top: 1010px
             left: 100px
 
         &-pinkCosmo
+            display: block
             position: absolute
             z-index: -8
             top: 100px

@@ -66,23 +66,34 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
+
 .Homepage
     width: 100%
+    background: url("../assets/img/background_home.jpg") no-repeat
+    background-size: cover
     height: 500vh
     overflow: hidden
     position: relative
     .desktop
         display: none
+.purpleBg
+    display: none
+.purpleBgBot
+    display: none
+
 @media(min-width: 600px)
     .Homepage
         width: 100%
         height: 500vh
+        background: none
         .purpleBg
+            display: block
             position: absolute
             top: 50px
             left: 3.5%
             z-index: -10
         .purpleBgBot
+            display: block
             position: absolute
             bottom: 0
             left: 3.5%
@@ -90,6 +101,7 @@
         .desktop
             display: block
         .timeline
+            display: block
             width: 100%
             position: absolute
             top: 0
