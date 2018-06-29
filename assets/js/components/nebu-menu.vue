@@ -18,7 +18,21 @@
             </div>
         </div>
         <div class="Menu desktop">
-            <div class="Menu-burger" v-on:click="show = !show" :class="{'active': active}"></div>
+
+            <svg class="Menu-burger" v-on:click="show = !show" :class="{'active': active}" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient x1="13.0279634%" y1="-15.1097413%" x2="100%" y2="115.679923%" id="linearGradient-1">
+                        <stop stop-color="#9C82C6" offset="0%"></stop>
+                        <stop stop-color="#F33A56" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Home" transform="translate(-1318.000000, -78.000000)" stroke-width="3" stroke="url(#linearGradient-1)">
+                        <circle id="Oval" cx="1340" cy="100" r="20"></circle>
+                    </g>
+                </g>
+            </svg>
+
                 <div class="Menu-container" :show="show" :class="{'opened': show}">
                     <div class="Menu-circle"></div>
                     <div class="Menu-itemsContainer" >
@@ -131,22 +145,16 @@
             top: 0
             right: 0
             opacity: 1
-            transition: all .2s
             background: transparent
+            transition: all .2s
             z-index: 1
             &-burger
                 display: block
-                width: 50px
-                height: 50px
-                border: 2px solid transparent
-                border-radius: 1000px
-                position: absolute
-                top: 4rem
-                right: 4rem
-                background: url("./assets/img/burger.svg") no-repeat
-                background-size: cover
+                top: 80px
+                right: 80px
                 z-index: 4
                 cursor: pointer
+                position: absolute
 
             &-container
                 padding: 2rem

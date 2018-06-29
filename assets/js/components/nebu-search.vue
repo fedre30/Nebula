@@ -1,6 +1,6 @@
 <template>
     <div class="Input">
-        <div class="loupe"></div>
+        <img class="loupe" src="../../img/loupe.svg" alt="">
         <input type="search" placeholder="Rechercher" @focus="show=!show" v-model="search">
         <div class="Input-results" v-if="show">
             <ul>
@@ -37,22 +37,19 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 .Input
-    width: 30vw
-    height: 20vh
+    width: 73px
+    height: 133px
     position: absolute
-    top: 5vh
-    left: 20vw
+    background-color: #cdc1e1
+    border-bottom-left-radius: 50px
+    border-bottom-right-radius: 50px
+    left: 207px
+    top: 0
     z-index: 0
     font-family: Roboto, sans-serif
     .loupe
-        background: url("./assets/img/loupe_desktop.svg") no-repeat
-        background-size: cover
-        width: 30px
-        height: 30px
-        position: absolute
-        left: 15px
-        top: 50px
-        z-index: 1
+        width: 24px
+        margin: 85px auto 0
 
     input[type=search]
         width: 40px
@@ -66,6 +63,7 @@
         padding: 12px 20px 12px 3rem
         -webkit-transition: width 0.4s ease-in-out
         transition: all 0.2s ease-in-out
+        display: none
 
 
 

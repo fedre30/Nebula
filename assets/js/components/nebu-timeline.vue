@@ -1,6 +1,7 @@
 <template>
     <div class="Timeline">
         <div class="Timeline-container">
+            <img class="Timeline-frame" src="../../img/arrowFrame.svg" alt="">
             <h3 class="Timeline-title">{{title}}</h3>
         </div>
         <div class="Circles-container">
@@ -55,6 +56,7 @@
     height: 170vh
     font-family: Roboto, sans-serif
     position: relative
+
     &-container
         width: 80%
         margin: 0 auto
@@ -124,6 +126,10 @@ a
         top: 300px
         left: 70px
         margin-top: 80vh
+
+        &-frame
+        position: absolute
+        z-index: -5
 
         &-container
             width: 80%

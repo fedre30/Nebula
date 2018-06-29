@@ -1,21 +1,23 @@
 <template>
     <div class="Question" ref="question">
         <div class="Question-container">
+            <img class="Question-scrollArrow" src="../../img/scroll.svg" alt="">
             <h3 class="Question-title">testez-vous</h3>
-            <p class="Question-text">{{homeQuestion[0].Question}}</p>
+            <p class="Question-text">Le MMU (système de propulsion développé par la NASA) utilise de l’azote pour aider les astronautes à se déplacer.
+            </p>
             <div class="Question-answers-container">
                 <div class="Question-answer" v-on:click="checkAnswer" :value="true">Vrai</div>
                 <div class="Question-answer" v-on:click="checkAnswer" :value="false">Faux</div>
             </div>
+        </div>
             <div class="Question-invitation">Trop facile pour vous ? <br> Un quizz complet vous attend !</div>
             <router-link :to="{path: 'question/0'}"><div class="Question-button quizz">quizz</div></router-link>
-
         </div>
-    </div>
+
 </template>
 
 <script>
-    import axios from 'axios';
+    /*import axios from 'axios';
     export default {
         name: 'nebu-question',
         data() {
@@ -40,6 +42,7 @@
         }
 
     }
+    */
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -55,7 +58,8 @@
         margin: 0 auto
         z-index: 2
         text-align: center
-
+    &-scrollArrow
+        margin-top: 20px
     &-title
         width: 100%
         font-size: 2.3rem
@@ -145,98 +149,96 @@ a:hover
 
 @media(min-width: 600px)
     .Question
-        width: 30vw
-        height: 25vw
-        border-radius: 1000px
-        padding-top: 3rem
+        width: 436px
+        height: 436px
+        border-radius: 100%
         font-family: Roboto, sans-serif
         position: absolute
-        top: 70vh
-        left: 40vw
+        top: 732px
+        left: 502px
         background: white
         &-container
             width: 80%
-            margin: 5vh auto
             z-index: 2
             text-align: center
 
-
         &-title
             width: 100%
-            font-size: 2rem
-            margin: 2vh auto
+            font-size: 3.6rem
+            margin-top: 40px
             text-align: center
 
         &-text
-            font-size: 1.2rem
+            font-size: 1.8rem
+            font-weight: 400
             color: black
-            text-align: center
-            line-height: 2rem
+            line-height: 3rem
+            margin-top: 20px
 
         &-answers-container
-            width: 100%
+            width: 80%
             margin: 0.5rem auto
             justify-content: center
+            margin-top: 45px
         &-answer
             width: 120px
             height: 50px
             background: linear-gradient(90deg, rgba(205,193,225,1) 0%, rgba(156,130,198,1) 100%)
-            font-size: 1rem
-            line-height: 50px
+            font-size: 1.8rem
+            font-weight: 900
             color: white
-            font-weight: 700
             border-radius: 10px
             text-align: center
             margin: 0 auto
 
         &-invitation
-            font-size: 1.2rem
-            margin: 30vh 0 10vh 0
+            font-size: 2rem
             color: white
-            text-align: left
-            line-height: 2rem
+            line-height: 3rem
             font-style: italic
+            margin-left: 100px
+
         &-button
-            font-size: 1.2rem
-            padding-left: 1rem
+            position: relative
+            font-size: 2rem
             padding-top: 0.3rem
-            width: 100px
-            height: 50px
-            line-height: 1.2
+            width: 200px
+            height: 60px
+            line-height: 6rem
             text-align: center
             margin: 0 auto
-            position: relative
             text-transform: uppercase
             display: block
             background: transparent
             color: white
-            font-weight: 800
-            z-index: 1
+            font-weight: 900
 
 
         &-button:before, &-button:after
-            width: 130px
+            border: 3px solid white
+            width: 200px
             left: 0
-            height: 30px
-            border: 2px solid white
+            height: 27px
+            z-index: -1
 
+        &-button:hover:before, &-button:hover:after 
+            background: white
+
+        &-button:hover
+            color: #131956
+            
         &-button:before
             position: absolute
             content: ''
             border-bottom: none
-            -webkit-transform: perspective(15px) rotateX(7deg)
-            -moz-transform: perspective(15px) rotateX(7deg)
-            transform: perspective(15px) rotateX(7deg)
-            top: -20px
+            transform: perspective(15px) rotateX(5deg)
 
         &-button:after
             position: absolute
-            top: 15px
+            top: 32px
             content: ''
             border-top: none
-            -webkit-transform: perspective(15px) rotateX(-7deg)
-            -moz-transform: perspective(15px) rotateX(-7deg)
-            transform: perspective(15px) rotateX(-7deg)
+            transform: perspective(15px) rotateX(-5deg)
 
 
 
