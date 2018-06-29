@@ -18,7 +18,6 @@
             </div>
         </div>
         <div class="Menu desktop">
-
             <svg class="Menu-burger" v-on:click="show = !show" :class="{'active': active}" width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient x1="13.0279634%" y1="-15.1097413%" x2="100%" y2="115.679923%" id="linearGradient-1">
@@ -32,7 +31,6 @@
                     </g>
                 </g>
             </svg>
-
                 <div class="Menu-container" :show="show" :class="{'opened': show}">
                     <div class="Menu-circle"></div>
                     <div class="Menu-itemsContainer" >
@@ -48,7 +46,7 @@
                         <router-link :to="{name: 'form'}">
                             <div class="Menu-item">Suggestions</div>
                         </router-link>
-                        <router-link :to="{name: 'search'}">
+                        <router-link :to="{name: 'team'}">
                             <div class="Menu-item">A propos</div>
                         </router-link>
                     </div>
@@ -89,7 +87,7 @@
 <style scoped lang="sass">
     .Menu
         width: 100%
-        height: 70px
+        height: 52px
         background-color: white
         position: fixed
         bottom: 0
@@ -109,33 +107,33 @@
             justify-content: space-between
 
         &-item-home
-            width: 43px
-            height: 25%
+            width: 10px
+            height: 20px
             background: url("./assets/img/home.svg") no-repeat
             background-size: cover
         &-item-quiz
             width: 30px
-            height: 30%
+            height: 30px
             background: url("./assets/img/question_mark.svg") no-repeat
             background-size: cover
         &-item-film
             width: 37px
-            height: 25%
+            height: 20px
             background: url("./assets/img/camera.svg") no-repeat
             background-size: cover
         &-item-search
             width: 35px
-            height: 25%
+            height: 20px
             background: url("./assets/img/loupe.svg") no-repeat
             background-size: cover
 
     .scrolled
         opacity: 1
         transition: all .2s ease
-        .mobile
-            display: block
-        .desktop
-            display: none
+    .mobile
+        display: block
+    .desktop
+        display: none
 
     @media(min-width: 600px)
         .Menu
@@ -167,7 +165,7 @@
                 text-align: center
                 background: url("./assets/img/menu_bg.jpg") no-repeat
                 background-size: cover
-                z-index: 1
+                z-index: 0
                 opacity: 0
                 transition: all .2s ease
             &-itemsContainer
@@ -189,7 +187,7 @@
                 color: #ED3A5E
             &-item-home, &-item-search, &-item-film, &-item-quiz
                 background: none
-            &-circle
+            //&-circle
                 width: 600px
                 height: 600px
                 background: linear-gradient(348deg, rgba(177,147,223,1) 0%, rgba(251,32,70,1) 100%)
@@ -198,21 +196,21 @@
                 left: 5vw
                 border-radius: 600px
 
-            .mobile
-                display: none
-            .desktop
-                display: block
-            .opened
-                width: 100vw
-                height: 100vh
-                opacity: 1
-                transition: all .2s ease
-            .active
-                background: url('./assets/img/menu_open.svg') no-repeat
+        .mobile
+            display: none
+        .desktop
+            display: block
+        .opened
+            width: 100vw
+            height: 100vh
+            opacity: 1
+            transition: all .2s ease
+        .active
+            background: url('./assets/img/menu_open.svg') no-repeat
 
-            a
-                text-decoration: none
-            .and
-                font-family: Futura, sans-serif
+        a
+            text-decoration: none
+        .and
+            font-family: Futura, sans-serif
 
 </style>

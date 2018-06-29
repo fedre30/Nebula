@@ -5,7 +5,7 @@
             <h3 class="AboutSection-title">qui quoi comment?</h3>
             <p class="AboutSection-text">Si vous voulez en savoir plus sur ce concept lunaire et les personnes brillantes qui l’ont réalisé, c’est par ici  !</p>
             <div class="AboutSection-shape desktop"></div>
-            <div class="AboutSection-button">à propos</div>
+            <router-link :to="{name: 'team'}"><div class="AboutSection-button">à propos</div></router-link>
         </div>
         <a href="#" ><div class="desktop shuttle" v-scroll-to="'#intro'"></div></a>
 
@@ -45,7 +45,7 @@
     height: 100vh
     font-family: Roboto, sans-serif
     position: relative
-    
+
     &-container
         width: 80%
         height: 100vh
@@ -59,41 +59,43 @@
         background: url("./assets/img/alien.png") no-repeat
         background-size: cover
         top: 200px
-        left: 100px
+        left: 80px
     &-title
-        font-size: 2.5rem
+        font-size: 3.6rem
         font-family: Airship, sans-serif
         text-transform: uppercase
-        margin: 5rem 0 1rem 0
+        margin: 100px 0 1rem 0
         line-height: 9rem
         text-align: left
         color: #1F0D87
     &-text
-        font-size: 1rem
+        font-size: 1.9rem
         font-weight: 500
         color: white
         text-align: left
-        line-height: 2rem
+        line-height: 3rem
         margin-bottom: 3rem
     &-button
-        font-size: 1rem
-        width: 100px
-        height: 50px
-        line-height: 3rem
+        font-size: 1.8rem
+        width: 160px
+        height: 60px
+        line-height: 2.1rem
         text-align: center
-        margin: 0 auto
+        margin: 40px auto
         position: relative
         text-transform: uppercase
-        display: block
+        display: flex
+        justify-content: center
+        align-items: center
         background: transparent
         color: white
         font-weight: 800
 
 
     &-button:before, &-button:after
-        width: 100px
+        width: 160px
         left: 0
-        height: 20px
+        height: 27px
         border: 2px solid white
 
     &-button:before
@@ -107,7 +109,7 @@
 
     &-button:after
         position: absolute
-        top: 25px
+        top: 34px
         content: ''
         border-top: none
         -webkit-transform: perspective(15px) rotateX(-7deg)
@@ -218,6 +220,8 @@ a
             position: absolute
             right: -550px
             bottom: -100px
+    a
+        text-decoration: none
 
 
 

@@ -9,6 +9,7 @@ import Quiz_answer from '../pages/Quiz_answer.vue';
 import Quiz_results from '../pages/Quiz_results.vue';
 import Search from '../pages/Search.vue';
 import Contribution from '../pages/Contribution.vue';
+import Team from '../pages/Team.vue';
 Vue.use(Router);
 Vue.use(Film_card);
 
@@ -63,6 +64,11 @@ export default new Router({
             path: '/contribution',
             name: 'contribution',
             component: Contribution
+        },
+        {
+            path: '/team',
+            name: 'team',
+            component: Team
         },
     ],
     scrollBehavior (to, from) {

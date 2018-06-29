@@ -55,18 +55,16 @@
     width: 100%
     font-family: Roboto, sans-serif
     position: relative
-
-
     &-container
         width: 80%
         margin: 0 auto
         text-align: center
     &-title
-        font-size: 2rem
+        font-size: 3.6rem
         font-family: Airship, sans-serif
         text-transform: uppercase
         margin-bottom: 5rem
-        line-height: 3rem
+        line-height: 5.2rem
         text-align: left
         color: #1F0D87
         width: 100%

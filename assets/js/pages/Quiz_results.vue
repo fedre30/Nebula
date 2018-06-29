@@ -6,10 +6,12 @@
         <div class="Results-container">
             <h3 class="Results-title">quizz</h3>
             <div class="Results-resultsContainer">
-            <h4 class="Results-subtitle">Résultats</h4>
-            <p class="Results-text">Waou trop balèze !  Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 10.</span></p>
-            <p class="Results-text">Seulement  <span class="bold">{{rate}}%</span> des utilisateurs ont réussi un tel exploit. </p>
-            <router-link :to="{name: 'question'}"><div class="Results-button">réssayer</div></router-link>
+                <h4 class="Results-subtitle">Résultats</h4>
+                <p class="Results-text">Waou trop balèze ! <br/>  Vous avez bien répondu à <span class="bold">{{goodAnswers}} questions sur 10.</span></p>
+                <p class="Results-text">Seulement  <span class="bold">{{rate}}%</span> des utilisateurs ont réussi un tel exploit. </p>
+                <router-link :to="{name: 'question'}">
+                    <div class="Results-button">réssayer</div>
+                </router-link>
             </div>
         </div>
         <nebu-footer></nebu-footer>
@@ -73,8 +75,8 @@
         color: white
         text-align: left
         line-height: 2rem
+        margin-bottom: 2rem
         font-weight: 500
-        margin-top: 2rem
     &-button
         width: 150px
         height: 50px
@@ -99,10 +101,9 @@ a
     .Results
         font-family: Roboto, sans-serif
         position: relative
-        width: 95vw
+        width: 100%
         height: 100vh
         background: none
-        padding: 3rem
         margin: 0 auto
         overflow: hidden
 
@@ -110,8 +111,8 @@ a
             width: 100%
             height: 50vh
             position: absolute
-            bottom: 15vh
-            right: 5vw
+            right: 54px
+            bottom: 110px
             background: url("../assets/img/quiz_background_desktop.png") no-repeat
             background-size: 100%
             box-sizing: border-box
@@ -121,33 +122,33 @@ a
             height: 30vh
             margin: 0 auto
             text-align: center
-            padding: 6rem
+            padding-top: 0
         &-title
-            font-size: 2.5rem
+            font-size: 6rem
             font-family: Airship, sans-serif
             color: #231189
             text-align: left
-            margin: 2rem 0 6rem 0
             text-transform: uppercase
             position: absolute
             transform: rotate(90deg)
-            right: 90px
-            top: 230px
+            right: 7%
+            margin: 0
+            top: 180px
         &-subtitle
-            font-size: 1.5rem
+            font-size: 3.2rem
             color: #FE5B3F
             font-style: italic
             font-weight: 900
-            margin-bottom: 1rem
+            margin-bottom: 51px
             text-transform: none
         &-text
-            font-size: 1.3rem
+            font-size: 2.1rem
             font-family: Roboto, sans-serif
             color: black
             text-align: left
-            line-height: 2rem
+            line-height: 3.3rem
             font-style: italic
-            margin-top: 2rem
+            margin-top: 30px
             font-weight: 500
         &-item
             width: 50%
@@ -159,16 +160,18 @@ a
             line-height: 50px
 
         &-button
-            width: 150px
-            height: 50px
-            font-size: 1rem
+            width: 25%
+            height: 70px
+            font-size: 2rem
+            display: flex
+            align-items: center
+            justify-content: center
             line-height: 50px
             background: white
             font-weight: 700
             border-radius: 10px
             border: transparent
             text-transform: uppercase
-            text-align: center
             margin: 5vh 1vw
             color: #1F0D87
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1)
@@ -176,22 +179,21 @@ a
             bottom: 0
             position: absolute
         &-resultsContainer
-            width: 70vw
-            height: 35vh
+            width: 65%
+            height: 45vh
             border-width: 15px
             border-style: solid
             border-image: linear-gradient(348deg, rgba(205, 193, 225, 1) 0%, rgba(243, 58, 86, 1) 100%)
             border-image-slice: 1
-            padding: 4rem
             position: relative
-            margin-top: 10vh
+            margin: 165px auto
+            padding: 4rem
         .Nebula-title
             font-size: 3rem
             position: absolute
             left: 6rem
             top: 3rem
             font-family: Airship, sans-serif
-            z-index: 2
             color: #F33A56
         .bold
             font-weight: 700
