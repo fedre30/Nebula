@@ -14,13 +14,26 @@
 </template>
 
 <script>
+    const center = document.querySelector('.Circle-center');
     export default {
         name: 'nebu-circle',
         data(){
             return {
-                show: true
+                show: true,
+                images : [
+                    {
+                        image :'./assets/img/space.jpg'
+                    },
+                    {
+                        image :'./assets/img/space.jpg'
+                    },
+                    {
+                        image : './assets/img/space.jpg'
+                    }
+                ]
             }
         },
+
         props: {
             year: {
                 type: Number,
@@ -32,16 +45,20 @@
             },
             mistake: {
                 type: String,
-            },
-            image: {
-                type: String,
+            }
+        },
+        methods : {
+            image(){
+                for (let i = 0; i < this.images.length; i++ ){
+                    this.center.style.backgroundImage = this.images[i].image;
+                }
             }
         }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="sass">
+<style scoed lang="sass">
 
 .Circle
     width: 80%
@@ -101,46 +118,44 @@
         height: 150px
         border-radius: 300px
         margin: 0 auto
-        background: url('./assets/img/space.jpg')
+
 
 @media(min-width: 600px)
     .Circle
         width: 80%
         height: 55vh
-        margin: 0 auto
         text-align: center
         z-index: 1
         font-family: Roboto, sans-serif
         position: relative
         &-container
             width: 100%
-            height: 500px
             position: relative
-            margin-top: 400px
+            margin-top: 350px
             z-index: 999999
 
         &-mistake
-            font-size: 1.2rem
+            font-size: 2rem
             font-weight: 700
             color: #440BA2
             text-align: left
-            line-height: 3rem
+            line-height: 2.4rem
             margin-bottom: 0.5rem
             position: absolute
             bottom: 20vh
             left: 5vw
         &-title
-            font-size: 1rem
+            font-size: 1.8rem
             font-weight: 300
             color: #F33957
             text-align: left
-            line-height: 3rem
+            line-height: 2.1rem
             font-style: italic
             position: absolute
             bottom: 15vh
             left: 5vw
         &-year
-            font-size: 2rem
+            font-size: 3.6rem
             margin-bottom: 15vh
             position: absolute
             color: #F33957
@@ -174,7 +189,7 @@
             position: absolute
             left: 120px
             top: -15
-            background: url('./assets/img/space.jpg')
+
 a
     text-decoration: none
 

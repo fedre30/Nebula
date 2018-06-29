@@ -8,6 +8,24 @@
             <router-link :to="{name: 'team'}"><div class="AboutSection-button">à propos</div></router-link>
         </div>
         <a href="#" ><div class="desktop shuttle" v-scroll-to="'#intro'"></div></a>
+
+        <svg class="purpleBgBottom" width="1340px" height="1353px" viewBox="0 0 1340 1353" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <polygon id="path-1" points="0 485.733572 429.505864 913.228851 1340 0.0288220115 1340 1353 2.32452946e-15 1353"></polygon>
+            </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Home" transform="translate(-50.000000, -2869.000000)">
+                    <g id="last-section" transform="translate(50.000000, 2869.000000)">
+                        <g id="monstre+bg">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill-opacity="0.268455616" fill="#CDC1E1" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
     </div>
 </template>
 
@@ -27,7 +45,7 @@
     height: 100vh
     font-family: Roboto, sans-serif
     position: relative
-    top: 200px
+
     &-container
         width: 80%
         height: 100vh
@@ -119,24 +137,25 @@ a
             margin: 0 auto
             position: relative
             padding-top: 40vh
+            text-align: center
         &-alien
             display: none
         &-title
-            font-size: 2.5rem
+            font-size: 3.6rem
             font-family: Airship, sans-serif
             text-transform: uppercase
             margin: 5rem 0 1rem 0
             line-height: 9rem
             color: #1F0D87
             position: absolute
-            top: 0
-            left: 3vw
+            top: 50px
+            left: 60px
         &-text
-            font-size: 1rem
-            font-weight: 500
+            font-size: 1.8rem
+            font-weight: 400
             color: white
             text-align: left
-            line-height: 2rem
+            line-height: 3rem
             position: absolute
             top: 25vh
             width: 80%
@@ -148,10 +167,12 @@ a
             height: 50px
             line-height: 3rem
             text-align: center
-            margin: 0 auto
+            margin: 40px auto 0
             position: relative
             text-transform: uppercase
-            display: block
+            display: flex
+            justify-content: center
+            align-items: center
             background: transparent
             color: white
             font-weight: 800

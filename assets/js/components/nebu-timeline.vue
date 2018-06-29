@@ -1,12 +1,13 @@
 <template>
     <div class="Timeline">
+        <img class="Timeline-frame" src="../../img/arrowFrame.svg" alt="">
         <div class="Timeline-container">
             <h3 class="Timeline-title">{{title}}</h3>
         </div>
         <div class="Circles-container">
-        <nebu-circle v-for="(circle, index) in circles" :key="circle.title" :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
+         <nebu-circle v-for="(circle, index) in circles" :key="circle.title"
+                      :title="circle.title" :year="circle.year" :image="circle.image" :mistake="circle.mistake"></nebu-circle>
         </div>
-        <div class="Timeline-button desktop"><router-link :to="{name: 'list'}">Voir plus</router-link></div>
     </div>
 </template>
 
@@ -52,10 +53,8 @@
 <style scoped lang="sass">
 .Timeline
     width: 100%
-    height: 170vh
     font-family: Roboto, sans-serif
     position: relative
-    top: 270px
     &-container
         width: 80%
         margin: 0 auto
@@ -111,20 +110,21 @@
     .desktop
         display: none
 
-
-
 a
     text-decoration: none
 
 @media(min-width: 600px)
+
     .Timeline
-        width: 100%
-        height: 100vh
         font-family: Roboto, sans-serif
         position: relative
-        top: 300px
-        left: 70px
-        margin-top: 80vh
+        left: 0
+        top: 1800px
+        .desktop
+            display: block
+        &-frame
+            position: absolute
+            z-index: -5
 
         &-container
             width: 80%
@@ -140,55 +140,18 @@ a
             color: rgba(255,91,54,0.2)
             width: 100%
             position: absolute
-            bottom: 700px
+            bottom: -100px
             left: 5vw
-        &-button
-            font-size: 1rem
-            width: 100px
-            height: 50px
-            line-height: 3rem
-            text-align: center
-            margin: 0 auto
-            text-transform: uppercase
-            display: block
-            background: transparent
-            color: #440BA2
-            font-weight: 800
-            position: absolute
-            bottom: 20vh
-            left: 25vw
 
 
-        &-button:before, &-button:after
-            width: 100px
-            left: 0
-            height: 20px
-            border: 2px solid #440BA2
-
-        &-button:before
-            position: absolute
-            content: ''
-            border-bottom: none
-            -webkit-transform: perspective(15px) rotateX(7deg)
-            -moz-transform: perspective(15px) rotateX(7deg)
-            transform: perspective(15px) rotateX(10deg)
-            top: 0
-
-        &-button:after
-            position: absolute
-            top: 25px
-            content: ''
-            border-top: none
-            -webkit-transform: perspective(15px) rotateX(-7deg)
-            -moz-transform: perspective(15px) rotateX(-7deg)
-            transform: perspective(15px) rotateX(-10deg)
-
-        .Circles-container
-            display: flex
-            width: 80%
-            position: absolute
-            bottom: 500px
 
 
+
+    .Circles-container
+        display: flex
+        width: 80%
+        position: absolute
+        bottom: 500px
+        top: 0
 
 </style>
