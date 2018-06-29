@@ -5,7 +5,7 @@
             <h3 class="AboutSection-title">qui quoi comment?</h3>
             <p class="AboutSection-text">Si vous voulez en savoir plus sur ce concept lunaire et les personnes brillantes qui l’ont réalisé, c’est par ici  !</p>
             <div class="AboutSection-shape desktop"></div>
-            <div class="AboutSection-button">à propos</div>
+            <router-link :to="{name: 'team'}"><div class="AboutSection-button">à propos</div></router-link>
         </div>
         <a href="#" ><div class="desktop shuttle" v-scroll-to="'#intro'"></div></a>
     </div>
@@ -196,6 +196,8 @@ a
             position: absolute
             right: -550px
             bottom: -100px
+    a
+        text-decoration: none
 
 
 
