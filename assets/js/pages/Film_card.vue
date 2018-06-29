@@ -71,7 +71,7 @@
         },
         mounted () {
             axios
-                .get('http://localhost:8000/api/facts/' + this.$route.params.id + '/')
+                .get('/api/facts/' + this.$route.params.id + '/')
                 .then(response => (this.fact = response.data))
         },
         watch: {

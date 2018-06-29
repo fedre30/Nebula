@@ -5,23 +5,25 @@
 
 
         <div class="Answer-container">
-            <h3 class="Answer-title">quizz</h3>
-            <div class="Answer-question">{{answers[$route.params.count].Question}}</div>
-            <div class="Answer-list">
-                <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].firstAnswerCorrection }"
-                     v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}
+            <div class="Answer-answerContainer">
+                <h3 class="Answer-title">quizz</h3>
+                <div class="Answer-question">{{answers[$route.params.count].Question}}</div>
+                <div class="Answer-list">
+                    <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].firstAnswerCorrection }"
+                         v-if="answers[0]">{{answers[$route.params.count].firstAnswer}}
+                    </div>
+                    <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"
+                         v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}
+                    </div>
+                    <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"
+                         v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}
+                    </div>
                 </div>
-                <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].secondAnswerCorrection }"
-                     v-if="answers[0]">{{answers[$route.params.count].secondAnswer}}
+                <div class="Answer-bottom">
+                    <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris ! <br/>
+                        Vous devriez relire <router-link :to="{path: `/film/${parseInt($route.params.count)}`}"><span class="underline">la fiche</span></router-link> qui en parle si vous voulez mon avis.</p>
+                    <div class="Answer-button" v-on:click="test">suivant</div>
                 </div>
-                <div class="Answer-item wrong" :class="{'right': answers[$route.params.count].thirdAnswerCorrection}"
-                     v-if="answers[0]">{{answers[$route.params.count].thirdAnswer}}
-                </div>
-            </div>
-            <div class="Answer-bottom">
-                <p class="Answer-text" :class="{'inactive' : isRightAnswer}">Mais vous n’avez rien compris ! <br/>
-                    Vous devriez relire <router-link :to="{path: `/film/${parseInt($route.params.count)}`}"><span class="underline">la fiche</span></router-link> qui en parle si vous voulez mon avis.</p>
-                <div class="Answer-button" v-on:click="test">suivant</div>
             </div>
         </div>
         <nebu-footer></nebu-footer>
@@ -51,7 +53,7 @@
         },
         mounted() {
             axios
-                .get('http://localhost:8000/api/quizz')
+                .get('/api/quizz')
                 .then(response => (this.answers = response.data))
         },
         methods: {
@@ -170,6 +172,9 @@
         text-decoration: none
 
     @media(min-width: 600px)
+        .underline
+            text-decoration: underline
+            color: #000
         .Answer
             font-family: Roboto, sans-serif
             position: relative
@@ -211,6 +216,7 @@
                 color: #FE5B3F
                 font-style: italic
                 font-weight: 900
+                margin-top: 0
                 margin-bottom: 1rem
                 text-transform: none
             &-text

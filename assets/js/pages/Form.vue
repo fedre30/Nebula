@@ -98,7 +98,7 @@
             },
 
             postPost() {
-                axios.post(`http://localhost:8000/api/facts`, {
+                axios.post(`/api/facts`, {
                     "tab_title": this.tab_title,
                     "category": 'oijn',
                     "main_title": this.tab_title,

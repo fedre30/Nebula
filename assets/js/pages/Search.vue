@@ -32,7 +32,7 @@ export default {
     },
     mounted () {
         axios
-            .get('http://localhost:8000/api/facts')
+            .get('/api/facts')
             .then(response => (this.facts = response.data))
     }
 }

@@ -75,7 +75,7 @@
 <style scoped lang="sass">
     .Menu
         width: 100%
-        height: 70px
+        height: 52px
         background-color: white
         position: fixed
         bottom: 0
@@ -95,23 +95,23 @@
             justify-content: space-between
 
         &-item-home
-            width: 43px
-            height: 25%
+            width: 10px
+            height: 20px
             background: url("./assets/img/home.svg") no-repeat
             background-size: cover
         &-item-quiz
             width: 30px
-            height: 30%
+            height: 30px
             background: url("./assets/img/question_mark.svg") no-repeat
             background-size: cover
         &-item-film
             width: 37px
-            height: 25%
+            height: 20px
             background: url("./assets/img/camera.svg") no-repeat
             background-size: cover
         &-item-search
             width: 35px
-            height: 25%
+            height: 20px
             background: url("./assets/img/loupe.svg") no-repeat
             background-size: cover
 

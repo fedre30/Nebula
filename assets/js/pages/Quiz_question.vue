@@ -49,7 +49,7 @@
         },
         mounted () {
             axios
-                .get('http://localhost:8000/api/quizz')
+                .get('/api/quizz')
                 .then(response => (this.answers = response.data))
         },
         methods : {
@@ -188,6 +188,7 @@
             color: #FE5B3F
             font-style: italic
             font-weight: 900
+            margin-top: 0
             margin-bottom: 1rem
             text-transform: none
         &-button

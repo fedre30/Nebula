@@ -33,25 +33,25 @@ export default {
         text-align: center
         padding-top: 5rem
     &-title
-        font-size: 7rem
+        font-size: 11rem
         margin-bottom: 2rem
         font-family: Airship, sans-serif
         color: rgb(255, 8, 73)
     &-subtitle
-        font-size: 1.5rem
+        font-size: 2rem
         margin-bottom: 2rem
         font-family: Roboto, sans-serif
         font-weight: bold
         color: white
         text-align: left
         width: 100%
-        line-height: 2rem
+        line-height: 3rem
     &-text
-        font-size: 1rem
+        font-size: 1.8rem
         font-family: Roboto, sans-serif
         color: white
         text-align: left
-        line-height: 2rem
+        line-height: 2.6rem
         font-weight: 300
         font-style: italic
         margin-bottom: 8rem

@@ -52,33 +52,31 @@
     font-family: Roboto, sans-serif
     &-container
         width: 100%
-        height: 600px
         position: relative
         margin-top: 10vh
         z-index: 999999
 
     &-mistake
-        font-size: 1.2rem
+        font-size: 2rem
         font-weight: 700
         color: white
         text-align: left
         line-height: 3rem
         margin-bottom: 0.5rem
     &-title
-        font-size: 1rem
+        font-size: 1.8rem
         font-weight: 300
         color: white
         text-align: left
         line-height: 3rem
         font-style: italic
     &-year
-        font-size: 1.4rem
-        margin-bottom: 15vh
+        font-size: 3rem
         position: absolute
         color: white
         font-family: Airship, sans-serif
         left: 0
-        top: 50px
+        top: 30px
 
     &-inner
         width: 180px
