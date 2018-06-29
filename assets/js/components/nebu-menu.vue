@@ -34,7 +34,7 @@
                         <router-link :to="{name: 'form'}">
                             <div class="Menu-item">Suggestions</div>
                         </router-link>
-                        <router-link :to="{name: 'search'}">
+                        <router-link :to="{name: 'team'}">
                             <div class="Menu-item">A propos</div>
                         </router-link>
                     </div>
@@ -118,10 +118,10 @@
     .scrolled
         opacity: 1
         transition: all .2s ease
-        .mobile
-            display: block
-        .desktop
-            display: none
+    .mobile
+        display: block
+    .desktop
+        display: none
 
     @media(min-width: 600px)
         .Menu
@@ -145,7 +145,6 @@
                 right: 4rem
                 background: url("./assets/img/burger.svg") no-repeat
                 background-size: cover
-
                 cursor: pointer
 
             &-container
@@ -190,21 +189,21 @@
                 left: 5vw
                 border-radius: 600px
 
-            .mobile
-                display: none
-            .desktop
-                display: block
-            .opened
-                width: 100vw
-                height: 100vh
-                opacity: 1
-                transition: all .2s ease
-            .active
-                background: url('./assets/img/menu_open.svg') no-repeat
+        .mobile
+            display: none
+        .desktop
+            display: block
+        .opened
+            width: 100vw
+            height: 100vh
+            opacity: 1
+            transition: all .2s ease
+        .active
+            background: url('./assets/img/menu_open.svg') no-repeat
 
-            a
-                text-decoration: none
-            .and
-                font-family: Futura, sans-serif
+        a
+            text-decoration: none
+        .and
+            font-family: Futura, sans-serif
 
 </style>
