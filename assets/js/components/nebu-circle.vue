@@ -5,9 +5,8 @@
             <h4 class="Circle-title">{{title}}</h4>
             <div class="Circle-container">
                 <div class="Circle-year">{{year}}</div>
-
-                    <div class="Circle-outer"></div>
-               <div class="Circle-inner"></div>
+                <div class="Circle-outer"></div>
+                <div class="Circle-inner"></div>
                 <div class="Circle-center"></div>
             </div>
         </router-link>

@@ -13,29 +13,29 @@
 
 <script>
 
-    import nebuMenu from "../components/nebu-menu.vue";
-    import axios from 'axios';
+import nebuMenu from "../components/nebu-menu.vue";
+import axios from 'axios';
 
-    export default {
-        components: {nebuMenu},
-        name: 'search',
-        data() {
-            return {
-                search: "",
-                facts: []
-            }
-        },
-        computed : {
-            getResults(){
-                return this.facts.filter((fact) => fact.videoDescriptionTitlee.match(this.search))
-            }
-        },
-        mounted () {
-            axios
-                .get('http://localhost:8000/api/facts')
-                .then(response => (this.facts = response.data))
+export default {
+    components: {nebuMenu},
+    name: 'search',
+    data() {
+        return {
+            search: "",
+            facts: []
         }
+    },
+    computed : {
+        getResults(){
+            return this.facts.filter((fact) => fact.videoDescriptionTitlee.match(this.search))
+        }
+    },
+    mounted () {
+        axios
+            .get('http://localhost:8000/api/facts')
+            .then(response => (this.facts = response.data))
     }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -61,6 +61,8 @@
         padding: 2rem 2rem
         li
             margin-bottom: 2rem
+.desktop
+    display: none
 
 
 </style>

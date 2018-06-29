@@ -2,33 +2,34 @@
     <div class="Film">
         <div class="Film-background">
             <router-link :to="{name: 'home'}"><h1 class="Nebula-title desktop">Nebula</h1></router-link>
-        <div class="Film-container">
-            <h2 class="Film-title">{{fact.mainTitle}}</h2>
-            <section class="Film-intro">
-                <h4 class="Film-subtitle">{{fact.videoDescriptionTitle}}</h4>
-                <p class="Film-text">
-                    {{fact.videoDescriptionText}}
-                </p>
-            </section>
-        </div>
-        <nebu-menu></nebu-menu>
+            <div class="Film-container">
+                <h2 class="Film-title">{{fact.mainTitle}}</h2>
+                <section class="Film-intro">
+                    <h4 class="Film-subtitle">{{fact.videoDescriptionTitle}}</h4>
+                    <p class="Film-text">
+                        {{fact.videoDescriptionText}}
+                    </p>
+                </section>
+            </div>
+
             <div class="Film-video">
                 <youtube :video-id="fact.videoSrc" ref="youtube" @playing="playing" :width="width" :height="height"></youtube>
             </div>
-        <div class="Film-container">
-            <section class="Film-mistake">
-                <h4 class="Film-subtitle">{{fact.explanationTitle}} </h4>
-                <p class="Film-text">
-                    {{fact.explanationText}}
-                </p>
-            </section>
-            <section class="Film-fact">
-                <h4 class="Film-subtitle">{{fact.scientificFactTitle}}</h4>
-                <p class="Film-text">
-                    {{fact.scientificFactText}}</p>
-            </section>
+            <div class="Film-container">
+                <section class="Film-mistake">
+                    <h4 class="Film-subtitle">{{fact.explanationTitle}} </h4>
+                    <p class="Film-text">
+                        {{fact.explanationText}}
+                    </p>
+                </section>
+                <section class="Film-fact">
+                    <h4 class="Film-subtitle">{{fact.scientificFactTitle}}</h4>
+                    <p class="Film-text">
+                        {{fact.scientificFactText}}</p>
+                </section>
+            </div>
         </div>
-        </div>
+        <nebu-menu></nebu-menu>
         <nebu-footer></nebu-footer>
     </div>
 </template>
@@ -114,12 +115,10 @@
         line-height: 2rem
         text-align: left
         margin: 3rem 0
-        font-weight: 500
     &-video
         width: 100vw
         margin: 5vh auto
         text-align: center
-        height: 30vh
     .desktop
         display: none
 @media(min-width: 600px)
@@ -142,18 +141,19 @@
 
         &-container
             width: 100vw
-            height: 30vh
-            margin: 0 auto
+            margin-left: 148px
             text-align: center
-            padding: 6rem
+            padding: 2rem
         &-title
-            font-size: 2.5rem
+            font-size: 6rem
+            line-height: 8.6rem
             font-family: Airship, sans-serif
-            margin: 4rem 0
+            margin-bottom: 130px
             color: #231189
             text-align: left
+            width: 75%
         &-subtitle
-            font-size: 1.5rem
+            font-size: 3.2rem
             margin: 15vh 0 3rem 0
             text-transform: uppercase
             color: #FE5B3F
@@ -161,22 +161,22 @@
             text-align: left
             font-weight: 900
         &-text
-            font-size: 1rem
+            font-size: 2.1rem
             color: #18165C
-            line-height: 2rem
+            line-height: 3.3rem
             text-align: left
             margin: 3rem 0
-            font-weight: 500
         &-video
-            width: 100vw
-            margin: 10vh auto 20vh auto
+            width: 80%
             text-align: center
-            height: 30vh
+        &-intro
+            width: 48.6%
         &-mistake
-            width: 50%
-            margin: 40vh 30vw
+            width: 48.6%
+            margin-left: 500px
         &-fact
-            width: 45%
+            margin-top: 20%
+            width: 45.8%
         .Nebula-title
             font-size: 3rem
             position: absolute
