@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="Menu desktop">
-            <div class="Menu-burger" v-on:click="show = !show" :class="{'active': active}"></div>
+            <div class="Menu-burger" v-on:click="show = !show" ></div>
                 <div class="Menu-container" :show="show" :class="{'opened': show}">
                     <div class="Menu-circle"></div>
                     <div class="Menu-itemsContainer" >
@@ -75,7 +75,7 @@
 <style scoped lang="sass">
     .Menu
         width: 100%
-        height: 70px
+        height: 52px
         background-color: white
         position: fixed
         bottom: 0
@@ -95,23 +95,23 @@
             justify-content: space-between
 
         &-item-home
-            width: 43px
-            height: 25%
+            width: 10px
+            height: 20px
             background: url("./assets/img/home.svg") no-repeat
             background-size: cover
         &-item-quiz
             width: 30px
-            height: 30%
+            height: 30px
             background: url("./assets/img/question_mark.svg") no-repeat
             background-size: cover
         &-item-film
             width: 37px
-            height: 25%
+            height: 20px
             background: url("./assets/img/camera.svg") no-repeat
             background-size: cover
         &-item-search
             width: 35px
-            height: 25%
+            height: 20px
             background: url("./assets/img/loupe.svg") no-repeat
             background-size: cover
 
@@ -140,12 +140,11 @@
                 height: 50px
                 border: 2px solid transparent
                 border-radius: 1000px
-                position: absolute
+
                 top: 4rem
                 right: 4rem
                 background: url("./assets/img/burger.svg") no-repeat
                 background-size: cover
-                z-index: 4
                 cursor: pointer
 
             &-container
@@ -159,7 +158,7 @@
                 text-align: center
                 background: url("./assets/img/menu_bg.jpg") no-repeat
                 background-size: cover
-                z-index: 1
+                z-index: 0
                 opacity: 0
                 transition: all .2s ease
             &-itemsContainer
@@ -181,7 +180,7 @@
                 color: #ED3A5E
             &-item-home, &-item-search, &-item-film, &-item-quiz
                 background: none
-            &-circle
+            //&-circle
                 width: 600px
                 height: 600px
                 background: linear-gradient(348deg, rgba(177,147,223,1) 0%, rgba(251,32,70,1) 100%)

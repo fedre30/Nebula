@@ -46,7 +46,7 @@
 <style scoped lang="sass">
 .Question
     width: 100%
-    height: 100vh
+    margin-top: 100px
     position: relative
     z-index: 0
     font-family: Roboto, sans-serif
@@ -58,7 +58,7 @@
 
     &-title
         width: 100%
-        font-size: 2.3rem
+        font-size: 3.6rem
         margin-bottom: 3.5rem
         text-transform: uppercase
         font-family: Airship, sans-serif
@@ -66,10 +66,10 @@
         text-align: left
 
     &-text
-        font-size: 1.2rem
+        font-size: 1.8rem
         color: white
         text-align: left
-        line-height: 2rem
+        line-height: 2.5rem
 
     &-answers-container
         display: flex
@@ -80,7 +80,7 @@
         width: 300px
         height: 50px
         background-color: white
-        font-size: 1rem
+        font-size: 1.8rem
         margin-right: 3rem
         line-height: 50px
         color: #1F0D87
@@ -89,14 +89,14 @@
         text-transform: uppercase
 
     &-invitation
-        font-size: 1.2rem
+        font-size: 1.8rem
         margin: 20vh 0 3rem 0
         color: white
         text-align: left
-        line-height: 2rem
+        line-height: 2.6rem
         font-style: italic
     &-button
-        font-size: 1rem
+        font-size: 2rem
         width: 100px
         height: 50px
         line-height: 3rem
@@ -104,7 +104,9 @@
         margin: 0 auto
         position: relative
         text-transform: uppercase
-        display: block
+        display: flex
+        justify-content: center
+        align-items: center
         background: transparent
         color: white
         font-weight: 800

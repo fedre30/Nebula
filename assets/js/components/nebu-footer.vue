@@ -29,11 +29,10 @@
 
     &-copyright
         color: white
-        font-size: 1rem
+        font-size: 1.6rem
         font-family: Roboto, sans-serif
         font-weight: 100
         width: 100%
-        line-height: 3rem
         position: absolute
         bottom: 6vh
     &-logo-container
@@ -61,19 +60,22 @@
     .Footer
         width: 100%
         height: 3vh
-        padding: 3rem
         position: absolute
-        bottom: 0
+        bottom: 33px
 
         &-copyright
             color: #CDC1E1
-            font-size: 1rem
+            font-size: 1.6rem
             font-family: Roboto, sans-serif
             font-weight: 100
-            line-height: 3rem
+            bottom: 0
+            left: 54px
 
         &-logo-container
-            width: 15vw
+            bottom: 0
+            right: 54px
+            left: auto
+            width: 110px
             height: 5vh
             display: flex
             z-index: 200000
