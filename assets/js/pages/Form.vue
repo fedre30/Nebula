@@ -347,7 +347,7 @@
                 height: 300px
                 position: absolute
                 right: 200px
-                top: 195px
+                top: 75px
                 background: url("../assets/img/student.png") no-repeat
                 background-size: cover
             .desktop

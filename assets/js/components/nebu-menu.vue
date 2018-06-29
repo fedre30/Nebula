@@ -190,24 +190,24 @@
                 left: 5vw
                 border-radius: 600px
 
-            .mobile
-                display: none
-            .desktop
-                display: block
-            .opened
-                width: 100vw
-                height: 100vh
-                opacity: 1
-                transition: all .2s ease
-                display: block
-            .active
-                background: url('./assets/img/menu_open.svg') no-repeat
-                display: block
+        .mobile
+            display: none
+        .desktop
+            display: block
+        .opened
+            width: 100vw
+            height: 100vh
+            opacity: 1
+            transition: all .2s ease
+            display: block
+        .active
+            background: url('./assets/img/menu_open.svg') no-repeat
+            display: block
 
-            a
-                text-decoration: none
-            .and
-                font-family: Futura, sans-serif
+        a
+            text-decoration: none
+        .and
+            font-family: Futura, sans-serif
 
 
 

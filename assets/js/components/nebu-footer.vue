@@ -24,7 +24,7 @@
     width: 100%
     height: 30vh
     position: absolute
-    bottom: 2vh
+    bottom: 1vh
 
     &-copyright
         color: white

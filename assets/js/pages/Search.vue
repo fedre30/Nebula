@@ -27,7 +27,7 @@ export default {
     },
     computed : {
         getResults(){
-            return this.facts.filter((fact) => fact.videoDescriptionTitlee.match(this.search))
+            return this.facts.filter((fact) => fact.videoDescriptionTitle.match(this.search))
         }
     },
     mounted () {
@@ -61,8 +61,8 @@ export default {
         padding: 2rem 2rem
         li
             margin-bottom: 2rem
-.desktop
-    display: none
+    .desktop
+        display: none
 
 
 </style>

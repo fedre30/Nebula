@@ -64,7 +64,7 @@
 .Filters
     width: 100%
     position: fixed
-    bottom: 70px
+    bottom: 50px
     background-color: white
     z-index: 99999999
     overflow: hidden
@@ -102,7 +102,7 @@
         padding: 0.5rem 2rem
         font-weight: 500
     &-item:first-child
-        padding-top: 1.6rem
+        padding-top: 3rem
 
     .opened
         height: auto
